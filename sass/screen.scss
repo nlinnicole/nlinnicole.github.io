@@ -122,13 +122,21 @@ body {
 .portfolio {
 
     img {
-        width: 200px;
+        width: 300px;
         height: "";
+        padding: 30px;
+        flex-flow: row wrap;
+        justify-content: space-between;
+        align-items: baseline;
     }
 
     div {
         display: inline-block;
     }
+}
+
+.image_container {
+    text-align: center;
 }
 
 /*RESUME*/

@@ -402,41 +402,50 @@ body {
 /*HOME*/
 /* line 124, ../sass/screen.scss */
 .portfolio img {
-  width: 200px;
+  width: 300px;
   height: "";
+  padding: 30px;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: baseline;
 }
-/* line 129, ../sass/screen.scss */
+/* line 133, ../sass/screen.scss */
 .portfolio div {
   display: inline-block;
 }
 
+/* line 138, ../sass/screen.scss */
+.image_container {
+  text-align: center;
+}
+
 /*RESUME*/
-/* line 135, ../sass/screen.scss */
+/* line 143, ../sass/screen.scss */
 .resume {
   text-align: center;
 }
 
-/* line 139, ../sass/screen.scss */
+/* line 147, ../sass/screen.scss */
 .box {
   margin: 80px 50px 80px 50px;
   height: 200px;
 }
-/* line 143, ../sass/screen.scss */
+/* line 151, ../sass/screen.scss */
 .box a:hover {
   color: #FF1654;
 }
 
-/* line 148, ../sass/screen.scss */
+/* line 156, ../sass/screen.scss */
 .line {
   border-bottom: 3px solid #B2DBBF;
 }
 
-/* line 152, ../sass/screen.scss */
+/* line 160, ../sass/screen.scss */
 section {
   clear: inherit;
 }
 
-/* line 156, ../sass/screen.scss */
+/* line 164, ../sass/screen.scss */
 .skills {
   position: relative;
   display: inline-block;
@@ -445,12 +454,12 @@ section {
   width: 250px;
   flex-flow: row wrap;
 }
-/* line 164, ../sass/screen.scss */
+/* line 172, ../sass/screen.scss */
 .skills h5 {
   text-align: center;
   padding: 20px;
 }
-/* line 169, ../sass/screen.scss */
+/* line 177, ../sass/screen.scss */
 .skills figcaption {
   font-size: 20px;
   position: relative;
