@@ -1,0 +1,457 @@
+@import url(https://fonts.googleapis.com/css?family=Raleway|Marvel);
+/* line 5, ../../../../../../Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+/* line 22, ../../../../../../Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+html {
+  line-height: 1;
+}
+
+/* line 24, ../../../../../../Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 26, ../../../../../../Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 28, ../../../../../../Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+/* line 30, ../../../../../../Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+q, blockquote {
+  quotes: none;
+}
+/* line 103, ../../../../../../Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+/* line 32, ../../../../../../Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+a img {
+  border: none;
+}
+
+/* line 116, ../../../../../../Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+  display: block;
+}
+
+/* line 17, ../sass/_pie.scss */
+#photoshop {
+  fill: transparent;
+  stroke-width: 15;
+  stroke-dasharray: 534;
+  stroke: #31C5F0;
+  stroke-dashoffset: 80;
+}
+
+/* line 23, ../sass/_pie.scss */
+#photoshop:hover {
+  stroke-dashoffset: 80 !important;
+  -webkit-animation: photoshop 2s alternate infinite;
+  animation: photoshop 2s alternate infinite;
+}
+@keyframes photoshop {
+  from {
+    stroke-dashoffset: 80;
+  }
+  to {
+    stroke-dashoffset: 534;
+  }
+}
+/* line 39, ../sass/_pie.scss */
+#illustrator {
+  fill: transparent;
+  stroke-width: 15;
+  stroke-dasharray: 534;
+  stroke: #FF7F18;
+  stroke-dashoffset: 90;
+}
+
+/* line 45, ../sass/_pie.scss */
+#illustrator:hover {
+  stroke-dashoffset: 90 !important;
+  -webkit-animation: illustrator 2s alternate infinite;
+  animation: illustrator 2s alternate infinite;
+}
+@keyframes illustrator {
+  from {
+    stroke-dashoffset: 90;
+  }
+  to {
+    stroke-dashoffset: 534;
+  }
+}
+/* line 61, ../sass/_pie.scss */
+#indesign {
+  fill: transparent;
+  stroke-width: 15;
+  stroke-dasharray: 534;
+  stroke: #FF408C;
+  stroke-dashoffset: 380;
+}
+
+/* line 67, ../sass/_pie.scss */
+#indesign:hover {
+  stroke-dashoffset: 380 !important;
+  -webkit-animation: indesign 2s alternate infinite;
+  animation: indesign 2s alternate infinite;
+}
+@keyframes indesign {
+  from {
+    stroke-dashoffset: 380;
+  }
+  to {
+    stroke-dashoffset: 534;
+  }
+}
+/* line 83, ../sass/_pie.scss */
+#premiere {
+  fill: transparent;
+  stroke-width: 15;
+  stroke-dasharray: 534;
+  stroke: #E579FF;
+  stroke-dashoffset: 340;
+}
+
+/* line 89, ../sass/_pie.scss */
+#premiere:hover {
+  stroke-dashoffset: 340 !important;
+  -webkit-animation: premiere 2s alternate infinite;
+  animation: premiere 2s alternate infinite;
+}
+@keyframes premiere {
+  from {
+    stroke-dashoffset: 340;
+  }
+  to {
+    stroke-dashoffset: 534;
+  }
+}
+/* line 105, ../sass/_pie.scss */
+#aftereffects {
+  fill: transparent;
+  stroke-width: 15;
+  stroke-dasharray: 534;
+  stroke: #D8A1FF;
+  stroke-dashoffset: 380;
+}
+
+/* line 111, ../sass/_pie.scss */
+#aftereffects:hover {
+  stroke-dashoffset: 380 !important;
+  -webkit-animation: aftereffects 2s alternate infinite;
+  animation: aftereffects 2s alternate infinite;
+}
+@keyframes aftereffects {
+  from {
+    stroke-dashoffset: 380;
+  }
+  to {
+    stroke-dashoffset: 534;
+  }
+}
+/* line 127, ../sass/_pie.scss */
+#unity {
+  fill: transparent;
+  stroke-width: 15;
+  stroke-dasharray: 534;
+  stroke: #45BFBC;
+  stroke-dashoffset: 410;
+}
+
+/* line 133, ../sass/_pie.scss */
+#unity:hover {
+  stroke-dashoffset: 410 !important;
+  -webkit-animation: unity 2s alternate infinite;
+  animation: unity 2s alternate infinite;
+}
+@keyframes unity {
+  from {
+    stroke-dashoffset: 410;
+  }
+  to {
+    stroke-dashoffset: 534;
+  }
+}
+/* line 149, ../sass/_pie.scss */
+#blender {
+  fill: transparent;
+  stroke-width: 15;
+  stroke-dasharray: 534;
+  stroke: #003AA8;
+  stroke-dashoffset: 420;
+}
+
+/* line 155, ../sass/_pie.scss */
+#blender:hover {
+  stroke-dashoffset: 420 !important;
+  -webkit-animation: blender 2s alternate infinite;
+  animation: blender 2s alternate infinite;
+}
+@keyframes blender {
+  from {
+    stroke-dashoffset: 420;
+  }
+  to {
+    stroke-dashoffset: 534;
+  }
+}
+/* line 171, ../sass/_pie.scss */
+#html {
+  fill: transparent;
+  stroke-width: 15;
+  stroke-dasharray: 534;
+  stroke: #CF649A;
+  stroke-dashoffset: 50;
+}
+
+/* line 177, ../sass/_pie.scss */
+#html:hover {
+  stroke-dashoffset: 50 !important;
+  -webkit-animation: html 2s alternate infinite;
+  animation: html 2s alternate infinite;
+}
+@keyframes html {
+  from {
+    stroke-dashoffset: 50;
+  }
+  to {
+    stroke-dashoffset: 534;
+  }
+}
+/* line 193, ../sass/_pie.scss */
+#java {
+  fill: transparent;
+  stroke-width: 15;
+  stroke-dasharray: 534;
+  stroke: #5382A1;
+  stroke-dashoffset: 450;
+}
+
+/* line 199, ../sass/_pie.scss */
+#java:hover {
+  stroke-dashoffset: 450 !important;
+  -webkit-animation: java 2s alternate infinite;
+  animation: java 2s alternate infinite;
+}
+@keyframes java {
+  from {
+    stroke-dashoffset: 450;
+  }
+  to {
+    stroke-dashoffset: 534;
+  }
+}
+/* line 215, ../sass/_pie.scss */
+.charts img {
+  width: 90px;
+  height: 90px;
+  position: absolute;
+  margin-left: 50px;
+  margin-top: 50px;
+}
+
+/* line 13, ../sass/screen.scss */
+h1 {
+  font-family: "Marvel";
+  text-align: center;
+  font-size: 30px;
+}
+
+/* line 19, ../sass/screen.scss */
+h2 {
+  font-family: "Marvel";
+  text-align: center;
+  font-size: 25px;
+  margin: 5px;
+}
+
+/* line 26, ../sass/screen.scss */
+h3 {
+  font-family: "Marvel";
+  text-align: center;
+  font-size: 50px;
+  color: white;
+  background-color: #70C1B3;
+  width: 100%;
+  padding: 5px;
+}
+
+/* line 36, ../sass/screen.scss */
+h4 {
+  font-family: "Raleway";
+  color: #247BA0;
+  font-size: 35px;
+  float: left;
+  border-right: 3px #70C1B3 solid;
+  padding-right: 50px;
+  margin-left: 300px;
+  margin-right: 50px;
+  width: 200px;
+  height: 200px;
+  clear: both;
+  text-align: right;
+}
+
+/* line 51, ../sass/screen.scss */
+h5 {
+  font-family: "Raleway";
+  font-size: 22px;
+  padding: 0px;
+  margin: 0px;
+  text-align: left;
+}
+
+/* line 59, ../sass/screen.scss */
+p {
+  font-family: "Raleway";
+  padding: 0px;
+  margin-bottom: 10px;
+  text-align: left;
+}
+
+/* line 66, ../sass/screen.scss */
+li {
+  text-align: left;
+  font-family: "Raleway";
+  font-size: 20px;
+  padding: 3px;
+  list-style-type: circle;
+}
+
+/* line 74, ../sass/screen.scss */
+a:link {
+  text-decoration: none;
+}
+
+/* line 78, ../sass/screen.scss */
+a:visited {
+  color: black;
+}
+
+/* line 82, ../sass/screen.scss */
+body {
+  margin: 0;
+  border: 10px #70C1B3 solid;
+}
+
+/*NAV*/
+/* line 88, ../sass/screen.scss */
+.nav {
+  text-align: center;
+  font-family: "Marvel";
+}
+/* line 92, ../sass/screen.scss */
+.nav ul {
+  position: relative;
+  display: inline-table;
+  padding: 0px;
+  margin: 0px;
+  text-align: center;
+  border-top: 1px black solid;
+  border-bottom: 1px black solid;
+}
+/* line 102, ../sass/screen.scss */
+.nav li {
+  display: inline-block;
+  font-size: 15px;
+  padding: 10px 20px 10px 20px;
+}
+/* line 108, ../sass/screen.scss */
+.nav a {
+  color: black;
+  position: relative;
+  text-decoration: none;
+  display: block;
+}
+/* line 115, ../sass/screen.scss */
+.nav a:hover {
+  color: #FF1654;
+  transition: color 0.1s ease;
+}
+
+/*HOME*/
+/* line 124, ../sass/screen.scss */
+.portfolio img {
+  width: 200px;
+  height: "";
+}
+/* line 129, ../sass/screen.scss */
+.portfolio div {
+  display: inline-block;
+}
+
+/*RESUME*/
+/* line 135, ../sass/screen.scss */
+.resume {
+  text-align: center;
+}
+
+/* line 139, ../sass/screen.scss */
+.box {
+  margin: 80px 50px 80px 50px;
+  height: 200px;
+}
+/* line 143, ../sass/screen.scss */
+.box a:hover {
+  color: #FF1654;
+}
+
+/* line 148, ../sass/screen.scss */
+.line {
+  border-bottom: 3px solid #B2DBBF;
+}
+
+/* line 152, ../sass/screen.scss */
+section {
+  clear: inherit;
+}
+
+/* line 156, ../sass/screen.scss */
+.skills {
+  position: relative;
+  display: inline-block;
+  color: black;
+  margin: 10px;
+  width: 250px;
+  flex-flow: row wrap;
+}
+/* line 164, ../sass/screen.scss */
+.skills h5 {
+  text-align: center;
+  padding: 20px;
+}
+/* line 169, ../sass/screen.scss */
+.skills figcaption {
+  font-size: 20px;
+  position: relative;
+}
