@@ -13,6 +13,8 @@ $un_offset: 410;
 $bl_offset: 420;
 $hc_offset: 50;
 $jav_offset: 450;
+$wp_offset: 380;
+$js_offset: 400;
 
 #photoshop {
     @include circle;
@@ -204,6 +206,50 @@ $jav_offset: 450;
     @keyframes java {
         from {
             stroke-dashoffset: $jav_offset;
+        }
+        
+        to {
+            stroke-dashoffset: 534;
+        }
+    }
+}
+
+#javascript {
+    @include circle;
+    stroke: black;
+    stroke-dashoffset: $js_offset;
+}
+
+#javascript:hover {
+    stroke-dashoffset: $js_offset !important;
+    -webkit-animation: wordpress 2s alternate infinite;
+    animation: wordpress 2s alternate infinite;
+    
+    @keyframes wodpress {
+        from {
+            stroke-dashoffset: $js_offset;
+        }
+        
+        to {
+            stroke-dashoffset: 534;
+        }
+    }
+}
+
+#wordpress {
+    @include circle;
+    stroke: black;
+    stroke-dashoffset: $wp_offset;
+}
+
+#wordpress:hover {
+    stroke-dashoffset: $wp_offset !important;
+    -webkit-animation: wordpress 2s alternate infinite;
+    animation: wordpress 2s alternate infinite;
+    
+    @keyframes wodpress {
+        from {
+            stroke-dashoffset: $wp_offset;
         }
         
         to {

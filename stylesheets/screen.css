@@ -64,7 +64,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   display: block;
 }
 
-/* line 17, ../sass/_pie.scss */
+/* line 19, ../sass/_pie.scss */
 #photoshop {
   fill: transparent;
   stroke-width: 15;
@@ -73,7 +73,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   stroke-dashoffset: 80;
 }
 
-/* line 23, ../sass/_pie.scss */
+/* line 25, ../sass/_pie.scss */
 #photoshop:hover {
   stroke-dashoffset: 80 !important;
   -webkit-animation: photoshop 2s alternate infinite;
@@ -87,7 +87,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     stroke-dashoffset: 534;
   }
 }
-/* line 39, ../sass/_pie.scss */
+/* line 41, ../sass/_pie.scss */
 #illustrator {
   fill: transparent;
   stroke-width: 15;
@@ -96,7 +96,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   stroke-dashoffset: 90;
 }
 
-/* line 45, ../sass/_pie.scss */
+/* line 47, ../sass/_pie.scss */
 #illustrator:hover {
   stroke-dashoffset: 90 !important;
   -webkit-animation: illustrator 2s alternate infinite;
@@ -110,7 +110,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     stroke-dashoffset: 534;
   }
 }
-/* line 61, ../sass/_pie.scss */
+/* line 63, ../sass/_pie.scss */
 #indesign {
   fill: transparent;
   stroke-width: 15;
@@ -119,7 +119,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   stroke-dashoffset: 380;
 }
 
-/* line 67, ../sass/_pie.scss */
+/* line 69, ../sass/_pie.scss */
 #indesign:hover {
   stroke-dashoffset: 380 !important;
   -webkit-animation: indesign 2s alternate infinite;
@@ -133,7 +133,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     stroke-dashoffset: 534;
   }
 }
-/* line 83, ../sass/_pie.scss */
+/* line 85, ../sass/_pie.scss */
 #premiere {
   fill: transparent;
   stroke-width: 15;
@@ -142,7 +142,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   stroke-dashoffset: 340;
 }
 
-/* line 89, ../sass/_pie.scss */
+/* line 91, ../sass/_pie.scss */
 #premiere:hover {
   stroke-dashoffset: 340 !important;
   -webkit-animation: premiere 2s alternate infinite;
@@ -156,7 +156,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     stroke-dashoffset: 534;
   }
 }
-/* line 105, ../sass/_pie.scss */
+/* line 107, ../sass/_pie.scss */
 #aftereffects {
   fill: transparent;
   stroke-width: 15;
@@ -165,7 +165,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   stroke-dashoffset: 380;
 }
 
-/* line 111, ../sass/_pie.scss */
+/* line 113, ../sass/_pie.scss */
 #aftereffects:hover {
   stroke-dashoffset: 380 !important;
   -webkit-animation: aftereffects 2s alternate infinite;
@@ -179,7 +179,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     stroke-dashoffset: 534;
   }
 }
-/* line 127, ../sass/_pie.scss */
+/* line 129, ../sass/_pie.scss */
 #unity {
   fill: transparent;
   stroke-width: 15;
@@ -188,7 +188,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   stroke-dashoffset: 410;
 }
 
-/* line 133, ../sass/_pie.scss */
+/* line 135, ../sass/_pie.scss */
 #unity:hover {
   stroke-dashoffset: 410 !important;
   -webkit-animation: unity 2s alternate infinite;
@@ -202,7 +202,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     stroke-dashoffset: 534;
   }
 }
-/* line 149, ../sass/_pie.scss */
+/* line 151, ../sass/_pie.scss */
 #blender {
   fill: transparent;
   stroke-width: 15;
@@ -211,7 +211,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   stroke-dashoffset: 420;
 }
 
-/* line 155, ../sass/_pie.scss */
+/* line 157, ../sass/_pie.scss */
 #blender:hover {
   stroke-dashoffset: 420 !important;
   -webkit-animation: blender 2s alternate infinite;
@@ -225,7 +225,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     stroke-dashoffset: 534;
   }
 }
-/* line 171, ../sass/_pie.scss */
+/* line 173, ../sass/_pie.scss */
 #html {
   fill: transparent;
   stroke-width: 15;
@@ -234,7 +234,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   stroke-dashoffset: 50;
 }
 
-/* line 177, ../sass/_pie.scss */
+/* line 179, ../sass/_pie.scss */
 #html:hover {
   stroke-dashoffset: 50 !important;
   -webkit-animation: html 2s alternate infinite;
@@ -248,7 +248,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     stroke-dashoffset: 534;
   }
 }
-/* line 193, ../sass/_pie.scss */
+/* line 195, ../sass/_pie.scss */
 #java {
   fill: transparent;
   stroke-width: 15;
@@ -257,7 +257,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   stroke-dashoffset: 450;
 }
 
-/* line 199, ../sass/_pie.scss */
+/* line 201, ../sass/_pie.scss */
 #java:hover {
   stroke-dashoffset: 450 !important;
   -webkit-animation: java 2s alternate infinite;
@@ -271,7 +271,53 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     stroke-dashoffset: 534;
   }
 }
-/* line 215, ../sass/_pie.scss */
+/* line 217, ../sass/_pie.scss */
+#javascript {
+  fill: transparent;
+  stroke-width: 15;
+  stroke-dasharray: 534;
+  stroke: black;
+  stroke-dashoffset: 400;
+}
+
+/* line 223, ../sass/_pie.scss */
+#javascript:hover {
+  stroke-dashoffset: 400 !important;
+  -webkit-animation: wordpress 2s alternate infinite;
+  animation: wordpress 2s alternate infinite;
+}
+@keyframes wodpress {
+  from {
+    stroke-dashoffset: 400;
+  }
+  to {
+    stroke-dashoffset: 534;
+  }
+}
+/* line 239, ../sass/_pie.scss */
+#wordpress {
+  fill: transparent;
+  stroke-width: 15;
+  stroke-dasharray: 534;
+  stroke: black;
+  stroke-dashoffset: 380;
+}
+
+/* line 245, ../sass/_pie.scss */
+#wordpress:hover {
+  stroke-dashoffset: 380 !important;
+  -webkit-animation: wordpress 2s alternate infinite;
+  animation: wordpress 2s alternate infinite;
+}
+@keyframes wodpress {
+  from {
+    stroke-dashoffset: 380;
+  }
+  to {
+    stroke-dashoffset: 534;
+  }
+}
+/* line 261, ../sass/_pie.scss */
 .charts img {
   width: 90px;
   height: 90px;
