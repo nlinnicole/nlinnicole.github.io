@@ -1,58 +1,58 @@
 @import 'breakpoint';
 @import 'grids';
 @import 'resume';
-@import url(https://fonts.googleapis.com/css?family=Raleway|Marvel|Josefin+Slab);
-$title_font: 'Marvel';
+$title_font: 'Roboto Slab';
 $subtitle_font: 'Raleway';
-$paragraph_font: 'Raleway';
 $colour4: #D9E0E0;
 $colour5: #FF1654;
 
 h1 {
     //Top Info
-    font-family: $title_font;
+    font-family: $subtitle_font;
+    font-weight: 400;
     text-align: center;
     font-size: 15px;
 }
 h2 {
     //Image Title
     font-family: $title_font;
-    text-align: center;
-    margin: 5px;
+    font-weight: 300;
+    text-align: left;
 }
 h3 {
     //Image Subtitle
     font-family: $subtitle_font;
+    font-weight: 400;
+    font-size: 17px;
     text-align: left;
 }
 h4 {
     //Resume Header
-    font-family: $subtitle_font;
+    font-family: $title_font;
     text-align: right;
-    font-size: 20px;
+    font-size: 22px;
 }
 h5 {
     //Resume Content
-    font-family: $subtitle_font;
+    font-family: $title_font;
+//    font-weight: 300;
     text-align: left;
-    font-size: 17px;
+    font-size: 18px;
 }
 p {
     //Resume Text
-    font-family: $paragraph_font;
+    font-family: $subtitle_font;
     text-align: left;
-}
-
-ul {
-    list-style-position: initial;
+    font-size: 16px;
 }
 
 li {
     //Resume Text
-    font-family: $paragraph_font;
+    font-family: $subtitle_font;
     text-align: left;
     padding: 3px;
-    list-style-type: square;
+    list-style-type: circle;
+    font-size: 14px;
 }
 a:link {
     text-decoration: none;
@@ -61,7 +61,7 @@ a:link {
 /*NAV*/
 .nav {
     text-align: center;
-    font-family: $title_font;
+    font-family: $subtitle_font;
     ul {
         position: relative;
         display: inline-table;
@@ -73,8 +73,12 @@ a:link {
     }
     li {
         display: inline-block;
-        font-size: 15px;
+        font-size: 17px;
         padding: 10px 20px 10px 20px;
+        
+        .current_page {
+            color: $colour5;
+        }
     }
     a {
         color: black;
@@ -84,7 +88,7 @@ a:link {
     }
     a:hover {
         color: $colour5;
-        transition: color 0.1s ease;
+        transition: color 0.5s ease;
     }
 }
 
