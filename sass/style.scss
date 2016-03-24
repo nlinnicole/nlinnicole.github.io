@@ -1,0 +1,155 @@
+@import 'breakpoint';
+@import 'grids';
+@import 'resume';
+@import url(https://fonts.googleapis.com/css?family=Raleway|Marvel|Josefin+Slab);
+$title_font: 'Marvel';
+$subtitle_font: 'Raleway';
+$paragraph_font: 'Raleway';
+$colour4: #D9E0E0;
+$colour5: #FF1654;
+h1 {
+    //Top Info
+    font-family: $title_font;
+    text-align: center;
+    font-size: 15px;
+}
+h2 {
+    //Image Title
+    font-family: $title_font;
+    text-align: center;
+    margin: 5px;
+}
+h3 {
+    //Image Subtitle
+    font-family: $subtitle_font;
+    text-align: left;
+}
+h4 {
+    //Resume Header
+    font-family: $subtitle_font;
+    text-align: right;
+    font-size: 20px;
+    padding-right: 30px;
+}
+h5 {
+    //Resume Content
+    font-family: $subtitle_font;
+    text-align: left;
+    font-size: 17px;
+}
+p {
+    //Resume Text
+    font-family: $paragraph_font;
+    text-align: left;
+}
+li {
+    //Resume Text
+    font-family: $paragraph_font;
+    text-align: left;
+    padding: 3px;
+    list-style-type: circle;
+}
+a:link {
+    text-decoration: none;
+}
+
+/*NAV*/
+
+.nav {
+    text-align: center;
+    font-family: $title_font;
+    ul {
+        position: relative;
+        display: inline-table;
+        padding: 0px;
+        margin: 0px;
+        text-align: center;
+        border-top: 1px black solid;
+        border-bottom: 1px black solid;
+    }
+    li {
+        display: inline-block;
+        font-size: 15px;
+        padding: 10px 20px 10px 20px;
+    }
+    a {
+        color: black;
+        position: relative;
+        text-decoration: none;
+        display: block;
+    }
+    a:hover {
+        color: $colour5;
+        transition: color 0.1s ease;
+    }
+}
+.container {
+    @include container;
+}
+.content_index {
+    text-align: center;
+    width: span (9 of 12);
+    //    background-color: bisque;
+    img {
+        width: span(9 of 9);
+    }
+}
+.line {
+    border-bottom: 1px black solid;
+    width: span (9 of 12);
+    margin: 75px 0px 75px 0px;
+}
+//PIECE PAGES
+.content {
+    //    background-color: aquamarine;
+    width: span (9 of 12);
+    text-align: center;
+    img {
+        width: span(4 of 9);
+        text-align: center;
+        padding: 10px;
+    }
+    video {
+        width: span(8 of 12);
+        padding: 50px;
+    }
+}
+.content_text {
+    width: span(8 of 8);
+}
+
+/*
+.box {
+    margin: 80px 50px 80px 50px;
+    height: 200px;
+    
+    a:hover {
+        color: $colour5;
+    }
+}
+
+
+
+section {
+    clear: inherit;
+}
+
+.skills {
+    position: relative;
+    display: inline-block;
+    color: black;
+    margin: 10px;
+    width: 250px;
+    flex-flow: row wrap;
+    
+    h5 {
+        text-align: center;
+        padding: 20px;
+    }
+    
+    figcaption {
+        font-size: 20px;
+        position: relative;
+    }    
+}
+*/

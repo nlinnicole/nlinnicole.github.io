@@ -64,299 +64,33 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   display: block;
 }
 
-/* line 19, ../sass/_pie.scss */
-#photoshop {
-  fill: transparent;
-  stroke-width: 15;
-  stroke-dasharray: 534;
-  stroke: #31C5F0;
-  stroke-dashoffset: 80;
-}
-
-/* line 25, ../sass/_pie.scss */
-#photoshop:hover {
-  stroke-dashoffset: 80 !important;
-  -webkit-animation: photoshop 2s alternate infinite;
-  animation: photoshop 2s alternate infinite;
-}
-@keyframes photoshop {
-  from {
-    stroke-dashoffset: 80;
-  }
-  to {
-    stroke-dashoffset: 534;
-  }
-}
-/* line 41, ../sass/_pie.scss */
-#illustrator {
-  fill: transparent;
-  stroke-width: 15;
-  stroke-dasharray: 534;
-  stroke: #FF7F18;
-  stroke-dashoffset: 90;
-}
-
-/* line 47, ../sass/_pie.scss */
-#illustrator:hover {
-  stroke-dashoffset: 90 !important;
-  -webkit-animation: illustrator 2s alternate infinite;
-  animation: illustrator 2s alternate infinite;
-}
-@keyframes illustrator {
-  from {
-    stroke-dashoffset: 90;
-  }
-  to {
-    stroke-dashoffset: 534;
-  }
-}
-/* line 63, ../sass/_pie.scss */
-#indesign {
-  fill: transparent;
-  stroke-width: 15;
-  stroke-dasharray: 534;
-  stroke: #FF408C;
-  stroke-dashoffset: 380;
-}
-
-/* line 69, ../sass/_pie.scss */
-#indesign:hover {
-  stroke-dashoffset: 380 !important;
-  -webkit-animation: indesign 2s alternate infinite;
-  animation: indesign 2s alternate infinite;
-}
-@keyframes indesign {
-  from {
-    stroke-dashoffset: 380;
-  }
-  to {
-    stroke-dashoffset: 534;
-  }
-}
-/* line 85, ../sass/_pie.scss */
-#premiere {
-  fill: transparent;
-  stroke-width: 15;
-  stroke-dasharray: 534;
-  stroke: #E579FF;
-  stroke-dashoffset: 340;
-}
-
-/* line 91, ../sass/_pie.scss */
-#premiere:hover {
-  stroke-dashoffset: 340 !important;
-  -webkit-animation: premiere 2s alternate infinite;
-  animation: premiere 2s alternate infinite;
-}
-@keyframes premiere {
-  from {
-    stroke-dashoffset: 340;
-  }
-  to {
-    stroke-dashoffset: 534;
-  }
-}
-/* line 107, ../sass/_pie.scss */
-#aftereffects {
-  fill: transparent;
-  stroke-width: 15;
-  stroke-dasharray: 534;
-  stroke: #D8A1FF;
-  stroke-dashoffset: 380;
-}
-
-/* line 113, ../sass/_pie.scss */
-#aftereffects:hover {
-  stroke-dashoffset: 380 !important;
-  -webkit-animation: aftereffects 2s alternate infinite;
-  animation: aftereffects 2s alternate infinite;
-}
-@keyframes aftereffects {
-  from {
-    stroke-dashoffset: 380;
-  }
-  to {
-    stroke-dashoffset: 534;
-  }
-}
-/* line 129, ../sass/_pie.scss */
-#unity {
-  fill: transparent;
-  stroke-width: 15;
-  stroke-dasharray: 534;
-  stroke: #45BFBC;
-  stroke-dashoffset: 410;
-}
-
-/* line 135, ../sass/_pie.scss */
-#unity:hover {
-  stroke-dashoffset: 410 !important;
-  -webkit-animation: unity 2s alternate infinite;
-  animation: unity 2s alternate infinite;
-}
-@keyframes unity {
-  from {
-    stroke-dashoffset: 410;
-  }
-  to {
-    stroke-dashoffset: 534;
-  }
-}
-/* line 151, ../sass/_pie.scss */
-#blender {
-  fill: transparent;
-  stroke-width: 15;
-  stroke-dasharray: 534;
-  stroke: #003AA8;
-  stroke-dashoffset: 420;
-}
-
-/* line 157, ../sass/_pie.scss */
-#blender:hover {
-  stroke-dashoffset: 420 !important;
-  -webkit-animation: blender 2s alternate infinite;
-  animation: blender 2s alternate infinite;
-}
-@keyframes blender {
-  from {
-    stroke-dashoffset: 420;
-  }
-  to {
-    stroke-dashoffset: 534;
-  }
-}
-/* line 173, ../sass/_pie.scss */
-#html {
-  fill: transparent;
-  stroke-width: 15;
-  stroke-dasharray: 534;
-  stroke: #CF649A;
-  stroke-dashoffset: 50;
-}
-
-/* line 179, ../sass/_pie.scss */
-#html:hover {
-  stroke-dashoffset: 50 !important;
-  -webkit-animation: html 2s alternate infinite;
-  animation: html 2s alternate infinite;
-}
-@keyframes html {
-  from {
-    stroke-dashoffset: 50;
-  }
-  to {
-    stroke-dashoffset: 534;
-  }
-}
-/* line 195, ../sass/_pie.scss */
-#java {
-  fill: transparent;
-  stroke-width: 15;
-  stroke-dasharray: 534;
-  stroke: #5382A1;
-  stroke-dashoffset: 450;
-}
-
-/* line 201, ../sass/_pie.scss */
-#java:hover {
-  stroke-dashoffset: 450 !important;
-  -webkit-animation: java 2s alternate infinite;
-  animation: java 2s alternate infinite;
-}
-@keyframes java {
-  from {
-    stroke-dashoffset: 450;
-  }
-  to {
-    stroke-dashoffset: 534;
-  }
-}
-/* line 217, ../sass/_pie.scss */
-#javascript {
-  fill: transparent;
-  stroke-width: 15;
-  stroke-dasharray: 534;
-  stroke: black;
-  stroke-dashoffset: 400;
-}
-
-/* line 223, ../sass/_pie.scss */
-#javascript:hover {
-  stroke-dashoffset: 400 !important;
-  -webkit-animation: wordpress 2s alternate infinite;
-  animation: wordpress 2s alternate infinite;
-}
-@keyframes wodpress {
-  from {
-    stroke-dashoffset: 400;
-  }
-  to {
-    stroke-dashoffset: 534;
-  }
-}
-/* line 239, ../sass/_pie.scss */
-#wordpress {
-  fill: transparent;
-  stroke-width: 15;
-  stroke-dasharray: 534;
-  stroke: black;
-  stroke-dashoffset: 380;
-}
-
-/* line 245, ../sass/_pie.scss */
-#wordpress:hover {
-  stroke-dashoffset: 380 !important;
-  -webkit-animation: wordpress 2s alternate infinite;
-  animation: wordpress 2s alternate infinite;
-}
-@keyframes wodpress {
-  from {
-    stroke-dashoffset: 380;
-  }
-  to {
-    stroke-dashoffset: 534;
-  }
-}
-/* line 261, ../sass/_pie.scss */
-.charts img {
-  width: 90px;
-  height: 90px;
-  position: absolute;
-  margin-left: 50px;
-  margin-top: 50px;
-}
-
-/* line 13, ../sass/screen.scss */
+/* line 12, ../sass/screen.scss */
 h1 {
   font-family: "Marvel";
   text-align: center;
-  font-size: 30px;
 }
 
-/* line 19, ../sass/screen.scss */
+/* line 18, ../sass/screen.scss */
 h2 {
   font-family: "Marvel";
   text-align: center;
-  font-size: 25px;
   margin: 5px;
 }
 
-/* line 26, ../sass/screen.scss */
+/* line 25, ../sass/screen.scss */
 h3 {
   font-family: "Marvel";
   text-align: center;
-  font-size: 50px;
   color: white;
   background-color: #70C1B3;
   width: 100%;
   padding: 5px;
 }
 
-/* line 36, ../sass/screen.scss */
+/* line 35, ../sass/screen.scss */
 h4 {
   font-family: "Raleway";
   color: #247BA0;
-  font-size: 35px;
   float: left;
   border-right: 3px #70C1B3 solid;
   padding-right: 50px;
@@ -368,7 +102,7 @@ h4 {
   text-align: right;
 }
 
-/* line 51, ../sass/screen.scss */
+/* line 50, ../sass/screen.scss */
 h5 {
   font-family: "Raleway";
   font-size: 22px;
@@ -377,15 +111,15 @@ h5 {
   text-align: left;
 }
 
-/* line 59, ../sass/screen.scss */
+/* line 58, ../sass/screen.scss */
 p {
   font-family: "Raleway";
   padding: 0px;
   margin-bottom: 10px;
-  text-align: left;
+  text-align: center;
 }
 
-/* line 66, ../sass/screen.scss */
+/* line 65, ../sass/screen.scss */
 li {
   text-align: left;
   font-family: "Raleway";
@@ -394,29 +128,23 @@ li {
   list-style-type: circle;
 }
 
-/* line 74, ../sass/screen.scss */
+/* line 73, ../sass/screen.scss */
 a:link {
   text-decoration: none;
 }
 
-/* line 78, ../sass/screen.scss */
+/* line 77, ../sass/screen.scss */
 a:visited {
   color: black;
 }
 
-/* line 82, ../sass/screen.scss */
-body {
-  margin: 0;
-  border: 10px #70C1B3 solid;
-}
-
 /*NAV*/
-/* line 88, ../sass/screen.scss */
+/* line 82, ../sass/screen.scss */
 .nav {
   text-align: center;
   font-family: "Marvel";
 }
-/* line 92, ../sass/screen.scss */
+/* line 86, ../sass/screen.scss */
 .nav ul {
   position: relative;
   display: inline-table;
@@ -426,43 +154,48 @@ body {
   border-top: 1px black solid;
   border-bottom: 1px black solid;
 }
-/* line 102, ../sass/screen.scss */
+/* line 96, ../sass/screen.scss */
 .nav li {
   display: inline-block;
   font-size: 15px;
   padding: 10px 20px 10px 20px;
 }
-/* line 108, ../sass/screen.scss */
+/* line 102, ../sass/screen.scss */
 .nav a {
   color: black;
   position: relative;
   text-decoration: none;
   display: block;
 }
-/* line 115, ../sass/screen.scss */
+/* line 109, ../sass/screen.scss */
 .nav a:hover {
   color: #FF1654;
   transition: color 0.1s ease;
 }
 
 /*HOME*/
-/* line 124, ../sass/screen.scss */
+/* line 118, ../sass/screen.scss */
 .portfolio img {
-  width: 300px;
-  height: "";
-  padding: 30px;
-  flex-flow: row wrap;
-  justify-content: space-between;
-  align-items: baseline;
+  width: 60%;
+  text-align: center;
+  padding: 50px;
 }
-/* line 133, ../sass/screen.scss */
+/* line 124, ../sass/screen.scss */
 .portfolio div {
   display: inline-block;
 }
 
-/* line 138, ../sass/screen.scss */
+/* line 129, ../sass/screen.scss */
 .image_container {
   text-align: center;
+}
+
+/*TYPOGRAPHY*/
+/* line 135, ../sass/screen.scss */
+.typography img {
+  width: 50%;
+  text-align: center;
+  padding: 20px;
 }
 
 /*RESUME*/

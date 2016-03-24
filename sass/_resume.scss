@@ -1,0 +1,21 @@
+/*RESUME*/
+@import url(https://fonts.googleapis.com/css?family=Raleway|Marvel|Josefin+Slab);
+$title_font: 'Marvel';
+$subtitle_font: 'Raleway';
+$paragraph_font: 'Raleway';
+
+
+
+.res_heading {
+    @include span(4 of 12);
+//    background-color: aquamarine;
+    border-right: 3px grey solid;
+}
+
+.res_content {
+    @include span (7 of 12);
+    margin-left: gutter(12);
+//    background-color: pink;
+    margin-bottom: 10px;
+}
+

@@ -1,5 +1,4 @@
 @import "compass/reset";
-@import "pie";
 @import url(https://fonts.googleapis.com/css?family=Raleway|Marvel);
 
 $title_font: 'Marvel';
@@ -13,20 +12,20 @@ $accent_colour5: #FF1654;
 h1 {
     font-family: $title_font;
     text-align: center;
-    font-size: 30px;
+//    font-size: 30px;
 }
 
 h2 {
     font-family: $title_font;
     text-align: center;
-    font-size: 25px;
+//    font-size: 25px;
     margin: 5px;
 }
 
 h3 {
     font-family: $title_font;
     text-align: center;
-    font-size: 50px;
+//    font-size: 50px;
     color: white;
     background-color: $accent_colour2; 
     width: 100%;
@@ -36,7 +35,7 @@ h3 {
 h4 {
     font-family: $subtitle_font;
     color: $accent_colour1;
-    font-size: 35px;
+//    font-size: 35px;
     float: left;
     border-right: 3px $accent_colour2 solid;
     padding-right: 50px;
@@ -60,7 +59,7 @@ p {
     font-family: $subtitle_font;
     padding: 0px;
     margin-bottom: 10px;
-    text-align: left;
+    text-align: center;
 }
 
 li {
@@ -77,11 +76,6 @@ a:link {
 
 a:visited {
     color: black;
-}
-
-body {
-    margin: 0;
-    border: 10px $accent_colour2 solid;
 }
 
 /*NAV*/
@@ -122,12 +116,9 @@ body {
 .portfolio {
 
     img {
-        width: 300px;
-        height: "";
-        padding: 30px;
-        flex-flow: row wrap;
-        justify-content: space-between;
-        align-items: baseline;
+        width: 60%;
+        text-align: center;
+        padding: 50px;
     }
 
     div {
@@ -137,6 +128,15 @@ body {
 
 .image_container {
     text-align: center;
+}
+
+/*TYPOGRAPHY*/
+.typography {
+    img {
+        width: 50%;
+        text-align: center;
+        padding: 20px;
+    }
 }
 
 /*RESUME*/
