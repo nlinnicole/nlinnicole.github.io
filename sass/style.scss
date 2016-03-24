@@ -96,11 +96,15 @@ a:link {
     @include container;
 }
 
-.content_index {
+.content {
     text-align: center;
     width: span (9 of 12);
     //    background-color: bisque;
     img {
+        width: span(9 of 9);
+    }
+    
+    video {
         width: span(9 of 9);
     }
 }
@@ -110,58 +114,3 @@ a:link {
     width: span (9 of 12);
     margin: 75px 0px 75px 0px;
 }
-
-//PIECE PAGES
-.content {
-    //    background-color: aquamarine;
-    width: span (9 of 12);
-    text-align: center;
-    img {
-        width: span(4 of 9);
-        text-align: center;
-        padding: 10px;
-    }
-    video {
-        width: span(8 of 12);
-        padding: 50px;
-    }
-}
-.content_text {
-    width: span(8 of 8);
-}
-
-/*
-.box {
-    margin: 80px 50px 80px 50px;
-    height: 200px;
-    
-    a:hover {
-        color: $colour5;
-    }
-}
-
-
-
-section {
-    clear: inherit;
-}
-
-.skills {
-    position: relative;
-    display: inline-block;
-    color: black;
-    margin: 10px;
-    width: 250px;
-    flex-flow: row wrap;
-    
-    h5 {
-        text-align: center;
-        padding: 20px;
-    }
-    
-    figcaption {
-        font-size: 20px;
-        position: relative;
-    }    
-}
-*/

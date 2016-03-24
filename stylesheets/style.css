@@ -129,76 +129,22 @@ a:link {
 }
 
 /* line 99, ../sass/style.scss */
-.content_index {
+.content {
   text-align: center;
   width: span 9 of 12;
 }
 /* line 103, ../sass/style.scss */
-.content_index img {
+.content img {
+  width: 100%;
+}
+/* line 107, ../sass/style.scss */
+.content video {
   width: 100%;
 }
 
-/* line 108, ../sass/style.scss */
+/* line 112, ../sass/style.scss */
 .line {
   border-bottom: 1px black solid;
   width: span 9 of 12;
   margin: 75px 0px 75px 0px;
 }
-
-/* line 115, ../sass/style.scss */
-.content {
-  width: span 9 of 12;
-  text-align: center;
-}
-/* line 119, ../sass/style.scss */
-.content img {
-  width: 43.18182%;
-  text-align: center;
-  padding: 10px;
-}
-/* line 124, ../sass/style.scss */
-.content video {
-  width: 66.10169%;
-  padding: 50px;
-}
-
-/* line 129, ../sass/style.scss */
-.content_text {
-  width: 100%;
-}
-
-/*
-.box {
-    margin: 80px 50px 80px 50px;
-    height: 200px;
-    
-    a:hover {
-        color: $colour5;
-    }
-}
-
-
-
-section {
-    clear: inherit;
-}
-
-.skills {
-    position: relative;
-    display: inline-block;
-    color: black;
-    margin: 10px;
-    width: 250px;
-    flex-flow: row wrap;
-    
-    h5 {
-        text-align: center;
-        padding: 20px;
-    }
-    
-    figcaption {
-        font-size: 20px;
-        position: relative;
-    }    
-}
-*/
