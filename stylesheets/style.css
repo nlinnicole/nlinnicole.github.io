@@ -59,7 +59,7 @@ h5 {
 p {
   font-family: "Raleway";
   text-align: left;
-  font-size: 16px;
+  font-size: 15px;
 }
 
 /* line 49, ../sass/style.scss */
@@ -115,7 +115,8 @@ a:link {
   transition: color 0.5s ease;
 }
 
-/* line 95, ../sass/style.scss */
+/*PAGES*/
+/* line 96, ../sass/style.scss */
 .container {
   max-width: 1120px;
   margin-left: auto;
@@ -128,23 +129,22 @@ a:link {
   clear: both;
 }
 
-/* line 99, ../sass/style.scss */
+/* line 100, ../sass/style.scss */
 .content {
   text-align: center;
   width: span 9 of 12;
 }
-/* line 103, ../sass/style.scss */
+/* line 104, ../sass/style.scss */
 .content img {
   width: 100%;
 }
-/* line 107, ../sass/style.scss */
+/* line 108, ../sass/style.scss */
 .content video {
   width: 100%;
 }
 
-/* line 112, ../sass/style.scss */
+/* line 113, ../sass/style.scss */
 .line {
   border-bottom: 1px black solid;
-  width: span 9 of 12;
   margin: 75px 0px 75px 0px;
 }

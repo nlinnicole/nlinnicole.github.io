@@ -43,7 +43,7 @@ p {
     //Resume Text
     font-family: $subtitle_font;
     text-align: left;
-    font-size: 16px;
+    font-size: 15px;
 }
 
 li {
@@ -92,6 +92,7 @@ a:link {
     }
 }
 
+/*PAGES*/
 .container {
     @include container;
 }
@@ -111,6 +112,5 @@ a:link {
 
 .line {
     border-bottom: 1px black solid;
-    width: span (9 of 12);
     margin: 75px 0px 75px 0px;
 }
