@@ -1,49 +1,49 @@
 /*RESUME*/
 @import url(https://fonts.googleapis.com/css?family=Raleway|Marvel|Josefin+Slab);
-@import url(https://fonts.googleapis.com/css?family=Raleway|Marvel|Josefin+Slab);
-/* line 9, ../sass/_resume.scss */
+/* line 2, ../sass/_resume.scss */
 .res_heading {
-  width: 32.20339%;
+  width: 20.45455%;
   float: left;
-  margin-right: 1.69492%;
-  border-right: 3px grey solid;
+  margin-right: 2.27273%;
+  align-self: flex-start;
 }
 
-/* line 15, ../sass/_resume.scss */
+/* line 8, ../sass/_resume.scss */
 .res_content {
-  width: 57.62712%;
+  width: 65.90909%;
   float: left;
-  margin-right: 1.69492%;
+  margin-right: 2.27273%;
   margin-left: 1.69492%;
-  margin-bottom: 10px;
+  margin-bottom: 30px;
+  padding-left: 30px;
+  border-left: 1px black solid;
 }
 
-/* line 10, ../sass/style.scss */
+/* line 11, ../sass/style.scss */
 h1 {
   font-family: "Marvel";
   text-align: center;
   font-size: 15px;
 }
 
-/* line 16, ../sass/style.scss */
+/* line 17, ../sass/style.scss */
 h2 {
   font-family: "Marvel";
   text-align: center;
   margin: 5px;
 }
 
-/* line 22, ../sass/style.scss */
+/* line 23, ../sass/style.scss */
 h3 {
   font-family: "Raleway";
   text-align: left;
 }
 
-/* line 27, ../sass/style.scss */
+/* line 28, ../sass/style.scss */
 h4 {
   font-family: "Raleway";
   text-align: right;
   font-size: 20px;
-  padding-right: 30px;
 }
 
 /* line 34, ../sass/style.scss */
@@ -59,26 +59,31 @@ p {
   text-align: left;
 }
 
-/* line 45, ../sass/style.scss */
+/* line 46, ../sass/style.scss */
+ul {
+  list-style-position: initial;
+}
+
+/* line 50, ../sass/style.scss */
 li {
   font-family: "Raleway";
   text-align: left;
   padding: 3px;
-  list-style-type: circle;
+  list-style-type: square;
 }
 
-/* line 52, ../sass/style.scss */
+/* line 57, ../sass/style.scss */
 a:link {
   text-decoration: none;
 }
 
 /*NAV*/
-/* line 58, ../sass/style.scss */
+/* line 62, ../sass/style.scss */
 .nav {
   text-align: center;
   font-family: "Marvel";
 }
-/* line 61, ../sass/style.scss */
+/* line 65, ../sass/style.scss */
 .nav ul {
   position: relative;
   display: inline-table;
@@ -88,26 +93,26 @@ a:link {
   border-top: 1px black solid;
   border-bottom: 1px black solid;
 }
-/* line 70, ../sass/style.scss */
+/* line 74, ../sass/style.scss */
 .nav li {
   display: inline-block;
   font-size: 15px;
   padding: 10px 20px 10px 20px;
 }
-/* line 75, ../sass/style.scss */
+/* line 79, ../sass/style.scss */
 .nav a {
   color: black;
   position: relative;
   text-decoration: none;
   display: block;
 }
-/* line 81, ../sass/style.scss */
+/* line 85, ../sass/style.scss */
 .nav a:hover {
   color: #FF1654;
   transition: color 0.1s ease;
 }
 
-/* line 86, ../sass/style.scss */
+/* line 91, ../sass/style.scss */
 .container {
   max-width: 1120px;
   margin-left: auto;
@@ -120,41 +125,41 @@ a:link {
   clear: both;
 }
 
-/* line 89, ../sass/style.scss */
+/* line 95, ../sass/style.scss */
 .content_index {
   text-align: center;
   width: span 9 of 12;
 }
-/* line 93, ../sass/style.scss */
+/* line 99, ../sass/style.scss */
 .content_index img {
   width: 100%;
 }
 
-/* line 97, ../sass/style.scss */
+/* line 104, ../sass/style.scss */
 .line {
   border-bottom: 1px black solid;
   width: span 9 of 12;
   margin: 75px 0px 75px 0px;
 }
 
-/* line 103, ../sass/style.scss */
+/* line 111, ../sass/style.scss */
 .content {
   width: span 9 of 12;
   text-align: center;
 }
-/* line 107, ../sass/style.scss */
+/* line 115, ../sass/style.scss */
 .content img {
   width: 43.18182%;
   text-align: center;
   padding: 10px;
 }
-/* line 112, ../sass/style.scss */
+/* line 120, ../sass/style.scss */
 .content video {
   width: 66.10169%;
   padding: 50px;
 }
 
-/* line 117, ../sass/style.scss */
+/* line 125, ../sass/style.scss */
 .content_text {
   width: 100%;
 }

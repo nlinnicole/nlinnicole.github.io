@@ -7,6 +7,7 @@ $subtitle_font: 'Raleway';
 $paragraph_font: 'Raleway';
 $colour4: #D9E0E0;
 $colour5: #FF1654;
+
 h1 {
     //Top Info
     font-family: $title_font;
@@ -29,7 +30,6 @@ h4 {
     font-family: $subtitle_font;
     text-align: right;
     font-size: 20px;
-    padding-right: 30px;
 }
 h5 {
     //Resume Content
@@ -42,19 +42,23 @@ p {
     font-family: $paragraph_font;
     text-align: left;
 }
+
+ul {
+    list-style-position: initial;
+}
+
 li {
     //Resume Text
     font-family: $paragraph_font;
     text-align: left;
     padding: 3px;
-    list-style-type: circle;
+    list-style-type: square;
 }
 a:link {
     text-decoration: none;
 }
 
 /*NAV*/
-
 .nav {
     text-align: center;
     font-family: $title_font;
@@ -83,9 +87,11 @@ a:link {
         transition: color 0.1s ease;
     }
 }
+
 .container {
     @include container;
 }
+
 .content_index {
     text-align: center;
     width: span (9 of 12);
@@ -94,11 +100,13 @@ a:link {
         width: span(9 of 9);
     }
 }
+
 .line {
     border-bottom: 1px black solid;
     width: span (9 of 12);
     margin: 75px 0px 75px 0px;
 }
+
 //PIECE PAGES
 .content {
     //    background-color: aquamarine;
