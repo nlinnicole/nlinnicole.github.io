@@ -14,8 +14,14 @@
   margin-right: 2.27273%;
   margin-left: 1.69492%;
   margin-bottom: 30px;
-  padding-left: 30px;
+  padding: 10px 10px 20px 30px;
   border-left: 1px black solid;
+}
+
+/* line 17, ../sass/_resume.scss */
+#res_link {
+  text-align: right;
+  margin-right: 100px;
 }
 
 /* line 9, ../sass/style.scss */
@@ -53,16 +59,17 @@ h5 {
   font-family: "Roboto Slab";
   text-align: left;
   font-size: 18px;
+  line-height: 10%;
 }
 
-/* line 42, ../sass/style.scss */
+/* line 43, ../sass/style.scss */
 p {
   font-family: "Raleway";
   text-align: left;
   font-size: 15px;
 }
 
-/* line 49, ../sass/style.scss */
+/* line 50, ../sass/style.scss */
 li {
   font-family: "Raleway";
   text-align: left;
@@ -71,18 +78,18 @@ li {
   font-size: 14px;
 }
 
-/* line 57, ../sass/style.scss */
+/* line 58, ../sass/style.scss */
 a:link {
   text-decoration: none;
 }
 
 /*NAV*/
-/* line 62, ../sass/style.scss */
+/* line 63, ../sass/style.scss */
 .nav {
   text-align: center;
   font-family: "Raleway";
 }
-/* line 65, ../sass/style.scss */
+/* line 66, ../sass/style.scss */
 .nav ul {
   position: relative;
   display: inline-table;
@@ -92,31 +99,31 @@ a:link {
   border-top: 1px black solid;
   border-bottom: 1px black solid;
 }
-/* line 74, ../sass/style.scss */
+/* line 75, ../sass/style.scss */
 .nav li {
   display: inline-block;
   font-size: 17px;
   padding: 10px 20px 10px 20px;
 }
-/* line 79, ../sass/style.scss */
+/* line 80, ../sass/style.scss */
 .nav li .current_page {
   color: #FF1654;
 }
-/* line 83, ../sass/style.scss */
+/* line 84, ../sass/style.scss */
 .nav a {
   color: black;
   position: relative;
   text-decoration: none;
   display: block;
 }
-/* line 89, ../sass/style.scss */
+/* line 90, ../sass/style.scss */
 .nav a:hover {
   color: #FF1654;
   transition: color 0.5s ease;
 }
 
 /*PAGES*/
-/* line 96, ../sass/style.scss */
+/* line 97, ../sass/style.scss */
 .container {
   max-width: 1120px;
   margin-left: auto;
@@ -129,21 +136,22 @@ a:link {
   clear: both;
 }
 
-/* line 100, ../sass/style.scss */
+/* line 101, ../sass/style.scss */
 .content {
   text-align: center;
   width: span 9 of 12;
 }
-/* line 104, ../sass/style.scss */
+/* line 105, ../sass/style.scss */
 .content img {
   width: 100%;
+  padding: 20px;
 }
-/* line 108, ../sass/style.scss */
+/* line 110, ../sass/style.scss */
 .content video {
   width: 100%;
 }
 
-/* line 113, ../sass/style.scss */
+/* line 115, ../sass/style.scss */
 .line {
   border-bottom: 1px black solid;
   margin: 75px 0px 75px 0px;
