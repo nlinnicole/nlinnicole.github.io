@@ -83,13 +83,20 @@ a:link {
   text-decoration: none;
 }
 
+/* line 62, ../sass/style.scss */
+footer {
+  font-family: "Raleway";
+  text-align: center;
+  margin-top: 50px;
+}
+
 /*NAV*/
-/* line 63, ../sass/style.scss */
+/* line 69, ../sass/style.scss */
 .nav {
   text-align: center;
   font-family: "Raleway";
 }
-/* line 66, ../sass/style.scss */
+/* line 72, ../sass/style.scss */
 .nav ul {
   position: relative;
   display: inline-table;
@@ -99,31 +106,31 @@ a:link {
   border-top: 1px black solid;
   border-bottom: 1px black solid;
 }
-/* line 75, ../sass/style.scss */
+/* line 81, ../sass/style.scss */
 .nav li {
   display: inline-block;
   font-size: 17px;
   padding: 10px 20px 10px 20px;
 }
-/* line 80, ../sass/style.scss */
+/* line 86, ../sass/style.scss */
 .nav li .current_page {
   color: #FF1654;
 }
-/* line 84, ../sass/style.scss */
+/* line 90, ../sass/style.scss */
 .nav a {
   color: black;
   position: relative;
   text-decoration: none;
   display: block;
 }
-/* line 90, ../sass/style.scss */
+/* line 96, ../sass/style.scss */
 .nav a:hover {
   color: #FF1654;
   transition: color 0.5s ease;
 }
 
 /*PAGES*/
-/* line 97, ../sass/style.scss */
+/* line 103, ../sass/style.scss */
 .container {
   max-width: 1120px;
   margin-left: auto;
@@ -136,22 +143,22 @@ a:link {
   clear: both;
 }
 
-/* line 101, ../sass/style.scss */
+/* line 107, ../sass/style.scss */
 .content {
   text-align: center;
   width: span 9 of 12;
 }
-/* line 105, ../sass/style.scss */
+/* line 111, ../sass/style.scss */
 .content img {
   width: 100%;
   padding: 20px;
 }
-/* line 110, ../sass/style.scss */
+/* line 116, ../sass/style.scss */
 .content video {
   width: 100%;
 }
 
-/* line 115, ../sass/style.scss */
+/* line 121, ../sass/style.scss */
 .line {
   border-bottom: 1px black solid;
   margin: 75px 0px 75px 0px;
