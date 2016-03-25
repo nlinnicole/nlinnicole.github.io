@@ -151,14 +151,13 @@ footer {
 /* line 111, ../sass/style.scss */
 .content img {
   width: 100%;
-  padding: 20px;
 }
-/* line 116, ../sass/style.scss */
+/* line 115, ../sass/style.scss */
 .content video {
   width: 100%;
 }
 
-/* line 121, ../sass/style.scss */
+/* line 120, ../sass/style.scss */
 .line {
   border-bottom: 1px black solid;
   margin: 75px 0px 75px 0px;
