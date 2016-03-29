@@ -79,7 +79,7 @@ li {
 
 /* line 58, ../sass/style.scss */
 a {
-  color: black;
+  color: #FF1654;
 }
 
 /* line 62, ../sass/style.scss */
@@ -155,13 +155,14 @@ footer {
 /* line 115, ../sass/style.scss */
 .content img {
   width: 100%;
+  margin-top: 30px;
 }
-/* line 119, ../sass/style.scss */
+/* line 120, ../sass/style.scss */
 .content video {
   width: 100%;
 }
 
-/* line 124, ../sass/style.scss */
+/* line 125, ../sass/style.scss */
 .line {
   border-bottom: 1px black solid;
   margin: 75px 0px 75px 0px;
