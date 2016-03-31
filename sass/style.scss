@@ -1,11 +1,9 @@
 @import 'breakpoint';
 @import 'grids';
-@import 'resume';
 $title_font: 'Roboto Slab';
 $subtitle_font: 'Raleway';
-$colour4: #D9E0E0;
-$colour5: #FF1654;
-
+$colour1: #FF1654;
+$colour2: #3D409E;
 h1 {
     //Top Info
     font-family: $subtitle_font;
@@ -35,7 +33,7 @@ h4 {
 h5 {
     //Resume Content
     font-family: $title_font;
-//    font-weight: 300;
+    //    font-weight: 300;
     text-align: left;
     font-size: 18px;
 }
@@ -45,7 +43,6 @@ p {
     text-align: left;
     font-size: 15px;
 }
-
 li {
     //Resume Text
     font-family: $subtitle_font;
@@ -54,15 +51,14 @@ li {
     list-style-type: circle;
     font-size: 14px;
 }
-
 a {
-    color: $colour5;
-}
-
-a:link {
+    color: black;
     text-decoration: none;
 }
-
+a:hover {
+    color: $colour2;
+    transition: color 0.5s ease;
+}
 footer {
     font-family: $subtitle_font;
     text-align: center;
@@ -70,6 +66,7 @@ footer {
 }
 
 /*NAV*/
+
 .nav {
     text-align: center;
     font-family: $subtitle_font;
@@ -86,9 +83,8 @@ footer {
         display: inline-block;
         font-size: 17px;
         padding: 10px 20px 10px 20px;
-        
         .current_page {
-            color: $colour5;
+            color: $colour1;
         }
     }
     a {
@@ -98,16 +94,19 @@ footer {
         display: block;
     }
     a:hover {
-        color: $colour5;
+        color: $colour1;
         transition: color 0.5s ease;
     }
 }
+.title {
+    font-size: 30px;
+}
 
 /*PAGES*/
+
 .container {
     @include container;
 }
-
 .content {
     text-align: center;
     width: span (9 of 12);
@@ -116,13 +115,44 @@ footer {
         width: span(9 of 9);
         margin-top: 30px;
     }
-    
     video {
         width: span(9 of 9);
     }
+    .social {
+        width: 32px;
+    }
 }
-
 .line {
     border-bottom: 1px black solid;
     margin: 75px 0px 75px 0px;
+}
+
+/*ABOUT*/
+
+#about_img {
+    width: span(4 of 9);
+    text-align: center;
+}
+#about_h2 {
+    text-align: center;
+}
+
+/*RESUME*/
+
+.res_heading {
+    @include span(2 of 9);
+    //    background-color: aquamarine;
+    align-self: flex-start;
+}
+.res_content {
+    @include span (6 of 9);
+    margin-left: gutter(12);
+    margin-bottom: 30px;
+    //    background-color: pink;
+    padding: 10px 10px 20px 30px;
+    border-left: 1px black solid;
+}
+#res_link {
+    text-align: right;
+    margin-right: 100px;
 }
