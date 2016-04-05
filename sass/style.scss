@@ -3,7 +3,6 @@
 $title_font: 'Roboto Slab';
 $subtitle_font: 'Raleway';
 $colour1: #FF1654;
-$colour2: #3D409E;
 h1 {
     //Top Info
     font-family: $subtitle_font;
@@ -56,7 +55,7 @@ a {
     text-decoration: none;
 }
 a:hover {
-    color: $colour2;
+    color: $colour1;
     transition: color 0.5s ease;
 }
 footer {
