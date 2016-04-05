@@ -117,8 +117,9 @@ footer {
     video {
         width: span(9 of 9);
     }
-    .social {
-        width: 32px;
+    svg:hover {
+        fill: $colour1;
+        transition: fill 0.5s ease;
     }
 }
 .line {

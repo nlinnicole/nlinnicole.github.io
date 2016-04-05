@@ -143,30 +143,31 @@ footer {
   width: 100%;
 }
 /* line 120, ../sass/style.scss */
-.content .social {
-  width: 32px;
+.content svg:hover {
+  fill: #FF1654;
+  transition: fill 0.5s ease;
 }
 
-/* line 124, ../sass/style.scss */
+/* line 125, ../sass/style.scss */
 .line {
   border-bottom: 1px black solid;
   margin: 75px 0px 75px 0px;
 }
 
 /*ABOUT*/
-/* line 131, ../sass/style.scss */
+/* line 132, ../sass/style.scss */
 #about_img {
   width: 43.18182%;
   text-align: center;
 }
 
-/* line 135, ../sass/style.scss */
+/* line 136, ../sass/style.scss */
 #about_h2 {
   text-align: center;
 }
 
 /*RESUME*/
-/* line 141, ../sass/style.scss */
+/* line 142, ../sass/style.scss */
 .res_heading {
   width: 20.45455%;
   float: left;
@@ -174,7 +175,7 @@ footer {
   align-self: flex-start;
 }
 
-/* line 146, ../sass/style.scss */
+/* line 147, ../sass/style.scss */
 .res_content {
   width: 65.90909%;
   float: left;
@@ -185,7 +186,7 @@ footer {
   border-left: 1px black solid;
 }
 
-/* line 154, ../sass/style.scss */
+/* line 155, ../sass/style.scss */
 #res_link {
   text-align: right;
   margin-right: 100px;
