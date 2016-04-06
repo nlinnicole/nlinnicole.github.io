@@ -1,4 +1,4 @@
-/* line 6, ../sass/style.scss */
+/* line 7, ../sass/style.scss */
 h1 {
   font-family: "Raleway";
   font-weight: 400;
@@ -6,14 +6,14 @@ h1 {
   font-size: 15px;
 }
 
-/* line 13, ../sass/style.scss */
+/* line 14, ../sass/style.scss */
 h2 {
   font-family: "Roboto Slab";
   font-weight: 300;
   text-align: left;
 }
 
-/* line 19, ../sass/style.scss */
+/* line 20, ../sass/style.scss */
 h3 {
   font-family: "Raleway";
   font-weight: 400;
@@ -21,28 +21,28 @@ h3 {
   text-align: left;
 }
 
-/* line 26, ../sass/style.scss */
+/* line 27, ../sass/style.scss */
 h4 {
   font-family: "Roboto Slab";
   text-align: right;
   font-size: 22px;
 }
 
-/* line 32, ../sass/style.scss */
+/* line 33, ../sass/style.scss */
 h5 {
   font-family: "Roboto Slab";
   text-align: left;
   font-size: 18px;
 }
 
-/* line 39, ../sass/style.scss */
+/* line 40, ../sass/style.scss */
 p {
   font-family: "Raleway";
   text-align: left;
   font-size: 15px;
 }
 
-/* line 45, ../sass/style.scss */
+/* line 46, ../sass/style.scss */
 li {
   font-family: "Raleway";
   text-align: left;
@@ -51,19 +51,19 @@ li {
   font-size: 14px;
 }
 
-/* line 53, ../sass/style.scss */
+/* line 54, ../sass/style.scss */
 a {
   color: black;
   text-decoration: none;
 }
 
-/* line 57, ../sass/style.scss */
+/* line 58, ../sass/style.scss */
 a:hover {
   color: #FF1654;
   transition: color 0.5s ease;
 }
 
-/* line 61, ../sass/style.scss */
+/* line 62, ../sass/style.scss */
 footer {
   font-family: "Raleway";
   text-align: center;
@@ -71,12 +71,12 @@ footer {
 }
 
 /*NAV*/
-/* line 69, ../sass/style.scss */
+/* line 70, ../sass/style.scss */
 .nav {
   text-align: center;
   font-family: "Raleway";
 }
-/* line 72, ../sass/style.scss */
+/* line 73, ../sass/style.scss */
 .nav ul {
   position: relative;
   display: inline-table;
@@ -86,36 +86,36 @@ footer {
   border-top: 1px black solid;
   border-bottom: 1px black solid;
 }
-/* line 81, ../sass/style.scss */
+/* line 82, ../sass/style.scss */
 .nav li {
   display: inline-block;
   font-size: 17px;
   padding: 10px 20px 10px 20px;
 }
-/* line 85, ../sass/style.scss */
+/* line 86, ../sass/style.scss */
 .nav li .current_page {
   color: #FF1654;
 }
-/* line 89, ../sass/style.scss */
+/* line 90, ../sass/style.scss */
 .nav a {
   color: black;
   position: relative;
   text-decoration: none;
   display: block;
 }
-/* line 95, ../sass/style.scss */
+/* line 96, ../sass/style.scss */
 .nav a:hover {
   color: #FF1654;
   transition: color 0.5s ease;
 }
 
-/* line 100, ../sass/style.scss */
+/* line 101, ../sass/style.scss */
 .title {
   font-size: 30px;
 }
 
 /*PAGES*/
-/* line 106, ../sass/style.scss */
+/* line 107, ../sass/style.scss */
 .container {
   max-width: 1120px;
   margin-left: auto;
@@ -128,46 +128,51 @@ footer {
   clear: both;
 }
 
-/* line 109, ../sass/style.scss */
+/* line 110, ../sass/style.scss */
 .content {
   text-align: center;
   width: span 9 of 12;
 }
-/* line 113, ../sass/style.scss */
+/* line 114, ../sass/style.scss */
 .content img {
   width: 100%;
   margin-top: 30px;
 }
-/* line 117, ../sass/style.scss */
+/* line 118, ../sass/style.scss */
 .content video {
   width: 100%;
 }
-/* line 120, ../sass/style.scss */
+/* line 122, ../sass/style.scss */
+.content svg {
+  width: 50px;
+}
+/* line 125, ../sass/style.scss */
 .content svg:hover {
+  width: 50px;
   fill: #FF1654;
   transition: fill 0.5s ease;
 }
 
-/* line 125, ../sass/style.scss */
+/* line 131, ../sass/style.scss */
 .line {
   border-bottom: 1px black solid;
   margin: 75px 0px 75px 0px;
 }
 
 /*ABOUT*/
-/* line 132, ../sass/style.scss */
+/* line 138, ../sass/style.scss */
 #about_img {
   width: 43.18182%;
   text-align: center;
 }
 
-/* line 136, ../sass/style.scss */
+/* line 142, ../sass/style.scss */
 #about_h2 {
   text-align: center;
 }
 
 /*RESUME*/
-/* line 142, ../sass/style.scss */
+/* line 148, ../sass/style.scss */
 .res_heading {
   width: 20.45455%;
   float: left;
@@ -175,7 +180,7 @@ footer {
   align-self: flex-start;
 }
 
-/* line 147, ../sass/style.scss */
+/* line 153, ../sass/style.scss */
 .res_content {
   width: 65.90909%;
   float: left;
@@ -186,7 +191,7 @@ footer {
   border-left: 1px black solid;
 }
 
-/* line 155, ../sass/style.scss */
+/* line 161, ../sass/style.scss */
 #res_link {
   text-align: right;
   margin-right: 100px;

@@ -1,5 +1,6 @@
 @import 'breakpoint';
 @import 'grids';
+@import 'media';
 $title_font: 'Roboto Slab';
 $subtitle_font: 'Raleway';
 $colour1: #FF1654;
@@ -117,7 +118,12 @@ footer {
     video {
         width: span(9 of 9);
     }
+    
+    svg {
+        width: 50px;
+    }
     svg:hover {
+        width: 50px;
         fill: $colour1;
         transition: fill 0.5s ease;
     }
