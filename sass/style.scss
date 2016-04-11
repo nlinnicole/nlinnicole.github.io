@@ -1,6 +1,5 @@
 @import 'breakpoint';
 @import 'grids';
-@import 'media';
 $title_font: 'Roboto Slab';
 $subtitle_font: 'Raleway';
 $colour1: #FF1654;
@@ -161,4 +160,12 @@ footer {
 #res_link {
     text-align: right;
     margin-right: 100px;
+}
+
+@media (max-width: 600px) {
+    .nav{
+        li {
+            font-size: 25px;
+        }
+    }
 }
