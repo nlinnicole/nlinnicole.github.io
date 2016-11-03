@@ -1,6 +1,4 @@
-@import 'breakpoint';
-@import 'grids';
-$title_font: 'Roboto Slab';
+$title_font: 'Abel';
 $subtitle_font: 'Raleway';
 $colour1: #FF1654;
 h1 {
@@ -12,6 +10,12 @@ h1 {
 }
 h2 {
     //Image Title
+    font-family: $title_font;
+    font-weight: 300;
+    text-align: left;
+}
+.h2_index{
+    //Index Title
     font-family: $title_font;
     font-weight: 300;
     text-align: center;
@@ -26,7 +30,7 @@ h3 {
 h4 {
     //Resume Header
     font-family: $title_font;
-    text-align: right;
+    text-align: left;
     font-size: 22px;
 }
 h5 {
@@ -68,7 +72,7 @@ footer {
 
 .nav {
     text-align: center;
-    font-family: $subtitle_font;
+    font-family: $title_font;
     ul {
         position: relative;
         display: inline-table;
@@ -130,8 +134,7 @@ footer {
 /*ABOUT*/
 
 #about_img {
-    width: span(4 of 9);
-    text-align: center;
+    width: 500px;
 }
 #about {
     font-family: $title_font;
@@ -141,18 +144,10 @@ footer {
 }
 
 /*RESUME*/
-
-.res_heading {
-    @include span(2 of 9);
-    //    background-color: aquamarine;
-    align-self: flex-start;
-}
 .res_content {
-    @include span (6 of 9);
-    margin-left: gutter(12);
     margin-bottom: 30px;
     //    background-color: pink;
-    padding: 10px 10px 20px 30px;
+    padding: 10px 10px 40px 30px;
     border-left: 1px black solid;
 }
 #res_link {
