@@ -10,7 +10,7 @@ h1 {
 h2 {
   font-family: "Roboto Slab";
   font-weight: 300;
-  text-align: left;
+  text-align: center;
 }
 
 /* line 19, ../sass/style.scss */
@@ -18,7 +18,7 @@ h3 {
   font-family: "Raleway";
   font-weight: 400;
   font-size: 17px;
-  text-align: left;
+  text-align: center;
 }
 
 /* line 26, ../sass/style.scss */
@@ -116,63 +116,54 @@ footer {
 
 /*PAGES*/
 /* line 106, ../sass/style.scss */
-.container {
-  max-width: 1120px;
-  margin-left: auto;
-  margin-right: auto;
-}
-/* line 12, ../../../../../../Ruby22-x64/lib/ruby/gems/2.2.0/gems/susy-2.2.12/sass/susy/output/support/_clearfix.scss */
-.container:after {
-  content: " ";
+.box {
+  text-align: center;
+  width: 20.33%;
   display: block;
-  clear: both;
 }
 
-/* line 109, ../sass/style.scss */
+/* line 111, ../sass/style.scss */
 .content {
   text-align: center;
-  width: span 9 of 12;
 }
 /* line 113, ../sass/style.scss */
 .content img {
-  width: 100%;
   margin-top: 30px;
 }
-/* line 117, ../sass/style.scss */
-.content video {
-  width: 100%;
-}
-/* line 121, ../sass/style.scss */
+/* line 116, ../sass/style.scss */
 .content svg {
   width: 50px;
 }
-/* line 124, ../sass/style.scss */
+/* line 119, ../sass/style.scss */
 .content svg:hover {
   width: 50px;
   fill: #FF1654;
   transition: fill 0.5s ease;
 }
 
-/* line 130, ../sass/style.scss */
+/* line 125, ../sass/style.scss */
 .line {
   border-bottom: 1px black solid;
   margin: 75px 0px 75px 0px;
 }
 
 /*ABOUT*/
-/* line 137, ../sass/style.scss */
+/* line 132, ../sass/style.scss */
 #about_img {
   width: 43.18182%;
   text-align: center;
 }
 
-/* line 141, ../sass/style.scss */
-#about_h2 {
+/* line 136, ../sass/style.scss */
+#about {
+  font-family: "Roboto Slab";
+  font-weight: 300;
   text-align: center;
+  font-size: 20px;
 }
 
 /*RESUME*/
-/* line 147, ../sass/style.scss */
+/* line 145, ../sass/style.scss */
 .res_heading {
   width: 20.45455%;
   float: left;
@@ -180,7 +171,7 @@ footer {
   align-self: flex-start;
 }
 
-/* line 152, ../sass/style.scss */
+/* line 150, ../sass/style.scss */
 .res_content {
   width: 65.90909%;
   float: left;
@@ -191,14 +182,14 @@ footer {
   border-left: 1px black solid;
 }
 
-/* line 160, ../sass/style.scss */
+/* line 158, ../sass/style.scss */
 #res_link {
   text-align: right;
   margin-right: 100px;
 }
 
 @media (max-width: 600px) {
-  /* line 167, ../sass/style.scss */
+  /* line 164, ../sass/style.scss */
   .nav li {
     font-size: 25px;
   }

@@ -14,14 +14,14 @@ h2 {
     //Image Title
     font-family: $title_font;
     font-weight: 300;
-    text-align: left;
+    text-align: center;
 }
 h3 {
     //Image Subtitle
     font-family: $subtitle_font;
     font-weight: 400;
     font-size: 17px;
-    text-align: left;
+    text-align: center;
 }
 h4 {
     //Resume Header
@@ -103,21 +103,16 @@ footer {
 
 /*PAGES*/
 
-.container {
-    @include container;
+.box {
+    text-align: center;
+    width: 20.33%;
+    display: block;
 }
 .content {
     text-align: center;
-    width: span (9 of 12);
-    //    background-color: bisque;
     img {
-        width: span(9 of 9);
         margin-top: 30px;
     }
-    video {
-        width: span(9 of 9);
-    }
-    
     svg {
         width: 50px;
     }
@@ -138,8 +133,11 @@ footer {
     width: span(4 of 9);
     text-align: center;
 }
-#about_h2 {
+#about {
+    font-family: $title_font;
+    font-weight: 300;
     text-align: center;
+    font-size: 20px;
 }
 
 /*RESUME*/
@@ -161,9 +159,8 @@ footer {
     text-align: right;
     margin-right: 100px;
 }
-
 @media (max-width: 600px) {
-    .nav{
+    .nav {
         li {
             font-size: 25px;
         }
