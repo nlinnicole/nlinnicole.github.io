@@ -1,190 +1,144 @@
-/* line 4, ../sass/style.scss */
-h1 {
-  font-family: "Raleway";
-  font-weight: 400;
-  text-align: center;
-  font-size: 15px;
-}
-
-/* line 11, ../sass/style.scss */
-h2 {
-  font-family: "Abel";
-  font-weight: 300;
-  text-align: left;
-}
-
-/* line 17, ../sass/style.scss */
-.h2_index {
-  font-family: "Abel";
-  font-weight: 300;
+@import url("https://fonts.googleapis.com/css?family=Oswald|Roboto+Condensed:300, 400");
+@import url("https://fonts.googleapis.com/css?family=Oswald|Roboto");
+/* line 3, ../sass/_resume.scss */
+.resume {
+  margin-top: 100px;
   text-align: center;
 }
 
-/* line 23, ../sass/style.scss */
-h3 {
-  font-family: "Raleway";
-  font-weight: 400;
-  font-size: 17px;
+/* line 7, ../sass/_resume.scss */
+.res-heading {
+  font-family: 'Oswald' sans-serif;
+  font-size: 1.4em;
+  text-decoration: underline;
+}
+
+/* line 3, ../sass/style.scss */
+a {
+  text-decoration: none;
+  color: black;
+}
+
+/* line 7, ../sass/style.scss */
+a:hover {
+  text-decoration: overline;
+}
+
+/* line 10, ../sass/style.scss */
+#top {
+  top: 0;
+  font-family: 'Oswald', sans-serif;
+  font-size: 1.4em;
+}
+/* line 14, ../sass/style.scss */
+#top #left {
+  top: 0;
+  left: 0;
+  text-align: left;
+  margin-left: 30px;
+  margin-top: 20px;
+  display: inline-block;
+}
+/* line 22, ../sass/style.scss */
+#top #right {
+  top: 0;
+  right: 0;
+  text-align: right;
+  margin-right: 30px;
+  margin-top: 20px;
+  width: 100px;
+  display: inline-block;
+  float: right;
+}
+
+/* line 33, ../sass/style.scss */
+#bottom {
   text-align: center;
+  font-family: 'Oswald', sans-serif;
+  font-size: 1.4em;
 }
 
-/* line 30, ../sass/style.scss */
-h4 {
-  font-family: "Abel";
-  text-align: left;
-  font-size: 22px;
+/* line 38, ../sass/style.scss */
+.block {
+  display: flex;
+  border: 8px white solid;
+  align-items: center;
+  overflow: hidden;
 }
 
-/* line 36, ../sass/style.scss */
-h5 {
-  font-family: "Abel";
-  text-align: left;
-  font-size: 18px;
-}
-
-/* line 43, ../sass/style.scss */
-p {
-  font-family: "Raleway";
-  text-align: left;
-  font-size: 15px;
+/* line 45, ../sass/style.scss */
+.block img {
+  width: 100%;
+  height: 100%;
 }
 
 /* line 49, ../sass/style.scss */
-li {
-  font-family: "Raleway";
-  text-align: left;
-  padding: 3px;
-  list-style-type: circle;
-  font-size: 14px;
+.content {
+  margin-top: 100px;
+  text-align: center;
+}
+
+/* line 53, ../sass/style.scss */
+.black {
+  background-color: #C7C7C7;
 }
 
 /* line 57, ../sass/style.scss */
-a {
-  color: black;
-  text-decoration: none;
+#resume {
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 
 /* line 61, ../sass/style.scss */
-a:hover {
-  color: #FF1654;
-  transition: color 0.5s ease;
+.res-heading {
+  font-family: 'Oswald', sans-serif;
+  font-size: 1.4em;
+  text-decoration: overline;
+  margin-bottom: 10px;
+  color: white;
 }
 
-/* line 65, ../sass/style.scss */
-footer {
-  font-family: "Raleway";
-  text-align: center;
-  margin-top: 50px;
+/* line 68, ../sass/style.scss */
+.res-name {
+  font-family: 'Roboto Condensed', sans-serif;
+  font-size: 1.2em;
+  font-weight: 400;
+  color: white;
 }
 
-/*NAV*/
-/* line 73, ../sass/style.scss */
-.nav {
-  text-align: center;
-  font-family: "Abel";
-}
-/* line 76, ../sass/style.scss */
-.nav ul {
-  position: relative;
-  display: inline-table;
-  padding: 0px;
-  margin: 0px;
-  text-align: center;
-  border-top: 1px black solid;
-  border-bottom: 1px black solid;
-}
-/* line 85, ../sass/style.scss */
-.nav li {
-  display: inline-block;
-  font-size: 17px;
-  padding: 10px 20px 10px 20px;
-}
-/* line 89, ../sass/style.scss */
-.nav li .current_page {
-  color: #FF1654;
-}
-/* line 93, ../sass/style.scss */
-.nav a {
-  color: black;
-  position: relative;
-  text-decoration: none;
-  display: block;
-}
-/* line 99, ../sass/style.scss */
-.nav a:hover {
-  color: #FF1654;
-  transition: color 0.5s ease;
-}
-
-/* line 104, ../sass/style.scss */
-.title {
-  font-size: 30px;
-}
-
-/*PAGES*/
-/* line 110, ../sass/style.scss */
-.box {
-  text-align: center;
-  width: 20.33%;
-  display: block;
-}
-
-/* line 115, ../sass/style.scss */
-.content {
-  text-align: center;
-}
-/* line 117, ../sass/style.scss */
-.content img {
-  margin-top: 30px;
-}
-/* line 120, ../sass/style.scss */
-.content svg {
-  width: 50px;
-}
-/* line 123, ../sass/style.scss */
-.content svg:hover {
-  width: 50px;
-  fill: #FF1654;
-  transition: fill 0.5s ease;
-}
-
-/* line 129, ../sass/style.scss */
-.line {
-  border-bottom: 1px black solid;
-  margin: 75px 0px 75px 0px;
-}
-
-/*ABOUT*/
-/* line 136, ../sass/style.scss */
-#about_img {
-  width: 500px;
-}
-
-/* line 139, ../sass/style.scss */
-#about {
-  font-family: "Abel";
+/* line 74, ../sass/style.scss */
+.res-content {
+  font-family: 'Roboto Condensed', sans-serif;
+  font-size: 1.2em;
   font-weight: 300;
-  text-align: center;
-  font-size: 20px;
+  margin-bottom: 20px;
+  color: white;
 }
 
-/*RESUME*/
-/* line 147, ../sass/style.scss */
-.res_content {
-  margin-bottom: 30px;
-  padding: 10px 10px 40px 30px;
-  border-left: 1px black solid;
+/* line 82, ../sass/style.scss */
+#about-content {
+  margin: 50px;
+  font-family: 'Roboto Condensed', sans-serif;
+  font-size: 1.3em;
+  color: white;
+  text-align: justify;
 }
 
-/* line 153, ../sass/style.scss */
-#res_link {
-  text-align: right;
-  margin-right: 100px;
+/* line 90, ../sass/style.scss */
+.title {
+  font-family: 'Oswald', sans-serif;
+  font-size: 1.2em;
 }
 
-@media (max-width: 600px) {
-  /* line 159, ../sass/style.scss */
-  .nav li {
-    font-size: 25px;
-  }
+/* line 94, ../sass/style.scss */
+.title img {
+  width: 100%;
+  height: 100%;
+  margin-top: 20px;
+}
+
+/* line 99, ../sass/style.scss */
+.description {
+  font-family: 'Roboto Condensed', sans-serif;
+  margin: 20px;
 }

@@ -1,163 +1,102 @@
-$title_font: 'Abel';
-$subtitle_font: 'Raleway';
-$colour1: #FF1654;
-h1 {
-    //Top Info
-    font-family: $subtitle_font;
-    font-weight: 400;
-    text-align: center;
-    font-size: 15px;
-}
-h2 {
-    //Image Title
-    font-family: $title_font;
-    font-weight: 300;
-    text-align: left;
-}
-.h2_index{
-    //Index Title
-    font-family: $title_font;
-    font-weight: 300;
-    text-align: center;
-}
-h3 {
-    //Image Subtitle
-    font-family: $subtitle_font;
-    font-weight: 400;
-    font-size: 17px;
-    text-align: center;
-}
-h4 {
-    //Resume Header
-    font-family: $title_font;
-    text-align: left;
-    font-size: 22px;
-}
-h5 {
-    //Resume Content
-    font-family: $title_font;
-    //    font-weight: 300;
-    text-align: left;
-    font-size: 18px;
-}
-p {
-    //Resume Text
-    font-family: $subtitle_font;
-    text-align: left;
-    font-size: 15px;
-}
-li {
-    //Resume Text
-    font-family: $subtitle_font;
-    text-align: left;
-    padding: 3px;
-    list-style-type: circle;
-    font-size: 14px;
-}
+@import url('https://fonts.googleapis.com/css?family=Oswald|Roboto+Condensed:300, 400');
+@import 'resume';
 a {
-    color: black;
     text-decoration: none;
+    color: black;
 }
 a:hover {
-    color: $colour1;
-    transition: color 0.5s ease;
+    text-decoration: overline;
 }
-footer {
-    font-family: $subtitle_font;
-    text-align: center;
-    margin-top: 50px;
-}
-
-/*NAV*/
-
-.nav {
-    text-align: center;
-    font-family: $title_font;
-    ul {
-        position: relative;
-        display: inline-table;
-        padding: 0px;
-        margin: 0px;
-        text-align: center;
-        border-top: 1px black solid;
-        border-bottom: 1px black solid;
-    }
-    li {
+#top {
+    top: 0;
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.4em;
+    #left {
+        top: 0;
+        left: 0;
+        text-align: left;
+        margin-left: 30px;
+        margin-top: 20px;
         display: inline-block;
-        font-size: 17px;
-        padding: 10px 20px 10px 20px;
-        .current_page {
-            color: $colour1;
-        }
     }
-    a {
-        color: black;
-        position: relative;
-        text-decoration: none;
-        display: block;
-    }
-    a:hover {
-        color: $colour1;
-        transition: color 0.5s ease;
+    #right {
+        top: 0;
+        right: 0;
+        text-align: right;
+        margin-right: 30px;
+        margin-top: 20px;
+        width: 100px;
+        display: inline-block;
+        float: right;
     }
 }
-.title {
-    font-size: 30px;
-}
-
-/*PAGES*/
-
-.box {
+#bottom {
     text-align: center;
-    width: 20.33%;
-    display: block;
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.4em;
+}
+.block {
+    //    background-color: pink;
+    display: flex;
+    border: 8px white solid;
+    align-items: center;
+    overflow: hidden;
+}
+.block img {
+    width: 100%;
+    height: 100%;
 }
 .content {
+    margin-top: 100px;
     text-align: center;
-    img {
-        margin-top: 30px;
-    }
-    svg {
-        width: 50px;
-    }
-    svg:hover {
-        width: 50px;
-        fill: $colour1;
-        transition: fill 0.5s ease;
-    }
 }
-.line {
-    border-bottom: 1px black solid;
-    margin: 75px 0px 75px 0px;
+.black {
+    background-color: #C7C7C7;
 }
-
-/*ABOUT*/
-
-#about_img {
-    width: 500px;
+//RESUME
+#resume {
+    padding-top: 20px;
+    padding-bottom: 20px;
 }
-#about {
-    font-family: $title_font;
+.res-heading {
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.4em;
+    text-decoration: overline;
+    margin-bottom: 10px;
+    color: white;
+}
+.res-name {
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 1.2em;
+    font-weight: 400;
+    color: white;
+}
+.res-content {
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 1.2em;
     font-weight: 300;
-    text-align: center;
-    font-size: 20px;
+    margin-bottom: 20px;
+    color: white;
 }
-
-/*RESUME*/
-.res_content {
-    margin-bottom: 30px;
-    //    background-color: pink;
-    padding: 10px 10px 40px 30px;
-    border-left: 1px black solid;
+//ABOUT
+#about-content {
+    margin: 50px;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 1.3em;
+    color: white;
+    text-align: justify;
 }
-#res_link {
-    text-align: right;
-    margin-right: 100px;
+//PAGES
+.title {
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.2em;
 }
-@media (max-width: 600px) {
-    .nav {
-        li {
-            font-size: 25px;
-        }
-    }
+.title img {
+    width: 100%;
+    height: 100%;
+    margin-top: 20px;
+}
+.description {
+    font-family: 'Roboto Condensed', sans-serif;
+    margin: 20px;
 }

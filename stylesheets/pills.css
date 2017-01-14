@@ -20,7 +20,7 @@ body {
 .row {
     display: block;
     margin: 0 auto;
-    max-width: 70%;
+    max-width: 50%;
     overflow: hidden;
     *zoom: 1;
     text-align: center;
