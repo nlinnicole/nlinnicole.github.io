@@ -15,16 +15,18 @@ html {
     background-color: #D3CED8;
 }
 #bar {
-  width: 90%;
-  margin: 0 auto;
-  height: 15px;
-  background-color: #D3CED8;
+    width: 90%;
+    margin: 0 auto;
+    height: 15px;
+    background-color: #D3CED8;
 }
+
 /*
 #bar-animation {
     width: 100%;
 }
 */
+
 .break {
     height: 50px;
 }
@@ -56,7 +58,6 @@ h3 {
     margin: 0;
     letter-spacing: 2px;
 }
-
 h4 {
     font-family: 'Dosis', sans-serif;
     font-size: 1.4em;
@@ -76,7 +77,9 @@ h5 {
     text-align: left;
     padding-left: 20px;
 }
+
 /*HOME*/
+
 .thumbnail {
     max-width: 350px;
     margin: 0 auto;
@@ -108,6 +111,7 @@ h5 {
 }
 
 /*PAGES*/
+
 .img-big {
     max-width: 900px;
     padding-left: 10px;
@@ -157,7 +161,9 @@ h5 {
 iframe {
     width: 100%;
 }
+
 /*RESPONSIVE*/
+
 @media all and (max-width:800px) {
     .text-right {
         text-align: center;
@@ -171,6 +177,10 @@ iframe {
     .img-full {
         padding-left: 0px;
     }
+    .thumb {
+        -webkit-filter: grayscale(0);
+        filter: grayscale(0);
+    }
 }
 @media all and (max-width:650px) {
     .text-right {
@@ -182,7 +192,11 @@ iframe {
     .img-big {
         padding-left: 0px
     }
-      .img-full {
+    .img-full {
         padding-left: 0px;
+    }
+     .thumb {
+        -webkit-filter: grayscale(0);
+        filter: grayscale(0);
     }
 }
