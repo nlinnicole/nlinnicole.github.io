@@ -39,7 +39,7 @@
 }
 .grid-container {
     width: 100%;
-    max-width: 90%;
+    max-width: 80%;
     margin: auto;
     text-align: center;
 }
@@ -51,13 +51,14 @@
     content: "";
     display: table;
     clear: both;
+/*    margin: 15px;*/
 }
 [class*='col-'] {
     float: left;
     min-height: 1px;
     width: 16.66%;
     /*-- our gutter -- */
-    /*    padding: 12px;*/
+    padding-bottom: 20px;
     /*    background-color: #FFDCDC;*/
 }
 .col-1 {
@@ -94,6 +95,19 @@
     color: white;
 }
 @media all and (max-width:800px) {
+    .grid-container {
+        width: 100%;
+        max-width: 100%;
+        margin: auto;
+        text-align: center;
+    }
+    .row:before,
+    .row:after {
+        content: "";
+        display: table;
+        clear: both;
+        margin: 0px;
+    }
     .col-1 {
         width: 33.33%;
     }
@@ -121,11 +135,25 @@
     #top,
     #bottom,
     #left,
-    #right {
+    #right,
+    #home-break{
         display: none;
     }
 }
 @media all and (max-width:650px) {
+    .grid-container {
+        width: 100%;
+        max-width: 100%;
+        margin: auto;
+        text-align: center;
+    }
+    .row:before,
+    .row:after {
+        content: "";
+        display: table;
+        clear: both;
+        margin: 0px;
+    }
     .col-1 {
         width: 50%;
     }
@@ -147,7 +175,8 @@
     #top,
     #bottom,
     #left,
-    #right {
+    #right,
+    #home-break{
         display: none;
     }
 }

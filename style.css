@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Space+Mono: 400, 700');
+@import url('https://fonts.googleapis.com/css?family=Dosis: 300, 600|Space+Mono: 400, 700');
 body,
 html {
     margin,
@@ -15,27 +15,136 @@ html {
     background-color: #D3CED8;
 }
 .break {
-    height: 60px;
+    height: 50px;
+}
+a {
+    text-decoration: none;
+    color: black;
 }
 h1 {
     font-family: 'Space Mono', monospace;
     letter-spacing: 20px;
+    font-size: 1.3em;
 }
-img {
+h2 {
+    font-family: 'Dosis', sans-serif;
+    font-size: 2.1em;
+    font-weight: 300;
+    margin: 0;
+}
+h3 {
+    font-family: 'Dosis', sans-serif;
+    font-size: 1.2em;
+    font-weight: 300;
+    margin: 0;
+    letter-spacing: 2px;
+}
+
+h4 {
+    font-family: 'Dosis', sans-serif;
+    font-size: 1.4em;
+    font-weight: 300;
+    margin: 0;
+}
+h5 {
+    font-family: 'Dosis', sans-serif;
+    font-size: 1em;
+    font-weight: 600;
+    margin: 0;
+}
+.right {
+    text-align: right;
+}
+.left {
+    text-align: left;
+    padding-left: 20px;
+}
+/*HOME*/
+
+.thumb {
     width: 320px;
+    -webkit-filter: grayscale(0.95);
+    filter: grayscale(0.95);
+    transition: filter 0.3s;
+}
+.thumb:hover {
+    -webkit-filter: grayscale(0);
+    filter: grayscale(0);
 }
 .name {
+    padding-top: 8px;
     font-family: 'Space Mono', monospace;
     font-size: 1.0em;
 }
-
 #about {
     font-family: 'Space Mono', monospace;
     font-weight: 700;
     letter-spacing: 8px;
 }
-
 .logo {
     height: 40px;
     width: 40px;
+}
+
+/*PAGES*/
+.img-big {
+    max-width: 900px;
+    padding-left: 10px;
+    text-align: center;
+}
+.img-big img {
+    width: 100%;
+}
+.img-full {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding-left: 30px;
+}
+.img-full img {
+    width: 100%;
+}
+.img-small {
+    max-width: 750px;
+}
+.img-small img {
+    width: 100%;
+}
+.description {
+    font-family: 'Dosis', sans-serif;
+}
+.text-right {
+    text-align: right;
+}
+#link {
+    color: #D3CED8;
+    text-decoration: underline;
+}
+#portrait {
+    max-width: 430px;
+}
+#portrait-img {
+    width: 100%;
+}
+/*RESPONSIVE*/
+@media all and (max-width:800px) {
+    .text-right {
+        text-align: center;
+    }
+    .img-big {
+        padding-left: 0px
+    }
+    .img-full {
+        padding-left: 0px;
+    }
+}
+@media all and (max-width:650px) {
+    .text-right {
+        text-align: center;
+    }
+    .img-big {
+        padding-left: 0px
+    }
+      .img-full {
+        padding-left: 0px;
+    }
 }
