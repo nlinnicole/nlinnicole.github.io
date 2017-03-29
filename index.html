@@ -1,10 +1,12 @@
-<html>
-
+<!DOCTYPE html>
 <head>
     <meta charset="UTF-8">
     <link href="style.css" rel="stylesheet" type="text/css">
     <link href="grid.css" rel="stylesheet" type="text/css">
+    <script src="p5-zip/p5.min.js"></script>
+    <script src="animation.js"></script>
     <title>Nicole Lin</title>
+    <link rel="shortcut icon" href="images/favicon.gif">
 </head>
 
 <body>
@@ -19,7 +21,7 @@
                 <br />
                 <a href="index.html"><h1>NICOLE LIN</h1></a>
                 <br />
-                <div id="bar"></div>
+                <div id="bar-home"></div>
             </div>
         </div>
     </div>
@@ -29,27 +31,35 @@
         </div>
         <div class="row">
             <div class="col-2">
-                <a href="throne.html">
-                    <img class="thumb" src="images/throneroom_thumb.jpg">
-                </a>
-                <div class="name">
-                    Throne Room
+                <div class="thumbnail">
+                    <a href="throne.html">
+                        <img class="thumb" src="images/throneroom_thumb.jpg">
+                    </a>
+                    <div class="name">
+                        <span><div class="bar-thumb"></div></span>
+                        <span>Throne Room</span>
+                    </div>
                 </div>
             </div>
             <div class="col-2">
-                <a href="lantern.html">
-                    <img class="thumb" src="images/lantern_thumb.jpg">
-                </a>
-                <div class="name">
-                    Moth Lantern
+                <div class="thumbnail">
+                    <a href="lantern.html">
+                        <img class="thumb" src="images/lantern_thumb.jpg">
+                    </a>
+                    <div class="name">
+                        <span><div class="bar-thumb"></div></span><span>Moth Lantern</span>
+                    </div>
                 </div>
             </div>
             <div class="col-2">
-                <a href="crystalline.html">
-                    <img class="thumb" src="images/crystalline_thumb.jpg">
-                </a>
-                <div class="name">
-                    Crystalline
+                <div class="thumbnail">
+                    <a href="crystalline.html">
+                        <img class="thumb" src="images/crystalline_thumb.jpg">
+                    </a>
+                    <div class="name">
+                        <span><div class="bar-thumb"></div></span>
+                        <span>Crystalline</span>
+                    </div>
                 </div>
             </div>
         </div>
@@ -60,28 +70,36 @@
         </div>
         <div class="row">
             <div class="col-2">
-                <a href="couture.html">
-                    <img class="thumb" src="images/fashion_thumb.jpg">
-                </a>
-                <div class="name">
-                    Couture Illustration
-                </div>
-
-            </div>
-            <div class="col-2">
-                <a href="pilgrimage.html">
-                <img class="thumb" src="images/pilgrimage_thumb.jpg">
-                </a>
-                <div class="name">
-                    Pilgrimage
+                <div class="thumbnail">
+                    <a href="couture.html">
+                        <img class="thumb" src="images/fashion_thumb.jpg">
+                    </a>
+                    <div class="name">
+                        <span><div class="bar-thumb"></div></span>
+                        <span>Couture</span>
+                    </div>
                 </div>
             </div>
             <div class="col-2">
-                <a href="wunderkammr.html">
-                <img class="thumb" src="images/video_thumb.jpg">
-                </a>
-                <div class="name">
-                    Wunderkammer
+                <div class="thumbnail">
+                    <a href="pilgrimage.html">
+                        <img class="thumb" src="images/pilgrimage_thumb.jpg">
+                    </a>
+                    <div class="name">
+                        <span><div class="bar-thumb"></div></span>
+                        <span>Pilgrimage</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-2">
+                <div class="thumbnail">
+                    <a href="wunderkammr.html">
+                        <img class="thumb" src="images/video_thumb.jpg">
+                    </a>
+                    <div class="name">
+                        <span><div class="bar-thumb"></div></span>
+                        <span>Wunderkammer</span>
+                    </div>
                 </div>
             </div>
         </div>
