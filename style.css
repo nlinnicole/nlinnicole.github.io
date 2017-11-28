@@ -104,6 +104,10 @@ h5 {
     font-family: 'Space Mono', monospace;
     font-weight: 700;
     letter-spacing: 8px;
+    transition: color 0.2s ease;
+}
+#about:hover {
+    color: #D3CED8;
 }
 .logo {
     height: 40px;
