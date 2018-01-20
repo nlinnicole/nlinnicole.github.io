@@ -145,6 +145,9 @@ h5 {
 .text-right {
     text-align: right;
 }
+.text-left{
+    text-align: left;
+}
 #link {
     color: #D3CED8;
     text-decoration: underline;
