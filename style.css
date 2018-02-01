@@ -148,6 +148,11 @@ h5 {
 .text-left{
     text-align: left;
 }
+.text {
+    text-align:justify;
+    padding-left: 10px;
+    padding-right: 10px;
+}
 #link {
     color: #D3CED8;
     text-decoration: underline;
