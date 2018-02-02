@@ -139,6 +139,9 @@ h5 {
 .img-small img {
     width: 100%;
 }
+.portrait img {
+    width: 302px;
+}
 .description {
     font-family: 'Dosis', sans-serif;
 }
