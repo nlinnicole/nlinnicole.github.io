@@ -142,6 +142,9 @@ h5 {
 .portrait img {
     width: 302px;
 }
+.square img {
+    width: 440px;
+}
 .description {
     font-family: 'Dosis', sans-serif;
 }
