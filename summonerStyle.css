@@ -1,0 +1,10 @@
+.red {
+    background: #873848;
+}
+
+#bar-red {
+    width: 90%;
+    margin: 0 auto;
+    height: 15px;
+    background-color: #873848;
+}

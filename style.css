@@ -1,34 +1,23 @@
-@import url('https://fonts.googleapis.com/css?family=Dosis: 300, 600|Space+Mono: 400, 700');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:500i,500,700');
 body,
 html {
     margin,
     padding: 0;
     background-color: #FFF;
 }
-#header {
-    text-align: center;
-}
-#bar-home {
-    width: 90%;
-    margin: 0 auto;
-    height: 15px;
-    background-color: #D3CED8;
-}
 #bar {
     width: 90%;
     margin: 0 auto;
-    height: 15px;
+    height: 10px;
     background-color: #D3CED8;
 }
 
-/*
-#bar-animation {
-    width: 100%;
+.def-color {
+    background: #D3CED8;
 }
-*/
 
 .break {
-    height: 50px;
+    height: 30px;
 }
 .bar-thumb {
     background-color: #D3CED8;
@@ -41,15 +30,20 @@ a {
     color: black;
 }
 h1 {
-    font-family: 'Space Mono', monospace;
-    letter-spacing: 20px;
+    font-family: 'Montserrat', monospace;
+    letter-spacing: 10px;
     font-size: 1.3em;
+    font-weight: 700;
+    padding-left: 120px;
+    padding-right: 120px;
+    padding-top: 10px;
 }
 h2 {
-    font-family: 'Dosis', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     font-size: 2.1em;
     font-weight: 300;
     margin: 0;
+    text-align: left;
 }
 h3 {
     font-family: 'Dosis', sans-serif;
@@ -65,15 +59,18 @@ h4 {
     margin: 0;
 }
 h5 {
-    font-family: 'Dosis', sans-serif;
+    font-family: 'Montserrat', serif;
     font-size: 1em;
-    font-weight: 600;
+    font-style: italic;
+    font-weight: 500;
     margin: 0;
 }
 .right {
+    float: right;
     text-align: right;
 }
 .left {
+    float: left;
     text-align: left;
     padding-left: 20px;
 }
@@ -139,6 +136,9 @@ h5 {
 .img-small img {
     width: 100%;
 }
+.img-center img {
+    text-align:center;
+}
 .portrait img {
     width: 302px;
 }
@@ -146,7 +146,8 @@ h5 {
     width: 440px;
 }
 .description {
-    font-family: 'Dosis', sans-serif;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
 }
 .text-right {
     text-align: right;
@@ -155,7 +156,7 @@ h5 {
     text-align: left;
 }
 .text {
-    text-align:justify;
+    text-align: justify;
     padding-left: 10px;
     padding-right: 10px;
 }
