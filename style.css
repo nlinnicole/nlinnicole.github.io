@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Montserrat:500i,500,700');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,500i,500,700');
 body,
 html {
     margin,
@@ -44,19 +44,21 @@ h2 {
     font-weight: 300;
     margin: 0;
     text-align: left;
+    letter-spacing: 2px;
 }
 h3 {
-    font-family: 'Dosis', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     font-size: 1.2em;
-    font-weight: 300;
+    font-weight: 700;
     margin: 0;
     letter-spacing: 2px;
 }
 h4 {
-    font-family: 'Dosis', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     font-size: 1.4em;
-    font-weight: 300;
+    font-weight: 500;
     margin: 0;
+    text-align:left;
 }
 h5 {
     font-family: 'Montserrat', serif;
@@ -109,6 +111,7 @@ h5 {
 .logo {
     height: 40px;
     width: 40px;
+    padding: 5px;
 }
 
 /*PAGES*/
@@ -180,7 +183,16 @@ h5 {
 iframe {
     width: 100%;
 }
-
+.nav {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+}
+.nav a{
+    padding: 10px;
+}
+.nav a:hover{
+    color:#873848;
+}
 /*RESPONSIVE*/
 
 @media all and (max-width:800px) {
