@@ -67,6 +67,9 @@ h5 {
     font-weight: 500;
     margin: 0;
 }
+h5 a{
+    color: #873848;
+}
 .right {
     float: right;
     text-align: right;
