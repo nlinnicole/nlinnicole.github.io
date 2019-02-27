@@ -23,10 +23,15 @@ html {
 }
 
 #about {
-    float: left;
     text-align: left;
     text-orientation: upright;
     writing-mode: vertical-lr;
+    display: inline-block;
+}
+
+.logo-container {
+    position: relative;
+    float: right;
 }
 
 #name {
@@ -39,7 +44,8 @@ html {
     margin: 0px 50px 0px 50px;
     padding: 0px;
     text-align: center;
-    float: right;
+    display: inline-block;
+    width: 100%;
 }
 
 .def-color {
@@ -94,10 +100,17 @@ h4 {
 h5 {
     font-family: 'Montserrat', serif;
     font-size: 1em;
-    font-style: italic;
+    font-weight: 700;
+    margin: 0;
+}
+
+h6 {
+    font-family: 'Montserrat', serif;
+    font-size: 1em;
     font-weight: 500;
     margin: 0;
 }
+
 h5 a{
     color: #873848;
 }
@@ -146,6 +159,7 @@ h5 a{
     height: 40px;
     width: 40px;
     padding: 5px;
+    margin: 5px auto;
 }
 
 /*PAGES*/
@@ -210,7 +224,15 @@ h5 a{
 }
 #resume {
     margin: 0 auto;
+    display: inline-block;
 }
+
+#resume-dates {
+    display: inline-block;
+    float: right;
+    text-align: left;
+}
+
 .video {
     margin: 0 auto;
 }
