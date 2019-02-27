@@ -1,15 +1,45 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat:300,500i,500,700');
+@font-face{
+    font-family:"Bebas Neue W01 Regular";
+    src:url("Fonts/1444649/3d9ec9a9-76a2-4cfe-b376-76e7340c3b50.eot?#iefix");
+    src:url("Fonts/1444649/3d9ec9a9-76a2-4cfe-b376-76e7340c3b50.eot?#iefix") format("eot"),url("Fonts/1444649/e0d6f852-5401-4bbf-9672-47a50c5c87c6.woff2") format("woff2"),url("Fonts/1444649/7fedd582-6ae3-4850-be2f-4acae2e74fa5.woff") format("woff"),url("Fonts/1444649/d6e08ef3-40db-4ac3-82df-f062f55a72f5.ttf") format("truetype");
+}
+
 body,
 html {
-    margin,
-    padding: 0;
+    margin: 0px;
+    padding: 0px;
     background-color: #FFF;
 }
 #bar {
-    width: 90%;
+    width: 70%;
     margin: 0 auto;
     height: 10px;
     background-color: #D3CED8;
+}
+
+.about-container {
+    float: left;
+}
+
+#about {
+    float: left;
+    text-align: left;
+    text-orientation: upright;
+    writing-mode: vertical-lr;
+}
+
+#name {
+    text-align: center;
+    margin: 0px;
+    padding: 0px;
+}
+
+.mosaic {
+    margin: 0px 50px 0px 50px;
+    padding: 0px;
+    text-align: center;
+    float: right;
 }
 
 .def-color {
@@ -19,6 +49,7 @@ html {
 .break {
     height: 30px;
 }
+
 .bar-thumb {
     background-color: #D3CED8;
     height: 10px;
@@ -30,13 +61,13 @@ a {
     color: black;
 }
 h1 {
-    font-family: 'Montserrat', monospace;
+    font-family: 'Bebas Neue', monospace;
     letter-spacing: 10px;
     font-size: 1.3em;
     font-weight: 700;
-    padding-left: 120px;
-    padding-right: 120px;
-    padding-top: 10px;
+    padding-top: 20px;
+    padding-left: 20px;
+    color: #D3CED8;
 }
 h2 {
     font-family: 'Montserrat', sans-serif;
@@ -83,9 +114,9 @@ h5 a{
 /*HOME*/
 
 .thumbnail {
-    max-width: 350px;
+    max-width: 95%;
     margin: 0 auto;
-    padding: 5px;
+    text-align: center;
 }
 .thumb {
     width: 100%;
