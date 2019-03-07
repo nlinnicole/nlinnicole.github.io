@@ -212,21 +212,17 @@ h5 a{
     color: #D3CED8;
     text-decoration: underline;
 }
-#portrait {
-    max-width: 430px;
-    margin: 0 auto;
-}
-#portrait-img {
-    width: 100%;
-}
-#resume {
-    margin: 0 auto;
+
+/* RESUME */
+
+#resume-container {
     display: inline-block;
+    text-align: center;
+    width: 100%;
 }
 
 #resume-dates {
     display: inline-block;
-    float: right;
     text-align: left;
 }
 
