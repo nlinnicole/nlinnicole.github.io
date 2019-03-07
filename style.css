@@ -11,6 +11,83 @@ html {
     padding: 0px;
     background-color: #FFF;
 }
+.def-color {
+    background: #D3CED8;
+}
+
+/* GENERAL SETTINGS */
+h1 {
+    font-family: 'Bebas Neue', monospace;
+    letter-spacing: 10px;
+    font-size: 1.3em;
+    font-weight: 700;
+    padding-top: 20px;
+    padding-left: 20px;
+    color: #D3CED8;
+}
+h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.1em;
+    font-weight: 300;
+    margin: 0;
+    text-align: left;
+    letter-spacing: 2px;
+}
+h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.2em;
+    font-weight: 700;
+    margin: 0;
+    letter-spacing: 2px;
+    color: #D3CED8; 
+}
+h3 a {
+    color: #D3CED8; 
+    text-decoration: none;
+}
+h3 a:hover{
+    color: #76707c;
+    transition: 0.3s;
+}
+h4 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.4em;
+    font-weight: 500;
+    margin: 0;
+    text-align:left;
+}
+h5 {
+    font-family: 'Montserrat', serif;
+    font-size: 1em;
+    font-weight: 700;
+    margin: 0;
+}
+
+h6 {
+    font-family: 'Montserrat', serif;
+    font-size: 1em;
+    font-weight: 500;
+    margin: 0;
+}
+a {
+    text-decoration: none;
+}
+a :hover {
+    color: #76707c;
+    transition: 0.3s;
+}
+
+.right {
+    float: right;
+    text-align: right;
+}
+.left {
+    float: left;
+    text-align: left;
+    padding-left: 20px;
+}
+
+/* HOME */
 #bar {
     width: 70%;
     margin: 0 auto;
@@ -39,88 +116,6 @@ html {
     display: block;
 }
 
-#name {
-    text-align: center;
-    margin: 0px;
-    padding: 0px;
-}
-
-.def-color {
-    background: #D3CED8;
-}
-
-.break {
-    height: 30px;
-}
-
-.bar-thumb {
-    background-color: #D3CED8;
-    height: 10px;
-    width: 100%;
-    float: left;
-}
-a {
-    text-decoration: none;
-    color: black;
-}
-h1 {
-    font-family: 'Bebas Neue', monospace;
-    letter-spacing: 10px;
-    font-size: 1.3em;
-    font-weight: 700;
-    padding-top: 20px;
-    padding-left: 20px;
-    color: #D3CED8;
-}
-h2 {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 2.1em;
-    font-weight: 300;
-    margin: 0;
-    text-align: left;
-    letter-spacing: 2px;
-}
-h3 {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 1.2em;
-    font-weight: 700;
-    margin: 0;
-    letter-spacing: 2px;
-}
-h4 {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 1.4em;
-    font-weight: 500;
-    margin: 0;
-    text-align:left;
-}
-h5 {
-    font-family: 'Montserrat', serif;
-    font-size: 1em;
-    font-weight: 700;
-    margin: 0;
-}
-
-h6 {
-    font-family: 'Montserrat', serif;
-    font-size: 1em;
-    font-weight: 500;
-    margin: 0;
-}
-
-h5 a{
-    color: #873848;
-}
-.right {
-    float: right;
-    text-align: right;
-}
-.left {
-    float: left;
-    text-align: left;
-    padding-left: 20px;
-}
-
 /*HOME*/
 
 .thumbnail {
@@ -130,27 +125,12 @@ h5 a{
 }
 .thumb {
     width: 100%;
-    /* -webkit-filter: grayscale(0.95);
-    filter: grayscale(0.95);
-    transition: filter 0.3s; */
-}
-/* .thumb:hover {
-    -webkit-filter: grayscale(0);
-    filter: grayscale(0);
-} */
-.name {
-    padding-top: 8px;
-    font-family: 'Space Mono', monospace;
-    font-size: 1.0em;
 }
 #about {
     font-family: 'Space Mono', monospace;
     font-weight: 700;
     letter-spacing: 8px;
     transition: color 0.2s ease;
-}
-#about:hover {
-    color: #D3CED8;
 }
 .logo {
     height: 40px;
@@ -160,7 +140,6 @@ h5 a{
 }
 
 /*PAGES*/
-
 .img-big {
     max-width: 900px;
     padding-left: 10px;
@@ -187,9 +166,6 @@ h5 a{
 .img-center img {
     text-align:center;
 }
-.portrait img {
-    width: 302px;
-}
 .square img {
     width: 440px;
 }
@@ -212,20 +188,6 @@ h5 a{
     color: #D3CED8;
     text-decoration: underline;
 }
-
-/* RESUME */
-
-#resume-container {
-    display: inline-block;
-    text-align: center;
-    width: 100%;
-}
-
-#resume-dates {
-    display: inline-block;
-    text-align: left;
-}
-
 .video {
     margin: 0 auto;
 }
@@ -242,6 +204,36 @@ iframe {
 .nav a:hover{
     color:#873848;
 }
+
+/* ABOUT */
+#about-portrait{
+    background-color: grey;
+    height: 500px;
+}
+
+#about-description{
+    padding: 5px;
+    margin: 0px 30px;
+    text-align: justify;
+}
+
+/* RESUME */
+#resume-container {
+    display: inline-block;
+    text-align: center;
+    width: 100%;
+}
+#resume-dates {
+    display: inline-block;
+    text-align: left;
+}
+/* .resume-link {
+    color: black;
+}
+.resume-link :hover {
+    color: #76707c;
+    transition: 0.3s;
+} */
 /*RESPONSIVE*/
 
 @media all and (max-width:800px) {
