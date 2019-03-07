@@ -38,9 +38,10 @@ html {
 }
 
 .logo-container {
-    position: fixed;
+    position: absolute;
     float: right;
     right: 0;
+    bottom: 0;
 }
 
 .logo {
