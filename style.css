@@ -29,23 +29,28 @@ html {
     display: inline-block;
 }
 
-.logo-container {
-    position: relative;
-    float: right;
-}
-
-#name {
-    text-align: center;
-    margin: 0px;
-    padding: 0px;
-}
-
 .mosaic {
     margin: 0px 50px 0px 50px;
     padding: 0px;
     text-align: center;
     display: inline-block;
     width: 100%;
+}
+
+.logo-container {
+    position: fixed;
+    float: right;
+    right: 0;
+}
+
+.logo {
+    display: block;
+}
+
+#name {
+    text-align: center;
+    margin: 0px;
+    padding: 0px;
 }
 
 .def-color {
@@ -133,14 +138,14 @@ h5 a{
 }
 .thumb {
     width: 100%;
-    -webkit-filter: grayscale(0.95);
+    /* -webkit-filter: grayscale(0.95);
     filter: grayscale(0.95);
-    transition: filter 0.3s;
+    transition: filter 0.3s; */
 }
-.thumb:hover {
+/* .thumb:hover {
     -webkit-filter: grayscale(0);
     filter: grayscale(0);
-}
+} */
 .name {
     padding-top: 8px;
     font-family: 'Space Mono', monospace;

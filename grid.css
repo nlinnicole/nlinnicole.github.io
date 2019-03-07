@@ -61,6 +61,10 @@
     padding-bottom: 20px;
     /*    background-color: #FFDCDC;*/
 }
+
+.col-05 {
+    width: 8.33%;
+}
 .col-1 {
     width: 16.66%;
 }
