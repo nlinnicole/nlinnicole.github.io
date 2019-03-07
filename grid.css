@@ -62,8 +62,11 @@
     /*    background-color: #FFDCDC;*/
 }
 
-.col-05 {
+.col-half {
     width: 5%;
+}
+.col-filler{
+    width: 3.33%;
 }
 .col-1 {
     width: 16.66%;

@@ -18,28 +18,19 @@ html {
     background-color: #D3CED8;
 }
 
-.about-container {
-    float: left;
-}
-
 #about {
     text-align: left;
     text-orientation: upright;
     writing-mode: vertical-lr;
-    display: inline-block;
 }
 
 .mosaic {
-    margin: 0px 50px 0px 50px;
-    padding: 0px;
     text-align: center;
-    display: inline-block;
     width: 100%;
 }
 
 .logo-container {
     position: absolute;
-    float: right;
     right: 0;
     bottom: 0;
 }
