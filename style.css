@@ -95,7 +95,6 @@ a :hover {
     margin-bottom: 30px;
 }
 
-/* HOME */
 #bar {
     width: 70%;
     margin: 0 auto;
@@ -130,10 +129,25 @@ a :hover {
     max-width: 95%;
     margin: 0 auto;
     text-align: center;
+    position: relative;
 }
 .thumb {
     width: 100%;
 }
+
+.overlay {
+    position: absolute;
+    height: 500px;
+    width: 500px;
+    background-color: grey;
+    transition: 0.5s ease;
+    opacity: 0;
+}
+
+.overlay:hover {
+    opacity: 1;
+}
+
 #about {
     font-family: 'Space Mono', monospace;
     font-weight: 700;
