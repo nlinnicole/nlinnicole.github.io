@@ -14,7 +14,6 @@ html {
 /* GENERAL SETTINGS */
 h1 {
     font-family: 'Montserrat', monospace;
-    letter-spacing: 10px;
     font-size: 1.3em;
     font-weight: 700;
     padding-top: 20px;
@@ -110,7 +109,7 @@ a :hover {
 }
 
 .logo-container {
-    position: absolute;
+    position: fixed;
     right: 0;
     bottom: 0;
 }
@@ -120,6 +119,11 @@ a :hover {
     width: 30px;
     padding: 5px;
     margin: 5px auto;
+    bottom: 0;
+}
+
+#name {
+    width: 20%;
 }
 
 
