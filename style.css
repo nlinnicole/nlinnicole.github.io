@@ -1,9 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat:300,500i,500,700');
-@font-face{
-    font-family:"Bebas Neue W01 Regular";
-    src:url("Fonts/1444649/3d9ec9a9-76a2-4cfe-b376-76e7340c3b50.eot?#iefix");
-    src:url("Fonts/1444649/3d9ec9a9-76a2-4cfe-b376-76e7340c3b50.eot?#iefix") format("eot"),url("Fonts/1444649/e0d6f852-5401-4bbf-9672-47a50c5c87c6.woff2") format("woff2"),url("Fonts/1444649/7fedd582-6ae3-4850-be2f-4acae2e74fa5.woff") format("woff"),url("Fonts/1444649/d6e08ef3-40db-4ac3-82df-f062f55a72f5.ttf") format("truetype");
-}
+
 
 body,
 html {
@@ -17,7 +13,7 @@ html {
 
 /* GENERAL SETTINGS */
 h1 {
-    font-family: 'Bebas Neue', monospace;
+    font-family: 'Montserrat', monospace;
     letter-spacing: 10px;
     font-size: 1.3em;
     font-weight: 700;
@@ -121,7 +117,11 @@ a :hover {
 
 .logo {
     display: block;
+    width: 30px;
+    padding: 5px;
+    margin: 5px auto;
 }
+
 
 /*HOME*/
 
@@ -130,22 +130,51 @@ a :hover {
     margin: 0 auto;
     text-align: center;
     position: relative;
+    overflow: auto;
+    transition: 0.5s ease;
 }
+
 .thumb {
     width: 100%;
+    backface-visibility: hidden;
+    position: relative;
+    text-align: center;
 }
 
 .overlay {
-    position: absolute;
-    height: 500px;
-    width: 500px;
-    background-color: grey;
-    transition: 0.5s ease;
     opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: white;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    transition: 0.5s ease;
+
 }
 
 .overlay:hover {
-    opacity: 1;
+    transition: 0.5s ease;
+    opacity: 0.75;
+    top: 0;
+}
+
+/* .thumbnail:hover .overlay {
+    transition: 0.5s ease;
+    opacity: 0.75;
+    top: 0;
+} */
+
+.caption {
+    font-family: 'Montserrat', serif;
+    font-size: 1em;
+    font-weight: 700;
+    margin: auto;
+    position: relative;
+    top: 50%;
+    transform: perspective(1px) translateY(-50%);
+    color: #76707c;
 }
 
 #about {
@@ -153,12 +182,6 @@ a :hover {
     font-weight: 700;
     letter-spacing: 8px;
     transition: color 0.2s ease;
-}
-.logo {
-    height: 40px;
-    width: 40px;
-    padding: 5px;
-    margin: 5px auto;
 }
 
 /*PAGES*/
