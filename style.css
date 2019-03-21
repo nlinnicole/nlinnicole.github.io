@@ -198,6 +198,15 @@ a:hover {
     width: 95%;
 }
 
+.dev-log-description {
+    text-align: left;
+}
+
+.text {
+    text-align: justify;
+    padding-left: 30px;
+    padding-right: 30px;
+}
 
 /* PAGES
 .img-big {
