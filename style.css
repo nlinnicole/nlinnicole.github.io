@@ -1,4 +1,5 @@
-@import url('https://fonts.googleapis.com/css?family=Montserrat:300,500i,500,700');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,500,700');
+@import url('https://fonts.googleapis.com/css?family=Lato');
 
 body,
 html {
@@ -16,24 +17,17 @@ h1 {
     font-size: 1.3em;
     font-weight: 700;
     color: #D3CED8;
-    text-decoration: none;
 }
 
 h2 {
     font-family: 'Montserrat', sans-serif;
-    font-size: 2.1em;
-    font-weight: 300;
-    margin: 0;
-    text-align: left;
-    letter-spacing: 2px;
+    font-size: 1em;
+    font-weight: 700;
 }
 h3 {
     font-family: 'Montserrat', sans-serif;
-    font-size: 1.2em;
-    font-weight: 700;
-    margin: 0;
-    letter-spacing: 2px;
-    color: #D3CED8; 
+    font-size: 1em;
+    font-weight: 500; 
 }
 h3 a {
     color: #D3CED8; 
