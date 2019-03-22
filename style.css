@@ -17,6 +17,7 @@ h1 {
     font-size: 1.3em;
     font-weight: 700;
     color: #D3CED8;
+    margin: 0;
 }
 
 h2 {
@@ -115,12 +116,12 @@ a:hover {
 
 #links-wrapper {
     float: right;
-    margin-top: 40px;
+    margin-top: 5vh;
 }
 
 .link {
     float: left;
-    padding-left: 20px;
+    padding-left: 2vh;
 }
 
 /*HOME*/
