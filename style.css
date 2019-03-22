@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat:300,500i,500,700');
 
-
 body,
 html {
     margin: 0px;
@@ -16,8 +15,6 @@ h1 {
     font-family: 'Montserrat', monospace;
     font-size: 1.3em;
     font-weight: 700;
-    padding-top: 20px;
-    padding-left: 20px;
     color: #D3CED8;
     text-decoration: none;
 }
@@ -74,7 +71,7 @@ a {
 a:hover {
     color: #76707c;
     transition: 0.3s ease;
-    text-decoration: underline;
+    text-decoration: none;
 }
 
 .right {
@@ -93,24 +90,6 @@ a:hover {
     left: 0;
     margin-left: 40px;
     margin-bottom: 30px;
-}
-
-#bar {
-    width: 70%;
-    margin: 0 auto;
-    height: 10px;
-    background-color: #D3CED8;
-}
-
-#about {
-    text-align: left;
-    text-orientation: upright;
-    writing-mode: vertical-lr;
-}
-
-.mosaic {
-    text-align: center;
-    width: 100%;
 }
 
 .logo-container {
@@ -142,16 +121,17 @@ a:hover {
 
 #header {
     display: inline-block;
-    margin: 20px;
+    margin: 3vh;
 }
 
 #links-wrapper {
     float: right;
-    margin-top: 30px;
+    margin-top: 40px;
 }
 
 .link {
     float: left;
+    padding-left: 20px;
 }
 
 /*HOME*/
