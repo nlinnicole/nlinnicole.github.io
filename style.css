@@ -67,13 +67,14 @@ h6 {
     margin: 0;
 }
 a {
-    text-decoration: underline;
+    text-decoration: none;
     color: #D3CED8; 
     transition: 0.3s ease;
 }
 a:hover {
     color: #76707c;
     transition: 0.3s ease;
+    text-decoration: underline;
 }
 
 .right {
@@ -128,10 +129,29 @@ a:hover {
 
 #name {
     width: 20%;
+    float: left;
 }
 
 .iframe-wrapper {
     width: 90%;
+}
+
+#header-wrapper{
+    text-align: center;
+}
+
+#header {
+    display: inline-block;
+    margin: 20px;
+}
+
+#links-wrapper {
+    float: right;
+    margin-top: 30px;
+}
+
+.link {
+    float: left;
 }
 
 /*HOME*/
