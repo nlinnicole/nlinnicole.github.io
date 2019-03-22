@@ -1,5 +1,5 @@
-@import url('https://fonts.googleapis.com/css?family=Montserrat:300,500,700');
-@import url('https://fonts.googleapis.com/css?family=Lato');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:500,700,800');
+@import url('https://fonts.googleapis.com/css?family=Roboto');
 
 body,
 html {
@@ -21,40 +21,35 @@ h1 {
 
 h2 {
     font-family: 'Montserrat', sans-serif;
-    font-size: 1em;
+    font-size: 1.2em;
     font-weight: 700;
+    margin: 0;
 }
 h3 {
     font-family: 'Montserrat', sans-serif;
     font-size: 1em;
     font-weight: 500; 
-}
-h3 a {
-    color: #D3CED8; 
-    text-decoration: none;
-}
-h3 a:hover{
-    color: #76707c;
-    transition: 0.3s;
-}
-h4 {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 1.0em;
-    font-weight: 500;
     margin: 0;
-    text-align:left;
+}
+
+h4 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1em;
+    font-weight: 400;
+    margin: 0;
+    text-align: justify;
 }
 h5 {
     font-family: 'Montserrat', serif;
-    font-size: 1em;
-    font-weight: 700;
+    font-size: 1.2em;
+    font-weight: 800;
     margin: 0;
 }
 
 h6 {
     font-family: 'Montserrat', serif;
     font-size: 1em;
-    font-weight: 500;
+    font-weight: 700;
     margin: 0;
 }
 a {
