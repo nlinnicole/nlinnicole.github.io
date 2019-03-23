@@ -110,6 +110,14 @@ a:hover {
     width: 20%;
 }
 
+.linkclose {
+    display: none;
+}
+
+#close {
+    width: 20%;
+}
+
 .logo-container {
     position: fixed;
     right: 0;
@@ -270,5 +278,13 @@ a:hover {
         text-align: center;
         float: none;
     }
+
+    .responsive-close {
+        display: block;
+        float: right;
+        width: 20%;
+        margin: 20px;
+    }
+
 }
 
