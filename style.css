@@ -8,7 +8,7 @@ html {
     background-color: #FFF;
 }
 .def-color {
-    background: #D3CED8;
+    background: #C1BECC;
 }
 
 /* GENERAL SETTINGS */
@@ -16,7 +16,7 @@ h1 {
     font-family: 'Montserrat', monospace;
     font-size: 1.3em;
     font-weight: 700;
-    color: #D3CED8;
+    color: #C1BECC;
     margin: 0;
 }
 
@@ -55,7 +55,7 @@ h6 {
 }
 a {
     text-decoration: none;
-    color: #D3CED8; 
+    color: #C1BECC; 
     transition: 0.3s ease;
 }
 a:hover {
@@ -197,72 +197,6 @@ a:hover {
     padding-left: 30px;
     padding-right: 30px;
 }
-
-/* PAGES
-.img-big {
-    max-width: 900px;
-    padding-left: 10px;
-    text-align: center;
-}
-.img-big img {
-    width: 100%;
-}
-.img-full {
-    max-width: 1400px;
-    margin: 0 auto;
-    padding-left: 30px;
-}
-.img-full img {
-    width: 100%;
-}
-.img-small {
-    max-width: 750px;
-    padding-left: 10px;
-}
-.img-small img {
-    width: 100%;
-}
-.img-center img {
-    text-align:center;
-}
-.square img {
-    width: 440px;
-}
-.description {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 500;
-}
-.text-right {
-    text-align: right;
-}
-.text-left{
-    text-align: left;
-}
-.text {
-    text-align: justify;
-    padding-left: 10px;
-    padding-right: 10px;
-}
-#link {
-    color: #D3CED8;
-    text-decoration: underline;
-}
-.video {
-    margin: 0 auto;
-}
-iframe {
-    width: 100%;
-}
-.nav {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 500;
-}
-.nav a{
-    padding: 10px;
-}
-.nav a:hover{
-    color:#873848;
-} */
 
 /* ABOUT */
 #about-portrait{
