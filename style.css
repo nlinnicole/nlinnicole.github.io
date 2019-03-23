@@ -118,7 +118,7 @@ a:hover {
     width: 20%;
 }
 
-.logo-container {
+.logo-container-outer {
     position: fixed;
     right: 0;
     bottom: 0;
@@ -243,6 +243,39 @@ a:hover {
 }
 
 @media all and (max-width:650px) {
+    #name{
+        width: 30%;
+    }
+
+    #header {
+        margin: 2vh;
+    }
+
+    .logo-container-outer{
+        text-align: center;
+        position: initial;
+    }
+
+    .logo-container {
+        text-align: center;
+        display: inline-block;
+        position: initial;
+    }
+    
+    .logo {
+        width: 30px;
+        padding: 5px;
+        float: left;
+        text-align: center;
+    }
+
+      
+    #email {
+        display: none;
+    }
+
+
+    /* NAV */
     .link{
         display: none;
     }

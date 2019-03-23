@@ -180,6 +180,12 @@
     .col-6 {
         width: 100%;
     }
+    .col-half{
+        width: 100%;
+    }
+    .col-filler{
+        display: none;
+    }
     #top,
     #bottom,
     #left,
