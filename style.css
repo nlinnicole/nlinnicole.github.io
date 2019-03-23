@@ -102,6 +102,14 @@ a:hover {
     padding-left: 2vh;
 }
 
+#links-hamburger {
+    display: none;
+}
+
+#hamburger {
+    width: 20%;
+}
+
 .logo-container {
     position: fixed;
     right: 0;
@@ -171,6 +179,7 @@ a:hover {
 .description {
     text-align: left;
     width: 95%;
+    margin: 20px;
 }
 
 .dev-log-description {
@@ -222,5 +231,44 @@ a:hover {
   }
 
 /*RESPONSIVE*/
+@media all and (max-width:800px) {
+}
 
+@media all and (max-width:650px) {
+    .link{
+        display: none;
+    }
+
+    #links-hamburger {
+        display: block;
+        float: right;
+    }
+
+    #links-wrapper{
+        margin: 0;
+    }
+
+    .responsive-overlay {
+        background-color: #C1BECC;
+        height: 100%;
+        width: 100%;
+        position: fixed;
+        left: 0;
+        top: 0;
+        overflow-x: hidden;
+        z-index: 1;
+        transition: 0.5s;
+        text-align: center;
+    }
+
+    .responsive-overlay .link{
+        display: block;
+        transition: 0.3s;
+        color: white;
+        margin-top: 80px;
+        font-size: 1.5em;
+        text-align: center;
+        float: none;
+    }
+}
 

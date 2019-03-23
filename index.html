@@ -2,11 +2,12 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link href="style.css" rel="stylesheet" type="text/css">
     <link href="grid.css" rel="stylesheet" type="text/css">
-    <script src="p5-zip/p5.min.js"></script>
     <title>Nicole Lin</title>
     <link rel="shortcut icon" href="images/favicon.png">
+    <script src="responsive.js"></script>
 </head>
 
 <body>
@@ -26,7 +27,7 @@
                             <a href="index.html">
                                 <img id="name" src="images/title.png">
                             </a>
-                            <div id="links-wrapper">
+                            <div class="linkwrap" id="links-wrapper">
                                 <h1>
                                     <a class="link" style="color: #76707c" href="index.html">
                                         Portfolio
@@ -39,8 +40,11 @@
                                     </a>
                                     <a class="link" href="about.html">
                                         About
-                                    </a>
+                                    </a> 
                                 </h1>
+                                <a href="javascript:void(0);" id="links-hamburger" onClick="changeToHamburger()">
+                                    <img id="hamburger" src="images/hamburger.png">
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -191,5 +195,4 @@
         </div>
     </div>
 </body>
-
 </html>
