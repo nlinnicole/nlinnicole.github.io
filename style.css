@@ -64,22 +64,42 @@ a:hover {
     text-decoration: none;
 }
 
-.right {
-    float: right;
-    text-align: right;
-}
-.left {
-    float: left;
-    text-align: left;
-    padding-left: 20px;
-}
-
-.email {
+#email {
     bottom: 0;
     position: fixed;
     left: 0;
     margin-left: 40px;
     margin-bottom: 30px;
+}
+
+.iframe-wrapper {
+    width: 90%;
+}
+
+/* HEADER */
+
+#header-wrapper{
+    text-align: center;
+}
+
+#header {
+    display: inline-block;
+    margin: 3vh;
+}
+
+#name {
+    width: 20%;
+    float: left;
+}
+
+#links-wrapper {
+    float: right;
+    margin-top: 5vh;
+}
+
+.link {
+    float: left;
+    padding-left: 2vh;
 }
 
 .logo-container {
@@ -94,34 +114,6 @@ a:hover {
     padding: 5px;
     margin: 5px auto;
     bottom: 0;
-}
-
-#name {
-    width: 20%;
-    float: left;
-}
-
-.iframe-wrapper {
-    width: 90%;
-}
-
-#header-wrapper{
-    text-align: center;
-}
-
-#header {
-    display: inline-block;
-    margin: 3vh;
-}
-
-#links-wrapper {
-    float: right;
-    margin-top: 5vh;
-}
-
-.link {
-    float: left;
-    padding-left: 2vh;
 }
 
 /*HOME*/
@@ -171,13 +163,6 @@ a:hover {
     color: #76707c;
 }
 
-#about {
-    font-family: 'Space Mono', monospace;
-    font-weight: 700;
-    letter-spacing: 8px;
-    transition: color 0.2s ease;
-}
-
 /* PAGES */
 .gallery img {
     width: 90%;
@@ -190,12 +175,6 @@ a:hover {
 
 .dev-log-description {
     text-align: left;
-}
-
-.text {
-    text-align: justify;
-    padding-left: 30px;
-    padding-right: 30px;
 }
 
 /* ABOUT */
@@ -244,39 +223,4 @@ a:hover {
 
 /*RESPONSIVE*/
 
-@media all and (max-width:800px) {
-    .text-right {
-        text-align: center;
-    }
-    .img-small {
-        padding-left: 0px;
-    }
-    .img-big {
-        padding-left: 0px
-    }
-    .img-full {
-        padding-left: 0px;
-    }
-    .thumb {
-        -webkit-filter: grayscale(0);
-        filter: grayscale(0);
-    }
-}
-@media all and (max-width:650px) {
-    .text-right {
-        text-align: center;
-    }
-    .img-small {
-        padding-left: 0px;
-    }
-    .img-big {
-        padding-left: 0px
-    }
-    .img-full {
-        padding-left: 0px;
-    }
-     .thumb {
-        -webkit-filter: grayscale(0);
-        filter: grayscale(0);
-    }
-}
+
