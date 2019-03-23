@@ -187,7 +187,6 @@ a:hover {
 .description {
     text-align: left;
     width: 95%;
-    margin: 20px;
 }
 
 .dev-log-description {
@@ -269,11 +268,13 @@ a:hover {
         text-align: center;
     }
 
-      
     #email {
         display: none;
     }
 
+    .description {
+        margin: 40px;
+    }
 
     /* NAV */
     .link{
