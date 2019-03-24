@@ -238,7 +238,7 @@ a:hover {
   }
 
 /*RESPONSIVE*/
-@media all and (max-width:10px) {
+@media all and (max-width:1024px) {
     .logo-container-outer{
         text-align: center;
         position: initial;
@@ -262,6 +262,12 @@ a:hover {
     #links-wrapper{
         margin-top: 0px;
     }
+
+    .description {
+        padding: 40px;
+        max-width: 90%;
+    }
+
 }
 
 @media all and (max-width:650px) {
