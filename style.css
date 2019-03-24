@@ -238,7 +238,30 @@ a:hover {
   }
 
 /*RESPONSIVE*/
-@media all and (max-width:800px) {
+@media all and (max-width:1024px) {
+    .logo-container-outer{
+        text-align: center;
+        position: initial;
+    }
+
+    .logo-container {
+        text-align: center;
+        display: inline-block;
+        position: initial;
+    }
+
+    .logo {
+        float: left;
+        text-align: center;
+    }
+
+    #email {
+        display: none;
+    }
+
+    #links-wrapper{
+        margin-top: 0px;
+    }
 }
 
 @media all and (max-width:650px) {
@@ -262,8 +285,6 @@ a:hover {
     }
     
     .logo {
-        width: 30px;
-        padding: 5px;
         float: left;
         text-align: center;
     }
