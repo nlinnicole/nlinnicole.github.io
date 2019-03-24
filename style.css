@@ -238,7 +238,7 @@ a:hover {
   }
 
 /*RESPONSIVE*/
-@media all and (max-width:1024px) {
+@media all and (max-width:10px) {
     .logo-container-outer{
         text-align: center;
         position: initial;
@@ -294,7 +294,8 @@ a:hover {
     }
 
     .description {
-        margin: 40px;
+        padding: 30px;
+        max-width: 85%;
     }
 
     /* NAV */
