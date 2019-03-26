@@ -187,6 +187,7 @@ a:hover {
 .description {
     text-align: left;
     width: 95%;
+    text-align: justify;
 }
 
 .dev-log-description {
@@ -194,15 +195,8 @@ a:hover {
 }
 
 /* ABOUT */
-#about-portrait{
-    background-color: grey;
-    height: 500px;
-}
-
-#about-description{
-    padding: 5px;
-    margin: 0px 30px;
-    text-align: justify;
+#about-portrait img{
+    width: 300px;
 }
 
 /* RESUME */
