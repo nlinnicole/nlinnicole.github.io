@@ -199,6 +199,10 @@ a:hover {
     width: 300px;
 }
 
+#about-description {
+    font-size: 1.2em;
+}
+
 /* RESUME */
 #resume-container {
     display: inline-block;
@@ -208,6 +212,10 @@ a:hover {
 #resume-dates {
     display: inline-block;
     text-align: left;
+}
+
+li {
+    list-style: square;
 }
 
 /* SCROLLBAR */
