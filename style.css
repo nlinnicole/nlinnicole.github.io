@@ -270,6 +270,10 @@ li {
         max-width: 90%;
     }
 
+    #resume-dates {
+        display: none;
+    }
+
 }
 
 @media all and (max-width:650px) {
@@ -348,6 +352,10 @@ li {
         float: right;
         width: 20%;
         margin: 20px;
+    }
+
+    #resume-dates {
+        display: none;
     }
 
 }
