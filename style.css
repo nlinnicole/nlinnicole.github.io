@@ -184,6 +184,10 @@ a:hover {
     width: 90%;
 }
 
+.gallery h2 {
+    text-align:left;
+}
+
 .description {
     text-align: left;
     width: 95%;
@@ -192,6 +196,10 @@ a:hover {
 
 .dev-log-description {
     text-align: left;
+}
+
+.text {
+    padding: 20px;
 }
 
 /* ABOUT */
