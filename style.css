@@ -132,6 +132,16 @@ a:hover {
     bottom: 0;
 }
 
+.logo-about {
+    display:inline-block;
+    width:30px;
+    padding: 5px;
+}
+
+.contact {
+    margin: 0 auto;
+}
+
 /*HOME*/
 
 .thumbnail {
