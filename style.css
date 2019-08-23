@@ -88,7 +88,7 @@ a:hover {
 }
 
 #name {
-    width: 20%;
+    width: 25%;
     float: left;
 }
 
@@ -292,11 +292,12 @@ li {
 
 @media all and (max-width:650px) {
     #name{
-        width: 30%;
+        width: 50%;
     }
 
     #header {
         margin: 2vh;
+        margin-top: 0vh;
     }
 
     .logo-container-outer{
