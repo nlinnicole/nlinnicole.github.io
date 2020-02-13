@@ -22,7 +22,7 @@ h1 {
 
 h2 {
     font-family: 'Montserrat', sans-serif;
-    font-size: 1.2em;
+    font-size: 1.5em;
     font-weight: 700;
     margin: 0;
 }
@@ -43,7 +43,7 @@ h4 {
 h5 {
     font-family: 'Montserrat', serif;
     font-size: 1.2em;
-    font-weight: 800;
+    font-weight: 500;
     margin: 0;
 }
 
@@ -235,20 +235,48 @@ a:hover {
     font-size: 1.2em;
 }
 
-/* RESUME */
-#resume-container {
-    display: inline-block;
+/* BLOG */
+.blog{
     text-align: center;
-    width: 100%;
-}
-#resume-dates {
     display: inline-block;
-    text-align: left;
 }
 
-li {
-    list-style: square;
+.blog-header1{
+    margin-left: 15%;
+    margin-right: 15%;
+    text-align: justify;
+    text-justify: auto;
+    font-size: 3vh;
+    padding: 5px;
 }
+
+.blog-header2{
+    margin-left: 15%;
+    margin-right: 15%;
+    text-align: justify;
+    text-justify: auto;
+    padding: 10px 5px 0px 5px;
+}
+
+.blog img {
+    width: 70%;
+}
+
+.blog-text {
+    margin-left: 15%;
+    margin-right: 15%;
+    padding: 5px;
+    font-size: 1.8vh;
+    line-height: 1.5;
+    display: inline-block;
+}
+
+.blog-text img {
+    text-align: center;
+    margin: auto;
+    padding: 10px;
+}
+
 
 /* SCROLLBAR */
 /* width */
