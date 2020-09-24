@@ -50,12 +50,12 @@
                         </a>
                     </div>
                 </div>
-                <div class="gallery blog">
+                <div class="blog">
                     <div class="row">
                         <div class="col-6">
                             <h2 class="blog-title">Topographic Map</h2>
                             <br />
-                            <img class="blog-img" src="images/Shaders/01_Topographic/00_TopographicMap.jpg">
+                            <img class="blog-header-img" src="images/Shaders/01_Topographic/00_TopographicMap.jpg">
                             <br />
                             <br />
                             <h5 class="blog-header1">Introduction</h5>
@@ -77,7 +77,7 @@
                                     When exporting the mesh from the 3D software, make sure that Y-axis is set to be pointing up. This is important because our shader will be driven by the Y components of our vertex positions so they need to be oriented the right way! Also, make sure the map is placed right above the grid and apply it’s position. This will ensure that the vertex positions of the mesh are all positive.
 
                                 </h4>
-                                <img src="images/Shaders/01_Topographic/01_Map.jpg">
+                                <img class="blog-img" src="images/Shaders/01_Topographic/01_Map.jpg">
                             </div>
                             <br />
                             <h6 class="blog-header2">
@@ -89,7 +89,7 @@
                                     You could also add a little outer glow around the lines for a glowing effect.
                                     
                                 </h4>
-                                <img src="images/Shaders/01_Topographic/02_Texture.jpg">
+                                <img class="blog-img" src="images/Shaders/01_Topographic/02_Texture.jpg">
                             </div>
                             <br />
                             <h5 class="blog-header1">The Shader</h5>
@@ -99,14 +99,16 @@
                             <div class="blog-text">
                                 <h4 >
                                     The first step is to get a nice gradient in values from 0 to 1 that is driven by the y component of the Vertex Position. This will give us a gradient based on the height of the local vertex position with 1 being the highest and 0 being the lowest. I used the Remap node to adjust the gradient a bit so the minimum value is right above 0. I didn’t want the gradient to fade totally to black because of how it will affect the scaling of the line texture later.                                    <br />
-                                    <img src="images/Shaders/01_Topographic/04_VertexHeightGradientAdjusted.jpg">
+                                </h4>
+                                    <img class="blog-img" src="images/Shaders/01_Topographic/04_VertexHeightGradientAdjusted.jpg">
                                     <br />
                                     <br />
+                                <h4>
                                     The goal here is to get a smooth gradient where the whitest values are the peaks and the darkest values are the valleys. Don't forget to Saturate after to ensure the values are clamped from 0 to 1. Now, we can use this gradient to Lerp some colours! We will also be using this gradient to scale the tiling of the line texture.
                                     <br />
-                                    <img src="images/Shaders/01_Topographic/05_ColorGradient.jpg">
-                                    <br />
                                 </h4>
+                                    <img class="blog-img" src="images/Shaders/01_Topographic/05_ColorGradient.jpg">
+                                    <br />
                             </div>
                             <br />
                             <h6 class="blog-header2">

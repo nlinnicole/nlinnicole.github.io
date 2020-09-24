@@ -267,8 +267,12 @@ a:hover {
     padding: 10px 5px 0px 5px;
 }
 
-.blog img {
+.blog-header-img{
     width: 70%;
+}
+
+.blog-img {
+    width: 100%;
 }
 
 .blog-text {
