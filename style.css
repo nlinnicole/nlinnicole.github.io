@@ -241,6 +241,15 @@ a:hover {
     display: inline-block;
 }
 
+.blog-title{
+    margin-left: 15%;
+    margin-right: 15%;
+    text-align: justify;
+    text-justify: auto;
+    font-size: 3vh;
+    padding: 5px;
+}
+
 .blog-header1{
     margin-left: 15%;
     margin-right: 15%;
@@ -275,6 +284,7 @@ a:hover {
     text-align: center;
     margin: auto;
     padding: 10px;
+    width: 100%;
 }
 
 

@@ -53,14 +53,14 @@
                 <div class="gallery blog">
                     <div class="row">
                         <div class="col-6">
-                            <h2 class="blog-text">Topographic Map</h2>
-                            <h4 class="blog-text">FEBRUARY 12, 2020</h4>
+                            <h2 class="blog-title">Topographic Map</h2>
                             <br />
-                            <img src="images/Shaders/01_Topographic/Topographic_Still_01.png">
+                            <img class="blog-img" src="images/Shaders/01_Topographic/00_TopographicMap.jpg">
                             <br />
                             <br />
                             <h5 class="blog-header1">Introduction</h5>
-                            <h4 class="blog-text">This shader replicates the features of a topographic map, which use contour lines to represent the elevation and shape of the terrain. The main components of this effect are the vertex heights and vertically projecting the texture onto the mesh.
+                            <h4 class="blog-text">This shader replicates the features of a topographic map, which use contour lines to represent the elevation and shape of the terrain. The main components used to achieve this effect are the local vertex position and vertically projecting the texture onto the mesh.
+
 
                             </h4>
                             <br />
@@ -71,13 +71,13 @@
                             </h6>
                             <div class="blog-text">
                                 <h4>
-                                    To create the mesh of the map, you can follow any tutorial to generate a terrain mesh. It would be nice for the mesh to have a good variety of big peaks and low valleys so the change in elevation is more obvious. Also, try to make sure it has enough polys to be smooth!
+                                    To create the mesh of the map, you can follow any tutorial to generate a terrain mesh. The mesh should have a good variety of tall peaks and low valleys so the change in elevation is obvious. Also, try to make sure it has enough polys to be smooth!
                                     <br />
                                     <br />
-                                    Note: When you import the mesh into Unity, make sure that the mesh is correctly imported so that the Y-axis is pointing up. This is important because our shader will be driven by the Y values of our vertex positions. Also, position the map right above the grid and apply it’s position. This will ensure that the vertex positions of the mesh are all positive.
+                                    When exporting the mesh from the 3D software, make sure that Y-axis is set to be pointing up. This is important because our shader will be driven by the Y components of our vertex positions so they need to be oriented the right way! Also, make sure the map is placed right above the grid and apply it’s position. This will ensure that the vertex positions of the mesh are all positive.
 
                                 </h4>
-                                <img src="images/Blog/01_Topographic/01_map.jpg">
+                                <img src="images/Shaders/01_Topographic/01_Map.jpg">
                             </div>
                             <br />
                             <h6 class="blog-header2">
@@ -85,10 +85,11 @@
                             </h6>
                             <div class="blog-text">
                                 <h4>
-                                    We need to create a texture for the panning lines to project onto the mesh. All we need is a texture with a bunch of horizontal lines that are equally spaced. We will deal with the line spacing with the shader. You could also add a little outer glow around the lines for a glowing effect.
-
+                                    For the texture, all we need is a texture with a bunch of equally spaced horizontal lines. We will deal with the line spacing in the shader so no need to worry about that now. 
+                                    You could also add a little outer glow around the lines for a glowing effect.
+                                    
                                 </h4>
-                                <img class="blog-img" src="images/Blog/01_Topographic/02_lines.jpg">
+                                <img src="images/Shaders/01_Topographic/02_Texture.jpg">
                             </div>
                             <br />
                             <h5 class="blog-header1">The Shader</h5>
@@ -97,27 +98,43 @@
                             </h6>
                             <div class="blog-text">
                                 <h4 >
-                                    The first step is to get a nice gradient in values from 0 to 1 that is driven by the y component of the vertex position. This will give us a gradient based on the height of the vertex with 1 being the highest and 0 being the lowest. We can just take the y value of the vertex position. We can use the remap node to adjust the gradient a bit. For example, I don’t want the gradient to fade totally to black, so I adjusted the minimum to a value right above 0.
+                                    The first step is to get a nice gradient in values from 0 to 1 that is driven by the y component of the Vertex Position. This will give us a gradient based on the height of the local vertex position with 1 being the highest and 0 being the lowest. I used the Remap node to adjust the gradient a bit so the minimum value is right above 0. I didn’t want the gradient to fade totally to black because of how it will affect the scaling of the line texture later.                                    <br />
+                                    <img src="images/Shaders/01_Topographic/04_VertexHeightGradientAdjusted.jpg">
                                     <br />
                                     <br />
-                                    The goal here is to get a smooth gradient that goes from white to black instead of just grey. Don't forget to Saturate after though to clamp the values back to (0-1). Now, we can use this gradient to Lerp some colours! We will also use this gradient to scale the tiling of the line texture according to the height.
+                                    The goal here is to get a smooth gradient where the whitest values are the peaks and the darkest values are the valleys. Don't forget to Saturate after to ensure the values are clamped from 0 to 1. Now, we can use this gradient to Lerp some colours! We will also be using this gradient to scale the tiling of the line texture.
+                                    <br />
+                                    <img src="images/Shaders/01_Topographic/05_ColorGradient.jpg">
+                                    <br />
                                 </h4>
                             </div>
                             <br />
                             <h6 class="blog-header2">
-                                    Contouring Your Map
+                                    Contouring the Map
                             </h6>
                             <div class="blog-text">
                                 <h4>
-                                    We want to map the lines onto the mesh but instead of unwrapping, we can use part of the triplanar method to project the lines vertically onto the map. We only need the vertical portion of the triplanar mapping method. This projects the texture onto the mesh from the top. Append the X and Y values of the vertex position and this becomes the UV's for our texture! 
+                                    We want to map the lines onto the mesh but instead of unwrapping the mesh, we can use part of the triplanar projection method to project the lines vertically onto the map. We only need the vertical portion of the triplanar mapping method since we just want the texture to be projected from the top. Append the X and Y values of the Vertex Position and this becomes the UV's for our texture! 
+                                    <br />
+                                    <img src="images/Shaders/01_Topographic/06_VerticalLines.jpg">
                                     <br />
                                     <br />
-                                    Right now, the contour lines are consistent because we haven't taken our vertex height gradient into account yet. So we can simply multiply our height gradient with our top-down projected lines. This scales the texture from 0 to 1 (the height gradient). We can multiply this with another float to adjust the overall scale of the lines as well. Finally, I panned the line texture using the equation Value=Value*Scale + Offset. 
+                                    Right now, the contour lines are consistent because we haven't taken our vertex height gradient into account yet. So we can simply Multiply our height gradient with our top-down projected line texture. This scales the line texture so at the peaks (where the height gradient values are closer to 1), the texture is scaled down and the lines are closer together. In the valleys (where the height gradient values are closer to 0), the texture is scaled up and the lines are farther apart. Multiply this with another float to adjust the overall scale of the lines. 
+                                    <br />
+                                    <img src="images/Shaders/01_Topographic/07_VerticalLinesScrolling.jpg">
+                                    <br />
+                                    <br />
+                                    We can take One Minus the lines and Multiply it with a Color to color the parts in between the lines. Finally, I panned the line texture using the equation Value=Value*Scale + Offset to give it some motion!
+
+                                    <br />
+                                    <img src="images/Shaders/01_Topographic/09_PanningLines.gif">
+                                    <br />
+                                    <img src="images/Shaders/01_Topographic/10_FullShader.jpg">
+
                                 </h4>
                             </div>
                             <br />
                             <br />
-                            <h5 class="blog-header1">Examples</h5>
 
                         </div>
                    
