@@ -35,8 +35,8 @@
                             <a class="link" href="index.html">
                                 Portfolio
                             </a>
-                            <a class="link"  style="color: #76707c" href="blog.html">
-                                Blog
+                            <a class="link"  style="color: #76707c" href="shaders.html">
+                                Shaders
                             </a>
                             <a class="link" href="sketchbook.html">
                                 Sketchbook
@@ -56,16 +56,14 @@
                             <h2 class="blog-text">Topographic Map</h2>
                             <h4 class="blog-text">FEBRUARY 12, 2020</h4>
                             <br />
-                            <img src="images/Blog/01_Topographic/TopographicThumbnail.PNG">
+                            <img src="images/Shaders/01_Topographic/Topographic_Still_01.png">
                             <br />
                             <br />
                             <h5 class="blog-header1">Introduction</h5>
-                            <h4 class="blog-text">This topographic shader was an effect that I hadn't seen any breakdowns or examples of before so I decided
-                                to make one myself! The effect uses the vertex height of the mesh so there are more contor lines drawn near the top and less near the bottom.
-                                Then just add a panning effect and lerp some colours together! To project the texture, I used one third of the triplanar mapping calculations
-                                so no unwrapping needed which is great since the mesh can be a bit dense depending on how smooth you want the lines to be. The most important part of this effect is the contour lines increasing as elevation increases. I also wanted to 
-                                go for a hologram effect too! I think it looks pretty cool combining an old-school type of map with a sci-fi element.
+                            <h4 class="blog-text">This shader replicates the features of a topographic map, which use contour lines to represent the elevation and shape of the terrain. The main components of this effect are the vertex heights and vertically projecting the texture onto the mesh.
+
                             </h4>
+                            <br />
                             <br />
                             <h5 class="blog-header1">Setting Up</h5>
                             <h6 class="blog-header2">
@@ -73,10 +71,11 @@
                             </h6>
                             <div class="blog-text">
                                 <h4>
-                                    To create the mesh of the map, I followed this <a href="https://www.youtube.com/watch?v=wNyNc6nLCTQ">tutorial</a> to generate terrain
-                                    in Blender. Any method of generating a mesh vaguely shaped like terrain will do, but make sure that the mesh is correctly oriented when
-                                    you import it to Unity so that the Y-axis is pointing up. (This will be important because a big part of our shader is driven by the 
-                                    Y values of our vertex positions). After applying the <b>Displace</b> modifier, you can also manually adjust the terrain using the proportional editor. 
+                                    To create the mesh of the map, you can follow any tutorial to generate a terrain mesh. It would be nice for the mesh to have a good variety of big peaks and low valleys so the change in elevation is more obvious. Also, try to make sure it has enough polys to be smooth!
+                                    <br />
+                                    <br />
+                                    Note: When you import the mesh into Unity, make sure that the mesh is correctly imported so that the Y-axis is pointing up. This is important because our shader will be driven by the Y values of our vertex positions. Also, position the map right above the grid and apply it’s position. This will ensure that the vertex positions of the mesh are all positive.
+
                                 </h4>
                                 <img src="images/Blog/01_Topographic/01_map.jpg">
                             </div>
@@ -86,28 +85,22 @@
                             </h6>
                             <div class="blog-text">
                                 <h4>
-                                    We need to create a texture for the panning lines to project onto the mesh. Just make a bunch of horizontal lines in your preferred
-                                    image editor! Make sure that they're equally spaced, we will deal with the increasing or decreasing amount of lines in the shader. 
-                                    You can also add a little outer glow around the lines for a glowing effect. 
+                                    We need to create a texture for the panning lines to project onto the mesh. All we need is a texture with a bunch of horizontal lines that are equally spaced. We will deal with the line spacing with the shader. You could also add a little outer glow around the lines for a glowing effect.
+
                                 </h4>
-                                <img class="blog-img-square" src="images/Blog/01_Topographic/02_lines.jpg">
+                                <img class="blog-img" src="images/Blog/01_Topographic/02_lines.jpg">
                             </div>
                             <br />
                             <h5 class="blog-header1">The Shader</h5>
-                            <br />
                             <h6 class="blog-header2">
                                 Getting a Nice Gradient of Vertex Height
                             </h6>
                             <div class="blog-text">
                                 <h4 >
-                                    Shader time! The first step is to get a nice gradient (or values between 0 and 1) that is driven by the height of the vertex, specifically
-                                    the y of the vertex position. So just add the <b>Position</b> node and <b>Split</b> it, taking just the Y or G output. Set the <b>Position</b>
-                                    to object space since we just want the vertex height relative to the object. But the gradient has little
-                                    or no contrast. If we continue like this, there won't be a big difference between the peaks and valleys of the map. So we can use the <b>Remap</b> 
-                                    node to exaggerate the differences in the heights of the map. You may have to play around with the <b>Remap</b> values depdending on your mesh.
-                                    If the mesh is flatter, the range will be greater, and if it's bumpier with big hills and low valleys, you may not even need this step. The goal
-                                    here is to get a smooth gradient that goes from white to black instead of just grey. Don't forget to <b>Saturate</b> after though to clamp the values back to (0-1).
-                                    Now, we can use this gradient to <b>Lerp</b> some colours! We will also use this gradient to scale the contour lines according to the height.
+                                    The first step is to get a nice gradient in values from 0 to 1 that is driven by the y component of the vertex position. This will give us a gradient based on the height of the vertex with 1 being the highest and 0 being the lowest. We can just take the y value of the vertex position. We can use the remap node to adjust the gradient a bit. For example, I don’t want the gradient to fade totally to black, so I adjusted the minimum to a value right above 0.
+                                    <br />
+                                    <br />
+                                    The goal here is to get a smooth gradient that goes from white to black instead of just grey. Don't forget to Saturate after though to clamp the values back to (0-1). Now, we can use this gradient to Lerp some colours! We will also use this gradient to scale the tiling of the line texture according to the height.
                                 </h4>
                             </div>
                             <br />
@@ -116,26 +109,13 @@
                             </h6>
                             <div class="blog-text">
                                 <h4>
-                                    We want the lines to be projected somehow onto the mesh and we don't want to deal with trying to unwrap this mesh, so we can either go with using a screenspace
-                                    method or triplanar! But triplanar mapping already uses a Z projection, as if the texture is projected onto the mesh from the top. So, we can just
-                                    take this part of the triplanar calculation since we don't need to project the texture from the sides. This time, the <b>Position</b> node should be 
-                                    in world space BECAUSE. Take the X and Y values of the world position using the <b>Split</b> node and this becomes the UV's for our texture! Right now,
-                                    the contor lines are consistent because we haven't taken our vertex height gradient into account yet. So multiply our height gradient with our top-down 
-                                    projected UV's and voila! 
+                                    We want to map the lines onto the mesh but instead of unwrapping, we can use part of the triplanar method to project the lines vertically onto the map. We only need the vertical portion of the triplanar mapping method. This projects the texture onto the mesh from the top. Append the X and Y values of the vertex position and this becomes the UV's for our texture! 
+                                    <br />
+                                    <br />
+                                    Right now, the contour lines are consistent because we haven't taken our vertex height gradient into account yet. So we can simply multiply our height gradient with our top-down projected lines. This scales the texture from 0 to 1 (the height gradient). We can multiply this with another float to adjust the overall scale of the lines as well. Finally, I panned the line texture using the equation Value=Value*Scale + Offset. 
                                 </h4>
                             </div>
                             <br />
-                            <h6 class="blog-text">
-                                    The Bells and Whistles
-                            </h6>
-                            <div class="blog-text">
-                                <h4>
-                                    You can play with your UV values to get a panning effect and increase or decrease the tiling, remember your UVs follow this equation: Value = Value*Scale + Offset. 
-                                    For a more holographic effect, you could also decrease with the alpha value of the texture so the space between the lines are transparent and add a little outer glow 
-                                    to the lines in Photoshop. Changing the look of the lines texture will have a big impact on the overall effect!
-                                    
-                                </h4>
-                            </div>
                             <br />
                             <h5 class="blog-header1">Examples</h5>
 

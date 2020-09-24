@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="style.css" rel="stylesheet" type="text/css">
+    <link href="grid.css" rel="stylesheet" type="text/css">
+    <title>Nicole Lin</title>
+    <link rel="shortcut icon" href="images/favicon.png">
+    <script src="responsive.js"></script>
+
+</head>
+
+<body>
+    <div id="left" class="def-color"></div>
+    <div id="right" class="def-color"></div>
+    <div id="top" class="def-color"></div>
+    <div id="bottom" class="def-color"></div>
+
+    <div class="row">
+        <div class="col-half"></div>
+        <div class="col-filler"></div>
+        <div class="col-5">
+            <div class="grid-container">
+                <div id="header">
+                    <a href="index.html">
+                        <img id="name" src="images/title.png">
+                    </a>
+                    <div class="linkwrap" id="links-wrapper">
+                        <a href="javascript:void(0);" class="linkclose" id="links-close" onClick="closeNav()">
+                            <img id="close" src="images/close.png">
+                        </a>
+                        <h1>
+                            <a class="link" href="index.html">
+                                Portfolio
+                            </a>
+                            <a class="link"  style="color: #76707c" href="shaders.html">
+                                Shaders
+                            </a>
+                            <a class="link" href="sketchbook.html">
+                                Sketchbook
+                            </a>
+                            <a class="link" href="about.html">
+                                About
+                            </a>
+                        </h1>
+                        <a id="links-hamburger" onClick="openNav()">
+                            <img id="hamburger" src="images/hamburger.png">
+                        </a>
+                    </div>
+                </div>
+                <div class="gallery blog">
+                    <div class="row">
+                        <div class="col-6">
+                            <h2 class="blog-text">Stylized Water</h2>
+                            <h4 class="blog-text">August 10, 2020</h4>
+                            <br />
+                            <img src="images/Blog/02_StylizedWater/WaterThumbTemp.PNG">
+                            <br />
+                            <br />
+                            <h5 class="blog-header1">Introduction</h5>
+                            <h4 class="blog-text">
+                            </h4>
+                            <br />
+                            <h5 class="blog-header1">Setting Up</h5>
+                            <h6 class="blog-header2">
+                                    Inspiration &amp; References
+                                </h6>
+                                <div class="blog-text">
+                                    <h4>
+                                        - RIME Stylized water talk
+                                        <br />
+                                        - harry alkiajsklda website
+                                        <br />
+                                        - https://catlikecoding.com/unity/tutorials/flow/looking-through-water/
+                                        <br />
+                                    </h4>
+                                </div>
+                            <h6 class="blog-header2">
+                                The Workspace
+                            </h6>
+                            <div class="blog-text">
+                                <h4>
+                                    - plane for water
+                                    <br />
+                                    - walls around water and ground (tilt ground to mimic a beach)
+                                    <br />
+                                    - some random meshes intersecting the water so can test foam
+                                </h4>
+                            </div>
+                            <br />
+                            <h6 class="blog-header2">
+                                    The Shader
+                            </h6>
+                            <div class="blog-text">
+                                <h4>
+                                    - unlit vertex/fragment shader <br />
+                                    - changes tags to Queue = Transparent, RenderType = Transparent <br />
+                                    - PanningTexture() function<br />
+                                    - ScreenPos, ViewDir, WorldNormal, WorldPos
+                                </h4>
+                            </div>
+                            <h6 class="blog-header2">
+                                    The Textures
+                            </h6>
+                            <div class="blog-text">
+                                <h4>
+                                   - you will need a color ramp texture<br />
+                                   - need a normal texture. make sure it's marked as [Normal] in the shader properties<br />
+                                   - optional normal noise texture later
+                                </h4>
+                            </div>
+                            <br />
+                            <h5 class="blog-header1">The Shader</h5>
+                            <br />
+                            <h6 class="blog-header2">
+                                Coloring the Water Part 1
+                            </h6>
+                            <div class="blog-text">
+                                <h4 >
+                                   - add a _ColorRamp property <br />
+                                   - add the UV to the appdata and v2f so you can use the scale and offset <br />
+                                   - return the _ColorRamp
+                                </h4>
+                            </div>
+                            <br />
+                            <h6 class="blog-header2">
+                                Calculating the Depth and Adding Foam
+                            </h6>
+                            <div class="blog-text">
+                                <h4>
+                                    - calculate the depth using the built-in shader variable, _CameraDepthTexture <br />
+                                    - this will be used for the foam <br />
+                                    - multiply it by the _FoamDistance so you can control the size of the foam <br />
+                                    - add a _FoamColor variable and multiply the depth with it <br />
+                                    - add that on top of your waterColor and you have foam!
+                                </h4>
+                            </div>
+                            <h6 class="blog-header2">
+                                    Coloring the Water Part 2
+                            </h6>
+                            <div class="blog-text">
+                                <h4 >
+                                    - make a simple fresnel <br />
+                                    - add it to the depth <br />
+                                    - multiply it by the water color <br />
+                                    - smooths out errors from the depth texture <br />
+                                    - saturates the colors a bit, useful for when you want the water to be a bit transparent
+                                </h4>
+                            </div>
+                            <h6 class="blog-header2">
+                                Refraction!
+                            </h6>
+                            <div class="blog-text">
+                                <h4>
+                                    - the most complicated part (for me)<br />
+                                    - will need a snapshot of the scene (a grab pass)<br/>
+                                    - in URP, can use the built-in variable _CameraOpaqueTexture , link references to documentation here <br />
+                                    - pan your normal texture using the PanningTexture function, make sure it's unpacked so it goes from -1 to 1 <br />
+                                    - initialize a float4 distortedUV and assign it to the screenPosition. <br />
+                                    - add the panning normal map to the distortedUV and muliply it by distortedUV.z to normalize to screen position or else you get this: <br />
+                                    - use tex2Dproj with _CameraOpaqueTexture and your distorted UVs<br />
+                                    - this is what you get: <br />
+                                    <br />
+                                    - the water is refracting parts of the mesh that are above the water too, we can mask it out <br />
+                                    - need to calculate the depth under the water, different from the depth we calculate before. SHOW <br />
+                                    - calculate the surface depth with this: <br />
+                                    - calculate the screenDepth with this: <br />
+                                    - but have to adjust the screenDepth according to the distorted UVs<br />
+                                    - to create the mask out the incorrect refractions, subtract the surfaceDepth from the distortedScreenDepth<br />
+                                    - lerp a clean grab pass and your distorted grab pass with the mask and done!<br />
+                                    - *refraction mask isn't perfect yet!
+                                    <br />
+                                    - lerp the water color with the refraction using a 0 to 1 value <br />
+                                    - if closer to 1, will make the water look more transparent because more of the grab pass texture will be showing
+                                </h4>
+                            </div>
+                            <h6 class="blog-header2">
+                                Coloring the Deep Water
+                            </h6>
+                            <div class="blog-text">
+                                <h4>
+                                    - wanted to color the water where it's deeper to add more depth on top of the color ramp<br />
+                                    - can use a similar technique we used before to get the depth under the water<br />
+                                    - subtract a clean surfaceDepth from a clean screenDepth<br />
+                                    - but it doesn't take the refraction into account <br />
+                                    - multiply it by the refractionMask<br />
+                                    - divide the fogCorrection by _WaterDepth (can raise it to a power), this makes the gradient more dramatic so the effect is visible<br />
+                                    - not perfect yet but of the refraction mask<br />
+                                    - lerp it with the refracted water <br />
+                                    <br />
+                                    - i also used a negated underwaterAmount to get a mask of the refracted parts underwater<br />
+                                    - you can use this to color the underwater parts <br />
+                                    - can make it darker or even glowy! <br />
+                                    - lerp it with the deep water <br />
+                                    
+                                </h4>
+                            </div>
+                            <h6 class="blog-header2">
+                                Sparkles yay!
+                            </h6>
+                            <div class="blog-text">
+                                <h4>
+                                    - pan the normal texture and just get the r value. <br />
+                                    - make sure the speed and tiling is the same as when you panned it to make the refraction <br />
+                                    - dot it with itself. this will get the parts that are pointing more up <br />
+                                    - explain<br />
+                                    - Multiply it by the _SparkleAmount and step it so we get hard edges <br />
+                                    - we only want a little bit left <br />
+                                    - depending on your texture, you might have to increase the range of the _SparkleAmount<br />
+                                    - can also raise the dot product to a power if it's not enough <br />
+                                    - invert the sparkles values <br />
+                                    - add the sparkles to your water <br />
+                                    <br />
+                                    - can stop there, but depending on your texture, the sparkles might be tiling too obviously <br />
+                                    - repeat the above process with a different texture! can also use the same texture with different scale and speed values <br />
+                                    - multiply them together
+                                </h4>
+                            </div>
+                            <br />
+                            <h6 class="blog-header2">
+                                Putting it All Together
+                                    - show final blend
+                            </h6>
+                            <div class="blog-text">
+                                <h4>
+                                    
+                                </h4>
+                            </div>
+                            <h6 class="blog-header2">
+                                Extras
+                            </h6>
+                            <div class="blog-text">
+                                <h4>
+                                    - reflection<br />
+                                    - adding more sparkles where the light shines<br />
+                                    - displacement
+                                </h4>
+                            </div>
+                            <br />
+                            <div class="blog-text">
+                                <h4>
+                                  
+                                    
+                                </h4>
+                            </div>
+                            <br />
+                            <h5 class="blog-header1">Examples</h5>
+
+                        </div>
+                   
+                </div>
+                    <div id="email">
+                        <h1><a target="_blank" href="mailto:nlin.nicole@gmail.com">nlin.nicole@gmail.com</a></h1>
+                    </div>
+                </div>
+                <div class="col-filler"></div>
+                <div class="col-half logo-container-outer">
+                        <div class="logo-container">
+                            <a href="https://sketchfab.com/nicolioos">
+                                <img class="logo" src="images/logo_sketchfab.png">
+                            </a>
+                            <a href="https://www.artstation.com/artist/nicolioos">
+                                <img class="logo" src="images/logo_artstation.png">
+                            </a>
+                            <a href="https://www.instagram.com/nicolioos/">
+                                <img class="logo" src="images/logo_instagram.png">
+                            </a>
+                            <a href="https://twitter.com/nicoliooos">
+                                <img class="logo" src="images/logo_twitter.png">
+                            </a>
+                            <a href="https://github.com/nlinnicole">
+                                <img class="logo" src="images/logo_github.png">
+                            </a>
+                        </div>
+                    </div>
+            </div>
+</body>
+
+
+</html>
