@@ -57,6 +57,7 @@ a {
     text-decoration: none;
     color: #C1BECC; 
     transition: 0.3s ease;
+    font-weight: 700;
 }
 a:hover {
     color: #76707c;
@@ -287,7 +288,7 @@ a:hover {
 .blog-text img {
     text-align: center;
     margin: auto;
-    padding: 10px;
+    padding: 10px 0px 10px 0px;
     width: 100%;
 }
 
