@@ -59,15 +59,42 @@
                             <br />
                             <br />
                             <h5 class="blog-header1">Introduction</h5>
-                            <h4 class="blog-text">This toon shader is based on the Blinn-Phong lighting model. It has the basic functions like directional lighting, specular lighting, and rim lighting and also includes emission and a toon ramp. The toon ramp texture plays a big part in the look of the shader so we can get many different effects by just adjusting this texture.
-
+                            <h4 class="blog-text">
+                                    This toon shader is based on the Blinn-Phong lighting model. It has the basic functions of directional lighting, specular lighting, and rim lighting. It also includes using a texture as a toon ramp and an option for emission. The toon ramp plays a big part in the look of the shader so we can get a variety of shading effects by just adjusting this texture.
+                                <br />
+                                <br />
+                                Some other resources for toon lighting and the Blinn-Phong lighting model are linked here:
+                                <br />
+                                <a target="blank" href="https://roystan.net/articles/toon-shader.html">Toon Shader by Roystan</a>
+                                <br />
+                                <a target="blank" href="https://learnopengl.com/Advanced-Lighting/Advanced-Lighting">Blinn-Phong Lighting in OpenGL</a>
+                                <br />
+                                <a target="blank" href="https://en.wikipedia.org/wiki/Blinn%E2%80%93Phong_reflection_model">Blinn-Phong Reflection Model</a>
                             </h4>
                             <br />
                             <br />
                             <h5 class="blog-header1">Setting Up</h5>
+                            <h6 class="blog-header2">
+                                Blinn-Phong Lighting Model
+                            </h6>
                             <div class="blog-text">
                                 <h4>
-                                    All we need is a texture for the toon ramp. This will be the main contributing factor to the look of the lighting. We can play with the number of steps, the transition between the steps, and even the color. You can also set up a simple scene with a variety of objects so we can test how the shader looks on different shapes.                                    <br />
+                                    The main values we will need to use to calculate lighting using the Blinn-Phong model is the Surface Normal (N) and the Light Direction (L). The Surface Normal comes from the mesh and can be manipulated by a Normal Map, usually to add more detail. The Light Direction will come from the main directional light in the scene. 
+                                        <br />
+                                    <img class="blog-img" src="images/Shaders/03_Toon/03D_DirectionalLight.jpg">
+                                    <br />
+                                    Using the dot product between these two vectors, or NdotL, we can determine how much light each part of the surface will receive. When N and L are parallel, the dot product is 1, which means that this will have the most light. As L moves away from being parallel to N, the dot product will start going to 0, so the amount of light will decrease. When N and L are perpendicular, the dot product is 0, which means there will be no light. When the angle between N and L is greater than 0, the dot product will be negative, but since we Saturate NdotL (so the values fall only between 0 and 1), there will also be no light on these areas.                                     
+                                    <br />
+                                    <img class="blog-img" src="images/Shaders/03_Toon/03E_DirectionalLight.jpg">
+                                </h4>
+                            </div>
+                            <h6 class="blog-header2">
+                                Toon Ramp Texture
+                            </h6>
+                            <div class="blog-text">
+                                <h4>
+                                    We will need some kind of gradient texture for the toon ramp. This can be made using the gradient tool in Photoshop. This will be the main contributing factor to the look of the lighting. We can play with the number of steps, the transition between the steps, and even the color.                                     
+                                    <br />
                                     <img class="blog-img" src="images/Shaders/03_Toon/00_ToonRamps.jpg">
                                 </h4>
                                 <br />
@@ -79,7 +106,8 @@
                             </h6>
                             <div class="blog-text">
                                 <h4 >
-                                    First, we can make a TextureSample for the BaseColor texture. I like to multiply this with a TintColor, since this can be used to color objects without a texture or adjust the color of the texture. If you don’t want a tint on the texture, the color can just stay white.                                </h4>
+                                    First, we can make a TextureSample for the BaseColor texture. I like to multiply this with a TintColor, since this can be used to color objects that don’t have a texture or just to adjust the color of the texture in the engine. If you want the color of the texture to be unaffected, the TintColor can just be white.                                    
+                                    <br />
                                     <img class="blog-img" src="images/Shaders/03_Toon/01A_BaseColor.jpg">
                                     <img class="blog-img" src="images/Shaders/03_Toon/01B_BaseColor.jpg">
                                     <br />
@@ -90,7 +118,7 @@
                             </h6>
                             <div class="blog-text">
                                 <h4>
-                                    In the BaseColor texture’s alpha channel, I added an emission mask. The areas in white will be emissive, and the areas in black won’t be. Multiply the mask with an HDR color as well as the BaseColor texture so the detail and color in the texture will be taken into account. With a bloom post-processing effect, we can get a nice glowing effect now.                                    <br />
+                                    In the BaseColor texture’s alpha channel, I added an emission mask. The areas in white will be emissive, and the areas in black won’t be. Multiply the mask with an HDR color as well as the BaseColor texture so the detail and color of the texture will be taken into account. With a bloom post-processing effect, we can now get a nice glowing effect.                                    
                                     <img class="blog-img" src="images/Shaders/03_Toon/02A_Emission.jpg">
                                     <img class="blog-img" src="images/Shaders/03_Toon/02B_Emission.jpg">
                                     <br />
@@ -102,23 +130,21 @@
                             </h6>
                             <div class="blog-text">
                                 <h4>
-                                    For the directional light, we will use the basic NdotL formula, which is the normals of the surface dot the direction of the light. A NormalMap can also be added here by connecting it to the WorldNormal node. I made this into a local variable since we will be using these Normals for other lighting calculations. 
+                                    For the directional light, we will use the basic NdotL formula from the Blinn-Phong lighting model. Don’t forget to Saturate the dot product! A NormalMap can also be added here by connecting it to the WorldNormal node. I made this into a local variable since we will be using these Normals for other lighting calculations.                                    
                                     <br />
                                     <img class="blog-img" src="images/Shaders/03_Toon/03A_DirectionalLight.jpg">
                                     <img class="blog-img" src="images/Shaders/03_Toon/03B_DirectionalLight.jpg">
                                     <img class="blog-img" src="images/Shaders/03_Toon/03C_DirectionalLight.jpg">
                                     <br />
-                                    The dot product will now become the UV’s for the toon ramp texture. This is the main way we can get the toon effect. Instead of using a texture, we could also get this effect with a Step function, but I prefer using a texture because it offers some more control.                                    
+                                    The dot product will now become the UV’s for the toon ramp texture. This is how we achieve the toon lighting effect. As the NdotL values progress from 0 to 1, they will fall into the steps of the ToonRamp texture, so instead of a smooth progression from light to dark, there will be hard edged steps from light to dark. Once again, the steps can be adjusted by changing the ToonRamp texture.                                    
                                     <br />
                                     <img class="blog-img" src="images/Shaders/03_Toon/04A_ToonRampTexture.jpg">
                                     <img class="blog-img" src="images/Shaders/03_Toon/04B_ToonRampTexture.jpg">
                                     <br />
-                                    We can multiply this with the LightAttenuation node, which contains the cast shadow information, and the LightColor node, which is the color of the directional light in the scene. Finally, I like to Add an AmbientColor to the toon shadow result since the shadows are a bit too dark right now. This represents a simplified form of bounce light and can be used to adjust the overall color of the shadow and object.                                 
-                                    <br />
+                                    We can multiply this with the LightAttenuation node, which contains the cast shadow information. Make sure the CastShadows option in your mesh’s MeshRenderer is on! I also added the LightColor node, which is the color of the directional light in the scene. Finally, I like to Add an AmbientColor to the toon shadow result since the shadows are a bit too dark right now. This represents a simplified form of bounce light and can be used to adjust the overall color of the shadow and object.                                     <br />
                                     <img class="blog-img" src="images/Shaders/03_Toon/05A_AmbientColor.jpg">
                                     <img class="blog-img" src="images/Shaders/03_Toon/05B_AmbientColor.jpg">
-                                    Finally, here are variations on the same scene with just a different toon ramp. The more steps there are in the toon ramp, the more “detailed” the light will be. Make sure to clamp the ToonRamp texture in the import properties or you will have incorrect results!
-                                    <br />
+                                    Finally, here are variations on the same scene with just a different toon ramp. The more steps there are in the toon ramp, the more “detailed” the light will be. Make sure to clamp the ToonRamp texture in the import properties or you will have incorrect results                                    <br />
                                     <img class="blog-img" src="images/Shaders/03_Toon/06_ToonRampVariations.jpg">
 
                                 </h4>
@@ -134,9 +160,8 @@
                                     <img class="blog-img" src="images/Shaders/03_Toon/07A_Specular.jpg">
                                     <img class="blog-img" src="images/Shaders/03_Toon/07B_Specular.jpg">
                                     <br />
-                                    To get the toon effect, we can run this through the Smoothstep function. We can also multiply this with a SpecularMap texture which can be used to mask out areas that shouldn’t have specular lighting. For example, shiny materials like metals will have more specular reflection and matte materials like wood won’t have any specular effect.
+                                    To get the toon effect, we can run this through the Smoothstep function. I also multiplied this with a SpecularMap texture to give the option of masking out areas that shouldn’t have specular lighting. For example, shiny materials like metals will have more specular reflection and matte materials like wood won’t have any specular effect.                                    <img class="blog-img" src="images/Shaders/03_Toon/08A_SpecularToon.jpg">
                                     <br />
-                                    <img class="blog-img" src="images/Shaders/03_Toon/08A_SpecularToon.jpg">
                                     <img class="blog-img" src="images/Shaders/03_Toon/08B_SpecularToon.jpg">
                                 </h4>
                             </div>
@@ -146,8 +171,7 @@
                             </h6>
                             <div class="blog-text">
                                 <h4>
-                                    We can use rim lighting to simulate backlighting, and is a subtle but nice touch to our ton shader. We can use the Fresnel node, which highlights the surfaces facing away from the camera. We will repeat the NdotL formula we previously used for directional lighting. We can use this to mask out the Fresnel since we only want it to show on the parts of the object that is lit. We will also Step this to get hard edges for a toon effect and multiply it with a RimColor.                                    <br />
-                                    <img class="blog-img" src="images/Shaders/03_Toon/09A_RimLight.jpg">
+                                        Rim lighting is often used to simulate backlighting, and is a subtle but nice touch to our shader. We can use the Fresnel node, which highlights the parts of the surface facing away from the camera. We will repeat the NdotL formula we previously used for directional lighting and use this to mask out the Fresnel since we only want it to show on the parts of the object that is lit. Finally, we can Step this to get hard edges for a toon effect and multiply it with a RimColor.                                     <img class="blog-img" src="images/Shaders/03_Toon/09A_RimLight.jpg">
                                     <img class="blog-img" src="images/Shaders/03_Toon/09B_RimLight.jpg">
                                     <br />
                                     To blend the lighting together, we just need to add the DirectionalLight, SpecularLight, and RimLight together. Then we multiply the lighting with the Emission and BaseColor and we’re done!                                    
