@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="style.css" rel="stylesheet" type="text/css">
+    <link href="grid.css" rel="stylesheet" type="text/css">
+    <title>Nicole Lin</title>
+    <link rel="shortcut icon" href="images/favicon.png">
+    <script src="responsive.js"></script>
+
+</head>
+
+<body>
+    <div id="left" class="def-color"></div>
+    <div id="right" class="def-color"></div>
+    <div id="top" class="def-color"></div>
+    <div id="bottom" class="def-color"></div>
+
+    <div class="row">
+        <div class="col-half"></div>
+        <div class="col-filler"></div>
+        <div class="col-5">
+            <div class="grid-container">
+                <div id="header">
+                    <a href="index.html">
+                        <img id="name" src="images/title.png">
+                    </a>
+                    <div class="linkwrap" id="links-wrapper">
+                        <a href="javascript:void(0);" class="linkclose" id="links-close" onClick="closeNav()">
+                            <img id="close" src="images/close.png">
+                        </a>
+                        <h1>
+                            <a class="link" href="index.html">
+                                Portfolio
+                            </a>
+                            <a class="link"  style="color: #76707c" href="shaders.html">
+                                Shaders
+                            </a>
+                            <a class="link" href="sketchbook.html">
+                                Sketchbook
+                            </a>
+                            <a class="link" href="about.html">
+                                About
+                            </a>
+                        </h1>
+                        <a id="links-hamburger" onClick="openNav()">
+                            <img id="hamburger" src="images/hamburger.png">
+                        </a>
+                    </div>
+                </div>
+                <div class="blog">
+                    <div class="row">
+                        <div class="col-6">
+                            <h2 class="blog-title">Toon Shader</h2>
+                            <br />
+                            <img class="blog-header-img" src="images/Shaders/03_Toon/09A_RimLight.jpg">
+                            <br />
+                            <br />
+                            <h5 class="blog-header1">Introduction</h5>
+                            <h4 class="blog-text">This toon shader is based on the Blinn-Phong lighting model. It has the basic functions like directional lighting, specular lighting, and rim lighting and also includes emission and a toon ramp. The toon ramp texture plays a big part in the look of the shader so we can get many different effects by just adjusting this texture.
+
+                            </h4>
+                            <br />
+                            <br />
+                            <h5 class="blog-header1">Setting Up</h5>
+                            <div class="blog-text">
+                                <h4>
+                                    All we need is a texture for the toon ramp. This will be the main contributing factor to the look of the lighting. We can play with the number of steps, the transition between the steps, and even the color. You can also set up a simple scene with a variety of objects so we can test how the shader looks on different shapes.                                    <br />
+                                    <img class="blog-img" src="images/Shaders/03_Toon/00_ToonRamps.jpg">
+                                </h4>
+                                <br />
+                            </div>
+                            <br />
+                            <h5 class="blog-header1">The Shader</h5>
+                            <h6 class="blog-header2">
+                                Base Color
+                            </h6>
+                            <div class="blog-text">
+                                <h4 >
+                                    First, we can make a TextureSample for the BaseColor texture. I like to multiply this with a TintColor, since this can be used to color objects without a texture or adjust the color of the texture. If you don’t want a tint on the texture, the color can just stay white.                                </h4>
+                                    <img class="blog-img" src="images/Shaders/03_Toon/01A_BaseColor.jpg">
+                                    <img class="blog-img" src="images/Shaders/03_Toon/01B_BaseColor.jpg">
+                                    <br />
+                            </div>
+                            <br />
+                            <h6 class="blog-header2">
+                                    Emission
+                            </h6>
+                            <div class="blog-text">
+                                <h4>
+                                    In the BaseColor texture’s alpha channel, I added an emission mask. The areas in white will be emissive, and the areas in black won’t be. Multiply the mask with an HDR color as well as the BaseColor texture so the detail and color in the texture will be taken into account. With a bloom post-processing effect, we can get a nice glowing effect now.                                    <br />
+                                    <img class="blog-img" src="images/Shaders/03_Toon/02A_Emission.jpg">
+                                    <img class="blog-img" src="images/Shaders/03_Toon/02B_Emission.jpg">
+                                    <br />
+                                </h4>
+                            </div>
+                            <br />
+                            <h6 class="blog-header2">
+                                Directional Light
+                            </h6>
+                            <div class="blog-text">
+                                <h4>
+                                    For the directional light, we will use the basic NdotL formula, which is the normals of the surface dot the direction of the light. A NormalMap can also be added here by connecting it to the WorldNormal node. I made this into a local variable since we will be using these Normals for other lighting calculations. 
+                                    <br />
+                                    <img class="blog-img" src="images/Shaders/03_Toon/03A_DirectionalLight.jpg">
+                                    <img class="blog-img" src="images/Shaders/03_Toon/03B_DirectionalLight.jpg">
+                                    <img class="blog-img" src="images/Shaders/03_Toon/03C_DirectionalLight.jpg">
+                                    <br />
+                                    The dot product will now become the UV’s for the toon ramp texture. This is the main way we can get the toon effect. Instead of using a texture, we could also get this effect with a Step function, but I prefer using a texture because it offers some more control.                                    
+                                    <br />
+                                    <img class="blog-img" src="images/Shaders/03_Toon/04A_ToonRampTexture.jpg">
+                                    <img class="blog-img" src="images/Shaders/03_Toon/04B_ToonRampTexture.jpg">
+                                    <br />
+                                    We can multiply this with the LightAttenuation node, which contains the cast shadow information, and the LightColor node, which is the color of the directional light in the scene. Finally, I like to Add an AmbientColor to the toon shadow result since the shadows are a bit too dark right now. This represents a simplified form of bounce light and can be used to adjust the overall color of the shadow and object.                                 
+                                    <br />
+                                    <img class="blog-img" src="images/Shaders/03_Toon/05A_AmbientColor.jpg">
+                                    <img class="blog-img" src="images/Shaders/03_Toon/05B_AmbientColor.jpg">
+                                    Finally, here are variations on the same scene with just a different toon ramp. The more steps there are in the toon ramp, the more “detailed” the light will be. Make sure to clamp the ToonRamp texture in the import properties or you will have incorrect results!
+                                    <br />
+                                    <img class="blog-img" src="images/Shaders/03_Toon/06_ToonRampVariations.jpg">
+
+                                </h4>
+                            </div>
+                            <br />
+                            <h6 class="blog-header2">
+                                Specular
+                            </h6>
+                            <div class="blog-text">
+                                <h4>
+                                    For specular lighting, we will need the dot product between the normals of the surface and the half vector. The half vector is the sum of the vectors of the light direction and the view direction. We have to take the view direction into account since the specular lighting depends on what angle the surface is being viewed. We can control the size of the specular reflection by raising the dot product to an exponent and adjusting it. I also multiplied the SpecularAmount with itself for more noticeable changes and better control. Finally, to color the light, we can multiply this with a SpecularColor and the LightColor.                                    
+                                    <br />
+                                    <img class="blog-img" src="images/Shaders/03_Toon/07A_Specular.jpg">
+                                    <img class="blog-img" src="images/Shaders/03_Toon/07B_Specular.jpg">
+                                    <br />
+                                    To get the toon effect, we can run this through the Smoothstep function. We can also multiply this with a SpecularMap texture which can be used to mask out areas that shouldn’t have specular lighting. For example, shiny materials like metals will have more specular reflection and matte materials like wood won’t have any specular effect.
+                                    <br />
+                                    <img class="blog-img" src="images/Shaders/03_Toon/08A_SpecularToon.jpg">
+                                    <img class="blog-img" src="images/Shaders/03_Toon/08B_SpecularToon.jpg">
+                                </h4>
+                            </div>
+                            <br />
+                            <h6 class="blog-header2">
+                                Rim Light
+                            </h6>
+                            <div class="blog-text">
+                                <h4>
+                                    We can use rim lighting to simulate backlighting, and is a subtle but nice touch to our ton shader. We can use the Fresnel node, which highlights the surfaces facing away from the camera. We will repeat the NdotL formula we previously used for directional lighting. We can use this to mask out the Fresnel since we only want it to show on the parts of the object that is lit. We will also Step this to get hard edges for a toon effect and multiply it with a RimColor.                                    <br />
+                                    <img class="blog-img" src="images/Shaders/03_Toon/09A_RimLight.jpg">
+                                    <img class="blog-img" src="images/Shaders/03_Toon/09B_RimLight.jpg">
+                                    <br />
+                                    To blend the lighting together, we just need to add the DirectionalLight, SpecularLight, and RimLight together. Then we multiply the lighting with the Emission and BaseColor and we’re done!                                    
+                                    <br />
+                                    <img class="blog-img" src="images/Shaders/03_Toon/10_FullGraph.png">
+                                </h4>
+                            </div>
+                            <br />
+                        </div>
+                   
+                </div>
+                    <div id="email">
+                        <h1><a target="_blank" href="mailto:nlin.nicole@gmail.com">nlin.nicole@gmail.com</a></h1>
+                    </div>
+                </div>
+                <div class="col-filler"></div>
+                <div class="col-half logo-container-outer">
+                        <div class="logo-container">
+                            <a href="https://sketchfab.com/nicolioos">
+                                <img class="logo" src="images/logo_sketchfab.png">
+                            </a>
+                            <a href="https://www.artstation.com/artist/nicolioos">
+                                <img class="logo" src="images/logo_artstation.png">
+                            </a>
+                            <a href="https://www.instagram.com/nicolioos/">
+                                <img class="logo" src="images/logo_instagram.png">
+                            </a>
+                            <a href="https://twitter.com/nicoliooos">
+                                <img class="logo" src="images/logo_twitter.png">
+                            </a>
+                            <a href="https://github.com/nlinnicole">
+                                <img class="logo" src="images/logo_github.png">
+                            </a>
+                        </div>
+                    </div>
+            </div>
+</body>
+
+
+</html>
