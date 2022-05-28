@@ -305,6 +305,14 @@ a:hover {
     width: 100%;
 }
 
+#storylines-thumb1 {
+    display: block;
+}
+
+#storylines-thumb2 {
+    display: none;
+}
+
 /* SCROLLBAR */
 /* width */
 ::-webkit-scrollbar {
@@ -360,6 +368,16 @@ a:hover {
     #resume-dates {
         display: none;
     }
+
+    #storylines-thumb1 {
+        display: none;
+    }
+
+    #storylines-thumb2 {
+        display: block;
+        margin: 0px 10px 0px 10px;
+    }
+    
 
 }
 
