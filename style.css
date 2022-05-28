@@ -151,6 +151,15 @@ a:hover {
     transition: 0.5s ease;
 }
 
+.thumbnail_full {
+    max-width: 98%;
+    margin: 0 auto;
+    text-align: center;
+    position: relative;
+    overflow: auto;
+    transition: 0.5s ease;
+}
+
 .thumb {
     width: 100%;
     backface-visibility: hidden;
@@ -203,6 +212,10 @@ a:hover {
 
 .dev-log-description {
     text-align: left;
+}
+
+.game-description{
+    margin: 0;
 }
 
 .text {
