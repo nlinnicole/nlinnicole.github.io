@@ -39,6 +39,7 @@ h4 {
     font-weight: 400;
     margin: 0;
     text-align: justify;
+    text-align-last: left;
 }
 h5 {
     font-family: 'Montserrat', serif;
