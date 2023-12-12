@@ -56,9 +56,8 @@
                             <h4 class="blog-text">
                                 This shader is used in my project <a target="blank" href="jiufen.html">Jiufen Street</a>, mimicking a watercolor effect with a two-tone and subtly distorted shadow. The creation of the texture also greatly affects the watercolor look of the scene. I tried to stick to colors that are commonly found in watercolor palettes and keeping the saturation of the colors on the lower side.
                                 <br />
-                                <br />
-                                INSERT IMAGE OF PUREREF REFERENCES HERE
-                                </h4>
+                                <img class="blog-img" src="images/Shaders/05_Watercolor/00A_Ref.jpg">
+                            </h4>
                             <br />
                             <br />
                             <h5 class="blog-header1">The Shader</h5>
@@ -85,7 +84,7 @@
                                 <h4>
                                     For the moped, I wanted to add a subtle fresnel since it is a metal, shiny object. A similar calculation as the shadows is used for the fresnel, distorting it with noise and combining a smoothstep and stepped fresnel. The areas with fresnel is then masked in the alpha channel of the texture.
                                     <br />
-                                    <img class="blog-header-img" src="images/Shaders/05_Watercolor/Watercolor_Final.png.jpg">
+                                    <img class="blog-img" src="images/Shaders/05_Watercolor/Watercolor_Final.png.jpg">
                                     <img class="blog-img" src="images/Shaders/05_Watercolor/02A_Fresnel.jpg">
                                     <br />
                                 </h4>
@@ -98,6 +97,8 @@
                                 <h4>
                                     The plants use the same lighting model, just with an alpha-cutout shader. Using the alpha cutout render queue allows the geometry to cast shadows, and results in some more nice two-tone watercolor shadows.
                                     <br />
+                                    <img class="blog-img" src="images/Shaders/05_Watercolor/03A_Plants.jpg">
+                                    <br />
                                 </h4>
                             </div>
                             <br />
@@ -109,8 +110,7 @@
                                     This triplanar watercolor shader mimics a watercolor smart substance material I made for texturing in Substance Painter. The Substance Material layers a variety of different colored brush stroke-like textures, giving a nice depth to areas that would otherwise be solid colored. The same watercolor lighting model is used in this shader again as well.
                                     <br />
                                     <img class="blog-header-img" src="images/Shaders/05_Watercolor/04A_Triplanar.jpg">
-                                    <img class="blog-header-img" src="images/Shaders/05_Watercolor/Watercolor_Final.png.jpg">
-                                    IMAGE OF PLANE WITH TRIPLANAR SHADER AND DIFFERENT COLOR VARIANTS
+                                    <img class="blog-header-img" src="images/Shaders/05_Watercolor/04C_Triplanar.jpg">
                                     <br />
                                     I exported the brushstroke textures from Substance Designer and combined them in the RGBA channels of a single image to use in-engine. Each channel is then separated and projected using triplanar projection. The color, opacity, and scale of each texture can be controlled in the material settings. This material is used for large areas such as the ground or walls.
                                     <br />
