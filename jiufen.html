@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="style.css" rel="stylesheet" type="text/css">
+    <link href="grid.css" rel="stylesheet" type="text/css">
+    <title>Nicole Lin</title>
+    <link rel="shortcut icon" href="images/favicon.png">
+    <script src="responsive.js"></script>
+
+</head><!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="style.css" rel="stylesheet" type="text/css">
+    <link href="grid.css" rel="stylesheet" type="text/css">
+    <title>Nicole Lin</title>
+    <link rel="shortcut icon" href="images/favicon.png">
+    <script src="responsive.js"></script>
+
+</head>
+
+<body>
+    <div id="left" class="def-color"></div>
+    <div id="right" class="def-color"></div>
+    <div id="top" class="def-color"></div>
+    <div id="bottom" class="def-color"></div>
+
+    <div class="row">
+        <div class="col-half"></div>
+        <div class="col-filler"></div>
+        <div class="col-5">
+            <div class="grid-container">
+                <div id="header">
+                    <a href="index.html">
+                        <img id="name" src="images/title.png">
+                    </a>
+                    <div class="linkwrap" id="links-wrapper">
+                        <a href="javascript:void(0);" class="linkclose" id="links-close" onClick="closeNav()">
+                            <img id="close" src="images/close.png">
+                        </a>
+                        <h1>
+                            <a class="link" style="color: #76707c"  href="index.html">
+                                Portfolio
+                            </a>
+                            <a class="link" href="about.html">
+                                About
+                            </a>
+                        </h1>
+                        <a id="links-hamburger" onClick="openNav()">
+                            <img id="hamburger" src="images/hamburger.png">
+                        </a>
+                    </div>
+                </div>
+                <div class="blog">
+                    <div class="row">
+                        <div class="col-6">
+                            <h2 class="blog-title">Jiufen Street</h2>
+                            </div>
+
+                            <br />
+                            <img class="blog-header-img" src="images/jiufen_thumb.jpg">
+                            <br />
+                            <h4 class="blog-text">
+                            <h5 class="blog-header1">Introduction</h5>
+                            <div class="blog-text">
+                                <h4>
+                                    This scene was inspired by a photo I took while traveling in Jiufen, Taiwan. I loved how lush and green the scenery was! While creating the concept for this scene and sketching out a plan, I actually ended up finding the location on google maps to gather more reference.
+                                    <br />
+                                    <img class="blog-img" src="images/Jiufen/00A_Ref.JPG">
+                                    <img class="blog-img" src="images/Jiufen/00B_Ref.JPG">
+                                    <br />
+                                    My goal for this project was to create a stylized watercolor-inspired scene. I wanted to create a shader for watercolor-style shadows, get more comfortable using Substance Designer and creating smart materials for Substance Painter, and to practice creating 3D foliage.
+                                    <br />
+                                    <img class="blog-img" src="images/Jiufen/00C_Ref.jpg">
+                                </h4>
+                            </div>
+                            
+                            <br />
+                            <h5 class="blog-header1">Watercolor Texture</h5>
+                            <div class="blog-text">
+                                <h4 >
+                                    The first material I made in Substance Designer was a watercolor texture I could turn into a smart material to use for texturing in Substance Painter. First, I created 3 different brushstrokes using Photoshop, then they were layered together with the ability to independently adjust the color, scale, and opacity. I also recreated a version of this as a <a target="blank" href="watercolor.html">shader</a> to use in-engine. The shader version was used for larger areas such as the ground and walls.
+                                    <br />
+                                    <img class="blog-img" src="images/Jiufen/01A_designer.jpg">
+                                    <br />
+                            </div>
+                            <br />
+
+                            <h5 class="blog-header1">Brick Texture</h5>
+                            <div class="blog-text">
+                                <h4 >
+                                    I used the watercolor material again in the brick texture, which gave a lot of nice subtle color variation. I wanted to make sure that the grout of the brick had variation in the lines, like it was imperfectly painted with a paintbrush.
+                                    <br />
+                                    <img class="blog-img" src="images/Jiufen/01B_designer.jpg">
+                                    <br />
+                            </div>
+                            <br />
+                            <h5 class="blog-header1">Unique Textures</h5>
+                            <div class="blog-text">
+                                <h4 >
+                                    I textured the unique meshes such as the moped, plant pots, and gardening supplies using Substance Painter. I used the watercolor smart material again then added some AO, curvature, and sometimes a positional gradient. I used more noise and brushstroke-like textures for these masks to break them up and give them a more painterly, organic feel.
+                                    <br />
+                                    <img class="blog-header-img" src="images/jiufen_thumb.jpg">
+                                    MOPED, PLANT POTS, GARDENING SUPPLIES
+                                    <br />
+                            </div>
+                            <h5 class="blog-header1">Trim Sheets</h5>
+                            <div class="blog-text">
+                                <h4 >
+                                    I made a couple other trim sheets using a combination of Substance Designer and baking them from Blender and texturing in Substance Painter.
+                                    <br />
+                                    <img class="blog-header-img" src="images/jiufen_thumb.jpg">
+                                    TRIM TEXTURED MESHES (TABLE, CRATE, ELECTRIC POLE)
+                                    <br />
+                            </div>
+                           
+                            <h5 class="blog-header1">Foliage</h5>
+                            <div class="blog-text">
+                                <h4 >
+                                    I painted the plant textures in Photoshop then arranged the foliage planes in Blender. To get more color variation, I duplicated the material in Unity with a subtle tint so there is the original version and a darker version of the foliage.
+                                    <br />
+                                    <img class="blog-img" src="images/Jiufen/02B_Texturing.jpg">
+                                    WILD FOLIAGE
+                                    <br />
+                            </div>
+
+                                 
+                </div>
+                    <div id="email">
+                        <h1><a target="_blank" href="mailto:nlin.nicole@gmail.com">nlin.nicole@gmail.com</a></h1>
+                    </div>
+                </div>
+                <div class="col-filler"></div>
+                <div class="col-half logo-container-outer">
+                        <div class="logo-container">
+                            <a href="https://www.artstation.com/artist/nicolioos">
+                                <img class="logo" src="images/logo_artstation.png">
+                            </a>
+                            <a href="https://www.instagram.com/nicolioos/">
+                                <img class="logo" src="images/logo_instagram.png">
+                            </a>
+                            <a href="https://twitter.com/nicoliooos">
+                                <img class="logo" src="images/logo_twitter.png">
+                            </a>
+                        </div>
+                    </div>
+            </div>
+</body>
+
+
+</html>
+
+
+</html>
