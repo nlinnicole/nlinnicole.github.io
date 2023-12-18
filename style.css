@@ -144,21 +144,23 @@ a:hover {
 /*HOME*/
 
 .thumbnail {
-    max-width: 95%;
+    max-width: 100%;
     margin: 0 auto;
     text-align: center;
     position: relative;
     overflow: auto;
     transition: 0.5s ease;
+    padding: 0px 8px 0px 8px;
 }
 
 .thumbnail_full {
-    max-width: 98%;
+    max-width: 100%;
     margin: 0 auto;
     text-align: center;
     position: relative;
     overflow: auto;
     transition: 0.5s ease;
+    padding: 0px 8px 0px 8px;
 }
 
 .thumb {

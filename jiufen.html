@@ -63,7 +63,19 @@
                             </div>
 
                             <br />
-                            <img class="blog-header-img" src="images/jiufen_thumb.jpg">
+                            <img class="blog-header-img" src="images/Jiufen/JiufenStreet_001.jpg">
+                            <br />
+                            <div class="blog-text">
+                                <img class="blog-img" src="images/Jiufen/JiufenStreet_002.jpg">
+                                <img class="blog-img" src="images/Jiufen/JiufenStreet_003.jpg">
+                                <img class="blog-img" src="images/Jiufen/JiufenStreet_004.jpg">
+                                <img class="blog-img" src="images/Jiufen/JiufenStreet_005.jpg">
+                                <img class="blog-img" src="images/Jiufen/JiufenStreet_006.jpg">
+                                <video width="500" height="375" controls>
+                                    <source src="images/Jiufen/movie_001.mp4" type="video/mp4">
+                                  Your browser does not support the video tag.
+                                  </video>  
+                            </div>
                             <br />
                             <h4 class="blog-text">
                             <h5 class="blog-header1">Introduction</h5>
@@ -74,7 +86,7 @@
                                     <img class="blog-img" src="images/Jiufen/00A_Ref.JPG">
                                     <img class="blog-img" src="images/Jiufen/00B_Ref.JPG">
                                     <br />
-                                    My goal for this project was to create a stylized watercolor-inspired scene. I wanted to create a shader for watercolor-style shadows, get more comfortable using Substance Designer and creating smart materials for Substance Painter, and to practice creating 3D foliage.
+                                    My goal for this project was to create a stylized watercolor-inspired scene. I wanted to create a shader for watercolor-style shadows, get more comfortable using Substance Designer to create smart materials for Substance Painter, and to practice creating 3D foliage.
                                     <br />
                                     <img class="blog-img" src="images/Jiufen/00C_Ref.jpg">
                                 </h4>
@@ -84,7 +96,7 @@
                             <h5 class="blog-header1">Watercolor Texture</h5>
                             <div class="blog-text">
                                 <h4 >
-                                    The first material I made in Substance Designer was a watercolor texture I could turn into a smart material to use for texturing in Substance Painter. First, I created 3 different brushstrokes using Photoshop, then they were layered together with the ability to independently adjust the color, scale, and opacity. I also recreated a version of this as a <a target="blank" href="watercolor.html">shader</a> to use in-engine. The shader version was used for larger areas such as the ground and walls.
+                                    The first material I made in Substance Designer was a watercolor texture I could turn into a smart material to use for texturing in Substance Painter. First, I created 3 different brushstrokes using Photoshop, then they were layered together and parameters were exposed to independently adjust the color, scale, and opacity. I also recreated a version of this as a <a target="blank" href="watercolor.html">shader</a> to use in-engine. The shader version was used for larger areas such as the ground and walls.
                                     <br />
                                     <img class="blog-img" src="images/Jiufen/01A_designer.jpg">
                                     <br />
@@ -94,7 +106,7 @@
                             <h5 class="blog-header1">Brick Texture</h5>
                             <div class="blog-text">
                                 <h4 >
-                                    I used the watercolor material again in the brick texture, which gave a lot of nice subtle color variation. I wanted to make sure that the grout of the brick had variation in the lines, like it was imperfectly painted with a paintbrush.
+                                    I used the watercolor material again as a base for the brick texture, which gave a lot of nice subtle color variation. I wanted to make sure that the grout of the brick had variation in the lines, like it was imperfectly painted with a paintbrush. I then used this texture as a tiling texture for the bricks and house walls.
                                     <br />
                                     <img class="blog-img" src="images/Jiufen/01B_designer.jpg">
                                     <br />
@@ -103,30 +115,39 @@
                             <h5 class="blog-header1">Unique Textures</h5>
                             <div class="blog-text">
                                 <h4 >
-                                    I textured the unique meshes such as the moped, plant pots, and gardening supplies using Substance Painter. I used the watercolor smart material again then added some AO, curvature, and sometimes a positional gradient. I used more noise and brushstroke-like textures for these masks to break them up and give them a more painterly, organic feel.
+                                    I textured the unique meshes such as the moped, plant pots, and gardening supplies using Substance Painter. I used the watercolor smart material I made in Substance Designer again then added AO, curvature, and a positional gradient. I used more noise and brushstroke-like textures for these masks to break them up and give them a more painterly, organic feel.
                                     <br />
-                                    <img class="blog-header-img" src="images/jiufen_thumb.jpg">
-                                    MOPED, PLANT POTS, GARDENING SUPPLIES
-                                    <br />
+                                    <img class="blog-header-img" src="images/Jiufen/02A_Texturing.jpg">
+                                    <img class="blog-header-img" src="images/Jiufen/02B_Texturing.jpg">
                             </div>
                             <h5 class="blog-header1">Trim Sheets</h5>
                             <div class="blog-text">
                                 <h4 >
-                                    I made a couple other trim sheets using a combination of Substance Designer and baking them from Blender and texturing in Substance Painter.
+                                    I used Substance Designer again to create the wood trim textures, using a similar technique as the brick textures. I also made a general trim sheet by baking high-res meshes onto a plane in Substance Painter. I used the watercolor smart material once again as a base. These trim sheets were used for assets like the power lines, pipes, pieces of the houses, and fences. I also made some simple posters and signs in Photoshop.
                                     <br />
-                                    <img class="blog-header-img" src="images/jiufen_thumb.jpg">
-                                    TRIM TEXTURED MESHES (TABLE, CRATE, ELECTRIC POLE)
+                                    <img class="blog-header-img" src="images/Jiufen/02C_Texturing.jpg">
+                                    <img class="blog-header-img" src="images/Jiufen/02D_Texturing.jpg">
                                     <br />
                             </div>
                            
                             <h5 class="blog-header1">Foliage</h5>
                             <div class="blog-text">
                                 <h4 >
-                                    I painted the plant textures in Photoshop then arranged the foliage planes in Blender. To get more color variation, I duplicated the material in Unity with a subtle tint so there is the original version and a darker version of the foliage.
+                                    I painted the plant textures in Photoshop using some watercolor brushes, then arranged the foliage planes in Blender to create the trees and bushes. I also tried to re-use the same leaf shapes for different types of plants by manipulating the mesh in different ways. 
                                     <br />
-                                    <img class="blog-img" src="images/Jiufen/02B_Texturing.jpg">
-                                    WILD FOLIAGE
+                                    <img class="blog-img" src="images/Jiufen/03A_Foliage.jpg">
+                                    <img class="blog-img" src="images/Jiufen/03B_Foliage.jpg">
                                     <br />
+                                    To get more color variation, I duplicated the plant material in Unity with a subtle darker tint.
+                                    <br />
+                                    <img class="blog-img" src="images/Jiufen/03C_Foliage.jpg">
+                            </div>
+                            <h5 class="blog-header1">Shader</h5>
+                            <div class="blog-text">
+                                <h4 >
+                                    A more in-depth explanation of the shader can be found <a target="blank" href="watercolor.html">here!</a>
+                                    <br />
+                                    <img class="blog-img" src="images/Shaders/05_Watercolor/Watercolor_Final.png.jpg">
                             </div>
 
                                  
