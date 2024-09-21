@@ -61,9 +61,7 @@
                         <div class="col-6">
                             <h2 class="blog-title">Storylines: Passion and Fashion</h2>
                             <div class="description blog-text">
-                                <h3>Tangent Interactive Media</h3>
-                                <h3>Mobile</h3>
-                                <h3>2021 - 2022</h3>
+                                <h3>Tangent Interactive Media | Mobile | 2021-2022</h3>
                             </div>
 
                             <br />
@@ -71,7 +69,7 @@
                             <br />
                             <h4 class="blog-text">
                                 <br />
-                                <i>Storylines: Passion &amp; Fashion</i> is a free-to-play romance narrative-based mobile game. My role in the project is the Technical Artist, and my responsibilites include creating and assembling environments, laying out the stories using an in-house narrative layout tool, and creating a variety of clothing assets. I also occasionally programming work on the custom Unity editor tools, implementing features that are needed but not high enough priority for the main developers.
+                                <i>Storylines: Passion &amp; Fashion</i> is a free-to-play romance narrative-based mobile game. My role in the project is the Technical Artist, and my responsibilites include creating and assembling environments, laying out the stories using an in-house narrative layout tool, and creating a variety of clothing assets. I also occasionally contributed some programming work to our custom Unity editor tools, implementing features that were needed but not high enough priority for the main developers.
                                 <br />
                                 <br />
                                 <div class="wrapper">
@@ -97,6 +95,7 @@
                                     <img class="blog-img" src="images/Storylines/storylines_bedroom.jpg">
                                     <img class="blog-img" src="images/Storylines/storylines_sororityhouse.jpg">
                                     <img class="blog-img" src="images/Storylines/storylines_university.jpg">
+                                    <img class="blog-img" src="images/Storylines/storylines_library.jpg">
                                     <img class="blog-img" src="images/Storylines/storylines_park.jpg">
                                     <img class="blog-img" src="images/Storylines/storylines_beach.jpg">
                                     <img class="blog-img" src="images/Storylines/storylines_beach_lobby.jpg">
@@ -105,6 +104,13 @@
                                     <img class="blog-img" src="images/Storylines/storylines_rusticbar.jpg">
                                     <img class="blog-img" src="images/Storylines/storylines_tigerbar.jpg">
                                     <img class="blog-img" src="images/Storylines/storylines_nightclub.jpg">
+                                    <img class="blog-img" src="images/Storylines/storylines_chalet.jpg">
+                                    <img class="blog-img" src="images/Storylines/storylines_gala.jpg">
+                                    <img class="blog-img" src="images/Storylines/storylines_hotelgala.jpg">
+                                    <img class="blog-img" src="images/Storylines/storylines_casinolobby.jpg">
+                                    <img class="blog-img" src="images/Storylines/storylines_casino.jpg">
+
+
                                     <br />
                                     I developed and maintained the shaders used in environment assets, such as the general environment shader, glass, and water. The environments use a flexible and lightweight lighting solution, allowing us to create multiple custom lighting schemes per set to express a variety of moods in the stories.
                                     <br />
@@ -115,6 +121,35 @@
                             </div>
                             
                             <br />
+
+                            <h5 class="blog-header1">Character Asset Creation</h5>
+                            <div class="blog-text">
+                                <h4 >
+                                    when there was downtime between creating new sets or doing narrative layout, I would also contribute character assets to help fill out our catalog of items. I modelled, textured, rigged, and implemented a variety of character assets such as hats, shoes, clothing, and hairstyles.                                    <br />
+                                    <img class="blog-img" src="images/Storylines/storylines_hats.jpg">
+                                    <br />
+                                    I created multiple types of shoes, using variations in the silhouette, colours, and materials to efficiently create a variety of different styles of shoes.
+                                    <br />
+                                    <img class="blog-img" src="images/Storylines/storylines_shoes.jpg">
+                                    <br />
+                                    I also worked on a few hairstyles for our characters. It was a fun challenge to figure out how to faithfully depict different hair textures and styles!
+                                    <br />
+                                    <img class="blog-img" src="images/Storylines/storylines_hairstyles.jpg">
+                            </div>
+                            <br />
+                            <h5 class="blog-header1">Hair Highlight Shader</h5>
+                            <div class="blog-text">
+                                <h4>
+                                    We wanted to offer the players more hair customization options, but since new hairstyles could be time-consuming to make and usually less prioritized than creating new clothing assets, I pitched the idea of adding a hair highlights feature. This would allow players to at least further customize the existing hairstyles to create new types of looks. Since the hair texture is greyscale, with the colour applied in-engine, I added the hair highlight masks into the Green and Blue channels of the existing hair textures. This was also important to reduce the number of overall textures in the project, especially as our asset library will only ever get bigger!                                     <br />
+                                    <img class="blog-img" src="images/Storylines/storylines_hairhighlightsexamples.jpg">
+                                    <br />
+                                    To give as many pattern options as possible, I split the Green channel of the RGBA hair texture into 4 components (0-0.24, 0.25-0.49, 0.5-0.74, 0.75-1), with each highlight option restricted to a different interval. The ombre option is added separately in the Blue channel. All the highlight options are available to mix and match as well, and different colours can be chosen for the base hair color, highlights and ombre. I added the functionality to the existing hair shader, implemented the options to our existing character creation tool, as well as painted the hair masks for our existing hairstyles. 
+                                    <br />
+                                    <img class="blog-img" src="images/Storylines/storylines_hairhighlights.jpg">
+
+                                </h4>
+                            </div>
+                            <br />
                             <h5 class="blog-header1">Narrative Layout</h5>
                             <div class="blog-text">
                                 <h4 >
@@ -124,19 +159,6 @@
                                     <br />
                             </div>
                             <br />
-
-                            <h5 class="blog-header1">Character Asset Creation</h5>
-                            <div class="blog-text">
-                                <h4 >
-                                    When there was downtime between creating new sets or doing narrative layout, I would also provide support to the 3D character artist to help fill out our catalog of clothing. I modelled, textured, and rigged a variety of character assets such as hats, shoes, t-shirts, and hairstyles.
-                                    <br />
-                                    <img class="blog-img" src="images/Storylines/storylines_hats.jpg">
-                                    <br />
-                                    I also created multiple types of shoes, where I used slight variations in the silhouette and color to quickly create new shoe assets to fit a variety of styles and situations.
-                                    <br />
-                                    <img class="blog-img" src="images/Storylines/storylines_shoes.jpg">
-                                    <br />
-                            </div>
 
                                  
                 </div>
