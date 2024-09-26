@@ -59,7 +59,7 @@
                             <h4 class="blog-text">
                                     This stylized water shader includes depth, foam, refraction, and sparkles! It’s pretty versatile on it's own, but also can be easily built upon for more specific uses.                                    <br />
                                     <br />
-                                    My main inspiration and references are linked here - I highly recommend checking them out too!
+                                    My main inspiration and references:
                                     <br />
                                     <a href="https://youtu.be/4FIDBeF_4SI" target="_blank">RIME Stylized VFX</a>
                                      <br />
@@ -94,19 +94,9 @@
                             </h6>
                             <div class="blog-text">
                                 <h4>
-                                Panning textures are one of the main tools used in shaders, so I always just make my own function that I can call anytime in the shader. The function input is two floats, for the x and y speed, a sampler2D for the texture, and a float2 for the UV coordinates.                             </h4>
-                            <pre><code class="language-glsl hljs">
-float4 panningTexture(float speedX, float speedY, sampler2D tex, float2 uv){
-    float2 panningUV = uv;
-    float Xspeed = speedX * _Time;
-    float Yspeed = speedY * _Time;
-    
-    panningUV += float2(Xspeed, Yspeed);
-
-    fixed4 panningTex = tex2D(tex, panningUV);
-    return panningTex;
-}
-                            </code></pre>
+                                Panning textures are one of the main tools used in shaders, so I always just make my own function that I can call anytime in the shader. The function input is two floats, for the x and y speed, a sampler2D for the texture, and a float2 for the UV coordinates.                             
+                            </h4>
+                            <img class="blog-img" src="images/Shaders/02_StylizedWater/00_Code_PanningTex.png">
                             </div>
                             <br />
                             <br />
@@ -118,96 +108,8 @@ float4 panningTexture(float speedX, float speedY, sampler2D tex, float2 uv){
                                 <h4>
                                     This shader uses an unlit vertex/fragment shader with the render queue set to transparent. I set up the textures that we will be using as well as the shader variables ScreenPos, ViewDir, WorldNormal, and WorldPos. This set-up will simply return the Color Ramp texture.                                </h4>
                                 <img class="blog-img" src="images/Shaders/02_StylizedWater/01_ColorRamp.jpg">
-                                <pre><code class="language-glsl hljs">
-    Shader "Unlit/Water"
-    {
-        Properties
-        {
-            _ColorRamp ("ColorRamp", 2D) = "white" {}
-            [Normal]_NormalMap ("NormalMap", 2D) = "bump" {}
-            [Normal]_NormalNoiseMap("NormalNoiseMap", 2D) = "bump" {}
-            _FoamTexture ("FoamTexture," 2D) = "white" {}
-        }
-        SubShader
-        {
-            Tags {"Queue"="Transparent" "IgnoreProjector"="True" "RenderType"="Transparent"}
-            ZWrite Off
-		    Cull Off
-            LOD 100
-    
-            Pass
-            {
-                CGPROGRAM
-                #pragma vertex vert
-                #pragma fragment frag
-
-                #include "UnityCG.cginc"
-    
-                struct appdata
-                {
-                    float4 vertex : POSITION;
-                    float2 colUV : TEXCOORD0;
-                    float2 normalUV : TEXCOORD1;
-                    float2 noiseUV : TEXCOORD2;
-                    float2 foamUV : TEXCOORD3;
-                    float3 normal : NORMAL;
-                };
-    
-                struct v2f
-                {
-                    float2 colUV : TEXCOORD0;
-                    float2 normalUV : TEXCOORD1;
-                    float2 noiseUV : TEXCOORD2;
-                    float2 foamUV : TEXCOORD3;
-    
-                    float4 screenPos : TEXCOORD4;
-                    float4 worldPos : TEXCOORD5;
-                    half3 worldNormal : TEXCOORD6;
-                    float3 viewDir : TEXCOORD7;
-    
-                    float4 vertex : SV_POSITION;
-                };
-    
-                sampler2D _ColorRamp;
-                float4 _ColorRamp_ST;
-    
-                sampler2D _NormalMap;
-                float4 _NormalMap_ST;
-    
-                sampler2D _NormalNoiseMap;
-                float4 _NormalNoiseMap_ST;
-
-                sampler2D _FoamTexture;
-                float4 _FoamTexture_ST;
-    
-                v2f vert (appdata v)
-                {
-                    v2f o;
-                    o.vertex = UnityObjectToClipPos(v.vertex);
-                    o.colUV = TRANSFORM_TEX(v.colUV, _ColorRamp);
-                    o.normalUV = TRANSFORM_TEX(v.normalUV, _NormalMap);
-                    o.noiseUV = TRANSFORM_TEX(v.noiseUV, _NormalNoiseMap);
-                    o.foamUV = TRANSFORM_TEX(v.foamUV, _FoaMTexture);
-    
-                    o.screenPos = ComputeScreenPos(o.vertex);
-                    o.worldPos = mul(unity_ObjectToWorld, v.vertex);
-                    o.worldNormal = UnityObjectToWorldNormal(v.normal);
-                    o.viewDir = normalize(UnityWorldSpaceViewDir(o.worldPos));
-                    UNITY_TRANSFER_FOG(o,o.vertex);
-                    return o;
-                }
-    
-                fixed4 frag (v2f i) : SV_Target
-                {
-                    // sample the texture
-                    fixed4 col = tex2D(_ColorRamp, i.colUV);
-                    return col;
-                }
-                ENDCG
-            }
-        }
-    }
-                                </code></pre>
+                                <img class="blog-img" src="images/Shaders/02_StylizedWater/01A_Code_ColorRamp.png">
+                                <img class="blog-img" src="images/Shaders/02_StylizedWater/01B_Code_ColorRamp.png">
                                                             
                             </div>
                             <br />
@@ -218,33 +120,11 @@ float4 panningTexture(float speedX, float speedY, sampler2D tex, float2 uv){
                                 <h4>
                                     We can get the depth by accessing the built-in shader variable _CameraDepthTexture. This will be used to see where objects intersect with our water plane, and where there would also be foam. We can multiply this by _DepthDistance to control the size of the depth.                                </h4>
                                 <img class="blog-img" src="images/Shaders/02_StylizedWater/02_Depth.jpg">
-                                <pre><code class="language-glsl hljs">
-sampler2D _CameraDepthTexture;
-
-fixed4 frag (v2f i) : SV_Target
-{
-    //DEPTH
-    float depth = tex2Dproj(_CameraDepthTexture, UNITY_PROJ_COORD(i.screenPos));
-    depth = saturate(((LinearEyeDepth(depth)) - i.screenPos.w) / _DepthDistance).r;
-
-    // COLOR BLEND
-    fixed4 col = tex2D(_ColorRamp, i.colUV);
-    return depth;
-}
-                                </code></pre>
+                                <img class="blog-img" src="images/Shaders/02_StylizedWater/02A_Code_Depth.png">
                                 <h4>
                                     If we want to color the shallow areas, the depth texture as is, is the reverse of what we want. So, we can One Minus the depth then multiply that with the _FoamColor. To add a texture to the foam, just Step the foamTexture with the foamArea to get a nice stylized foam texture. Finally, using the panningTexture() function, we can pan the foam for some motion.                                </h4>    
                                 <img class="blog-img" src="images/Shaders/02_StylizedWater/03_Foam.gif">
-                                <pre><code class="language-glsl hljs">
-//FOAM
-fixed4 foamArea = (1 - depth) * _FoamColor;
-fixed4 foamTex = tex2D(_FoamTexture, i.foamUV);
-fixed4 foam = saturate(step(foamTex, foamArea));
-
-//COLOR BLEND
-fixed4 col = tex2D(_ColorRamp, i.colUV);
-return col + foam;
-                                </code></pre>
+                                <img class="blog-img" src="images/Shaders/02_StylizedWater/03A_Code_Foam.png">
 
                             </div>
                             <h6 class="blog-header2">
@@ -254,25 +134,10 @@ return col + foam;
                                 <h4 >
                                         I like to add a fresnel to the depth which helps smooth out some of the depth errors that can sometimes occur in more complicated scenes. Since we’re using a foam texture, I added the fresnel to One Minus the foam so we don’t see any inconsistencies. I also find that the fresnel is useful to keep the vibrancy and saturation of the water color in areas it will later be more transparent.                                </h4>
                                 <img class="blog-img" src="images/Shaders/02_StylizedWater/04_Fresnel.jpg">
-                                <pre><code class="language-glsl hljs">
-//WATER COLOR
-fixed4 waterCol = tex2D(_ColorRamp, i.colUV);
-
-float fresnel = saturate(1 -(dot(i.worldNormal, i.viewDir)));
-
-//Since we're using a foam texture, use (fresnel + (1 - foam)) instead of (fresnel + depth)
-//fixed4 waterDepthCorrection = (fresnel + depth) * float4(1,1,1,1);
-
-fixed4 waterDepthCorrection = (fresnel + (1 - foam)) * float4(1,1,1,1);
-waterCol *= waterDepthCorrection;
-
-//COLOR BLEND
-fixed4 col = waterCol + foam;
-return col;
-                                </code></pre>
+                                <img class="blog-img" src="images/Shaders/02_StylizedWater/04A_Code_Fresnel.png">
                             </div>
                             <h6 class="blog-header2">
-                                Refraction!
+                                Refraction
                             </h6>
                             <div class="blog-text">
                                 <h4>
@@ -280,37 +145,11 @@ return col;
                                     <br />
                                     Pan the normal texture using the PanningTexture() function. Make sure that the normal texture is unpacked to ensure that the values go from -1 to 1 instead of from 0 to 1. Initialize a float4 distortedUV and assign it to the screenPosition. Now we can add our panning normals to the distortedUV. Multiply this by distortedUV.z to normalize to screen position. This will distort our snapshot of the scene by the panning normal map.                                </h4>
                                 <img class="blog-img" src="images/Shaders/02_StylizedWater/05_DistortedGrabPass.gif">
-                                <pre><code class="language-glsl hljs">
-//REFRACTION
-float4 grabPass = tex2Dproj(_CameraOpaqueTexture, UNITY_PROJ_COORD(i.screenPos));
-
-float2 distortion = UnpackNormal(panningTexture(_RefractionSpeedX, _RefractionSpeedY, 
-                                _NormalMap, i.normalUV)).xy * RefractionStrength;
-float4 distortedUV = normalize(i.screenPos);
-distortedUV.xy += distortion * distortedUV.z;
-float4 grabPassDistorted = tex2Dproj(_CameraOpaqueTexture, UNITY_PROJ_COORD(distortedUV));
-                
-//COLOR BLEND
-fixed4 col = grabPassDistorted;
-return col;
-                                </code></pre>
+                                <img class="blog-img" src="images/Shaders/02_StylizedWater/06A_Code_Refraction.png">
                                 <h4>
                                         There are some parts being refracted that shouldn’t be refracting, like the parts of the mesh that are above the water, so we have to mask it out. To do so, we can subtract the surfaceDepth from a distorted version of the screenDepth. Now that we have a mask to only distort what’s under the water, we can Lerp a clean, undistorted grabpass with the distorted grabpass using the mask, and done! Lerp again between the water color and the refraction with _WaterOpacity so we can control how transparent the water looks.                                 </h4>
                                 <img class="blog-img" src="images/Shaders/02_StylizedWater/06_Refraction.gif">
-                                <pre><code class="language-glsl hljs">
-    //REFRACTION MASK
-    float surfaceDepth = UNITY_Z_0_FAR_FROM_CLIPSPACE(i.screenPos.z);
-    float screenDepthDistorted = LinearEyeDepth(UNITY_SAMPLE_DEPTH(tex2Dproj
-                                (_CameraDepthTexture, UNITY_PROJ_COORD(distortedUV))));
-    float refractionMask = screenDepthDistorted - surfaceDepth;
-
-float4 refraction = lerp(grabPass, grabPassDistorted, saturate(refractionMask));
-                                
-//COLOR BLEND
-fixed4 refractedWater = lerp(waterCol, refraction, _WaterOpacity);
-fixed4 col = refractedWater + foam;
-return col;
-                                </code></pre>
+                                <img class="blog-img" src="images/Shaders/02_StylizedWater/06B_Code_Refraction.png">
                             </div>
                             <h6 class="blog-header2">
                                 Coloring the Deep Water
@@ -319,18 +158,7 @@ return col;
                                 <h4>
                                         We can use a similar technique to what we used in the refraction mask to calculate where the water is deeper. Coloring the deeper water a darker color is a nice way to add some more depth to the water’s color on top of the color ramp. Subtract a clean surfaceDepth from a clean screenDepth. We can divide this by _WaterDepth to make the gradient easier to control. Finally, Lerp this with the refracted water. This is a subtle effect but I think it adds a lot of depth!                                </h4>
                                 <img class="blog-img" src="images/Shaders/02_StylizedWater/07_Underwater.jpg">
-                                <pre><code class="language-glsl hljs">
-//UNDERWATER
-float screenDepth = LinearEyeDepth(SAMPLE_DEPTH_TEXTURE(_CameraDepthTexture, 
-                    (i.screenPos.xy/i.screenPos.w)));
-float depthDifference = (screenDepth - surfaceDepth);
-float underwaterAmount = saturate((depthDifference / (pow(_WaterDepth, 5))));
-                                
-//COLOR BLEND
-fixed4 underwater = lerp(refractedWater, _UnderwaterColor, underwaterAmount);
-fixed4 col = underwater + foam;
-return col;
-                                </code></pre>
+                                <img class="blog-img" src="images/Shaders/02_StylizedWater/07A_Code_Underwater.jpg.png">
                             </div>
                             <h6 class="blog-header2">
                                 Sparkles!
@@ -343,22 +171,7 @@ return col;
                                 <h4>
                                         We can stop there, but depending on the texture, the tiling of the sparkles may be too obvious or you may want to decrease the overall amount of sparkles. Just repeat the above process with a different texture with different tiling and speeds. Multiply them together and now the sparkles will look more random. And we’re done!                                </h4>
                                 <img class="blog-img" src="images/Shaders/02_StylizedWater/09_Sparkles2.gif">
-                                <pre><code class="language-glsl hljs">
-//SPARKLES
-float normals1 = UnpackNormal(panningTexture(_RefractionSpeedX, _RefractionSpeedY, 
-                _NormalMap, i.normalUV)).x;
-float sparkles1 = step((dot(normals1, normals1) * _SparkleAmount), 1);
-
-float normals2 = UnpackNormal(panningTexture((_RefractionSpeedX / 2), (_RefractionSpeedY / 2), 
-                _NormalNoiseMap, i.noiseUV)).x;
-float sparkles2 = step((dot(normals2, normals2) * _SparkleAmount), 1);
-
-float sparkles = (1 - sparkles1) * (1 - sparkles2) * _FoamColor;
-
-//COLOR BLEND
-fixed4 col = underwater + foam + sparkles;
-return col;
-                                </code></pre>
+                                <img class="blog-img" src="images/Shaders/02_StylizedWater/08A_Code_Sparkles.png">
                             </div>                            
                         </div>
                    

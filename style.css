@@ -397,8 +397,35 @@ a:hover {
     }
 
     .description {
-        padding: 30px;
+        padding: 0px;
         max-width: 85%;
+    }
+
+    .blog-title{
+        margin-left: 5%;
+        margin-right: 5%;
+        text-align: left;
+        font-size: 2.8vh;
+    }
+
+    .blog-header1{
+        margin-left: 5%;
+        margin-right: 5%;
+        text-align: left;
+    }
+    
+    .blog-header2{
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+
+    .blog-text {
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+
+    .blog-header-img{
+        width: 90%;
     }
 
     /* NAV */
