@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="style.css" rel="stylesheet" type="text/css">
+    <link href="grid.css" rel="stylesheet" type="text/css">
+    <title>Nicole Lin</title>
+    <link rel="shortcut icon" href="images/favicon.png">
+    <script src="responsive.js"></script>
+
+</head>
+
+<body>
+    <div id="left" class="def-color"></div>
+    <div id="right" class="def-color"></div>
+    <div id="top" class="def-color"></div>
+    <div id="bottom" class="def-color"></div>
+
+    <div class="row">
+        <div class="col-half"></div>
+        <div class="col-filler"></div>
+        <div class="col-5">
+            <div class="grid-container">
+                <div id="header">
+                    <a href="index.html">
+                        <img id="name" src="images/title.png">
+                    </a>
+                    <div class="linkwrap" id="links-wrapper">
+                        <a href="javascript:void(0);" class="linkclose" id="links-close" onClick="closeNav()">
+                            <img id="close" src="images/close.png">
+                        </a>
+                        <h1>
+                            <a class="link" style="color: #76707c"  href="index.html">
+                                Portfolio
+                            </a>
+                            <a class="link" href="about.html">
+                                About
+                            </a>
+                        </h1>
+                        <a id="links-hamburger" onClick="openNav()">
+                            <img id="hamburger" src="images/hamburger.png">
+                        </a>
+                    </div>
+                </div>
+                <div class="blog">
+                    <div class="row">
+                        <div class="col-6">
+                            <h2 class="blog-title">Hot Pot</h2>
+                            </div>
+
+                            <br />
+                            <img class="blog-header-img" src="images/HotPot/FinalA.jpg">
+                            <br />
+                            <div class="blog-text">
+                                <img class="blog-img" src="images/HotPot/FinalD.jpg">
+                                <img class="blog-img" src="images/HotPot/FinalB.jpg">
+                                <img class="blog-img" src="images/HotPot/FinalC.jpg">
+
+                                <video width=100% controls>
+                                    <source src="images/HotPot/FinalRender_001.webm" type="video/mp4">
+                                  Your browser does not support the video tag.
+                                </video>  
+                            </div>
+                            <br />
+                            <h4 class="blog-text">
+                            <h5 class="blog-header1">Introduction</h5>
+                            <div class="blog-text">
+                                <h4>
+                                    My main goal for this project was to implement a post-process outline effect using the Unity Scriptable Render Pipeline. I wanted to use this effect to create my favourite meal in an anime-style. I was inspired by how warm and inviting the food in anime looks!
+                                    <br />
+                                    <img class="blog-img" src="images/HotPot/00_Ref.PNG">
+                                    <br />
+                                    My main references:
+                                    <br />
+                                    <a href="https://www.vertexfragment.com/ramblings/unity-postprocessing-sobel-outline/" target="_blank">Vertex Fragment "Sobel Outline with Unity Post-Processing"</a>
+                                    <br />
+                                    <a href="https://www.gdcvault.com/play/1027721/The-Art-of-Sable-Imperfection" target="blank">GDC Vault "The Art of Sable Imperfection"</a>
+                                     <br />
+                                    <a href="https://youtu.be/LMqio9NsqmM?si=cXe-xCmpp9qMsM-H" target="_blank">Robin Seibold Outlines Devlog</a>
+                                     <br />
+                                </h4>
+                            </div>
+                            <br />
+                            <br />
+                            <h5 class="blog-header1">Post-Process Outlines</h5>
+                            <h6 class="blog-header2">                                
+                            Outline Render Feature
+                            </h6>
+                            <div class="blog-text">
+                                <h4 >
+                                    First, I created a custom Outline Render Feature using the Unity Scriptable Render Pipeline. In summary, it contains a custom Render Pass that creates a temporary render texture using a specified shader, which is then passed to the outline shader. The outline shader uses the Sobel operator to detect the edges of the render texture, draws the outline, then combines it with the rest of the scene. A faint noise mask is also multiplied over the outlines for a more organic hand-drawn feel. This outline shader result is then blitted to the camera by the Render Pass.
+                                    <br />
+                                    <img class="blog-img" src="images/HotPot/01A_OutlineRenderPass.jpg">
+                                    <br />
+                            </div>
+                            <h6 class="blog-header2">                                
+                                Depth-Based Outlines
+                            </h6>
+                            <div class="blog-text">
+                                <h4 >
+                                    The depth texture taken from the camera is commonly used for the Sobel edge detection since it is easy to access and can give decent results. However, it can miss details that are at similar depth and can run into issues with transparent objects since they are not drawn to the depth texture. Depth-Based outlines can be combined with View-Space Normal outlines for a better result, however for this scene, I decided to only use Vertex Color based outlines.
+                                    <br />
+                                    <img class="blog-img" src="images/HotPot/01B_DepthBasedOutlines.jpg">
+                                    <br />
+                            </div>
+                            <h6 class="blog-header2">                                
+                                Vertex Color-Based Outlines
+                            </h6>
+                            <div class="blog-text">
+                                <h4 >
+                                    Using Vertex Color-based outlines gives a very predictable result, and allows fine control over where the outlines are drawn. The vertex color shader used to create the render texture assigns a random vertex color to each mesh using the world position as a seed. 
+                                    <br />
+                                    <img class="blog-img" src="images/HotPot/01C_VertexColorRT.jpg">
+                                    <br />
+                                <h4>
+                                    For more complex meshes, I colored each section that should be outlined with a different greyscale value in Blender. The greyscale value will then be multiplied with a random color in the vertex color shader, ensuring both the smaller parts and the entire mesh will be colored differently from other objects in the scene.
+                                    <br />
+                                    <img class="blog-img" src="images/HotPot/01D_VertexColorComplex.jpg">
+                                    <br />
+                                <h4>
+                                    By using just the vertex color, I was also able to solve the problem of the outlines being drawn through the transparent soup since their vertex colors are also drawn to the render texture. 
+                                    <br />
+                                    <img class="blog-img" src="images/HotPot/01E_VertexColorOutlilnes.jpg">
+                                    <br />
+                            </div>
+                            <br />
+
+                            <h5 class="blog-header1">Toon Shader</h5>
+                            <div class="blog-text">
+                                <h4 >
+                                    I used an updated version of my <a href="toon.html" target="_blank">toon shader</a> to achieve the anime-style look. The main change from my toon shader was adding a shadow gradient within the toon shadow to soften the look and give a bit more of a painterly feel. I also added support for point lights, but decided to not step them and keep the light from the point lights soft.
+                                    <br />
+                                    <img class="blog-img" src="images/HotPot/02A_ToonShadow.PNG">
+                                    <img class="blog-img" src="images/HotPot/02B_NoTexture.jpg">
+                                    <br />
+                            </div>
+                            <br />
+                            <br />
+                            <h5 class="blog-header1">Soup Shader</h5>
+                            <div class="blog-text">
+                                <h4 >
+                                    The soup shader uses two levels of depth, mostly so I could mimic the look of the yellow beef tallow rising to the surface for the spicy Mala soup! This shader is also used for the tea and sauce. A normal texture is also sampled using polar coordinates for the swirls in the soup.                                    <br />
+                                    <video width=100% controls>
+                                        <source src="images/HotPot/03A_Soup.webm" type="video/mp4">
+                                      Your browser does not support the video tag.
+                                    </video>
+                            </div>
+                            <br />
+                            <br />
+                            <h5 class="blog-header1">VFX</h5>
+                            <h6 class="blog-header2">                                
+                                Steam
+                            </h6>
+                            <div class="blog-text">
+                                <h4 >
+                                    First, I drew a couple vertical repeating steam textures in Procreate. The texture is then panned in the shader and layered with another copy but with slightly different offset, tiling, and speed. There is also a subtle distortion in the UVs to create a more organic feel. Finally, the top and bottom of the plane is masked out with a subtle, slow-moving texture to fade in and out the steam.
+                                    <br />
+                                    <img class="blog-header-img" src="images/HotPot/04A_SteamShader.jpg">
+                                    <video width=100% controls>
+                                        <source src="images/HotPot/04B_Steam.mp4" type="video/mp4">
+                                      Your browser does not support the video tag.
+                                    </video>
+                                    <br />
+                            </div>
+                            <h6 class="blog-header2">                                
+                                Bubble
+                            </h6>
+                            <div class="blog-text">
+                                <h4 >
+                                    The bubbles are made with the particle system and a custom mesh. The alpha is multiplied with a noise texture and the V of the UV coordinates to mask the mesh vertically. This is then multiplied with the vertex color, which is controlled by the particle system. The particle alpha is then faded to 0 over its lifetime and timed with scaling over lifetime to achieve the bubble popping effect.
+                                    <br />
+                                    <video width=100% controls>
+                                        <source src="images/HotPot/05A_Bubbles.webm" type="video/mp4">
+                                      Your browser does not support the video tag.
+                                    </video>
+                                    <br />
+                            </div>
+                           <br />
+                           <br />
+                            <h5 class="blog-header1">Textures</h5>
+                            <div class="blog-text">
+                                <h4 >
+                                    <img class="blog-img" src="images/HotPot/06A_Meat.jpg">
+                                    <img class="blog-img" src="images/HotPot/06B_Veggies.jpg">
+                                    <img class="blog-img" src="images/HotPot/06C_FoodTex.jpg">
+                            </div>       
+                </div>
+                    <div id="email">
+                        <h1><a target="_blank" href="mailto:nlin.nicole@gmail.com">nlin.nicole@gmail.com</a></h1>
+                    </div>
+                </div>
+                <div class="col-filler"></div>
+                
+                <div class="col-filler"></div>
+                <div class="col-half logo-container-outer">
+                    <div class="logo-container">
+                        <a href="index.html">
+                            <img class="logo" src="images/logo_home.png">
+                    </div>
+                </div>
+            </div>
+</body>
+
+
+</html>
+
+
+</html>
