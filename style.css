@@ -9,6 +9,7 @@ html {
 }
 .def-color {
     background: #C1BECC;
+    z-index: 10;
 }
 
 /* GENERAL SETTINGS */
@@ -201,7 +202,7 @@ a:hover {
 
 /* PAGES */
 .gallery img {
-    width: 90%;
+    width: 100%;
 }
 
 .gallery h2 {
