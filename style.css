@@ -154,6 +154,16 @@ a:hover {
     padding: 0px 8px 0px 8px;
 }
 
+.thumbnail_mini{
+    max-width: 31%;
+    margin: 0 auto;
+    float: left;
+    position: relative;
+    overflow: auto;
+    transition: 0.5s ease;
+    padding: 5px 2px 0px 2px;
+}
+
 .thumbnail_full {
     max-width: 100%;
     margin: 0 auto;
@@ -302,6 +312,14 @@ a:hover {
     display: inline-block;
 }
 
+.articulate-text{
+    margin-left: 15%;
+    margin-right: 15%;
+    font-size: 1.8vh;
+    line-height: 1.5;
+    display: inline-block;
+}
+
 .blog-text img {
     text-align: center;
     margin: auto;
@@ -391,6 +409,11 @@ a:hover {
     .logo {
         float: left;
         text-align: center;
+    }
+
+    .thumbnail_mini{
+        max-width: 85%;
+        float: none;
     }
 
     #email {
