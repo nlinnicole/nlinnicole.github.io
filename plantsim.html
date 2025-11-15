@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="style.css" rel="stylesheet" type="text/css">
+    <link href="grid.css" rel="stylesheet" type="text/css">
+    <title>Nicole Lin</title>
+    <link rel="shortcut icon" href="images/favicon.png">
+    <script src="responsive.js"></script>
+
+</head><!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="style.css" rel="stylesheet" type="text/css">
+    <link href="grid.css" rel="stylesheet" type="text/css">
+    <title>Nicole Lin</title>
+    <link rel="shortcut icon" href="images/favicon.png">
+    <script src="responsive.js"></script>
+
+</head>
+
+<body>
+    <div id="left" class="def-color"></div>
+    <div id="right" class="def-color"></div>
+    <div id="top" class="def-color"></div>
+    <div id="bottom" class="def-color"></div>
+
+    <div class="row">
+        <div class="col-half"></div>
+        <div class="col-filler"></div>
+        <div class="col-5">
+            <div class="grid-container">
+                <div id="header">
+                    <a href="index.html">
+                        <img id="name" src="images/title.png">
+                    </a>
+                    <div class="linkwrap" id="links-wrapper">
+                        <a href="javascript:void(0);" class="linkclose" id="links-close" onClick="closeNav()">
+                            <img id="close" src="images/close.png">
+                        </a>
+                        <h1>
+                            <a class="link" style="color: #76707c"  href="index.html">
+                                Portfolio
+                            </a>
+                            <a class="link" href="about.html">
+                                About
+                            </a>
+                        </h1>
+                        <a id="links-hamburger" onClick="openNav()">
+                            <img id="hamburger" src="images/hamburger.png">
+                        </a>
+                    </div>
+                </div>
+                <div class="blog">
+                    <div class="row">
+                        <div class="col-6">
+                            <h2 class="blog-title">Plant Nursery Simulator</h2>
+                            <div class="description blog-text">
+                                <h3>Robot Assembly | PC | 2025</h3>
+                            </div>
+
+                            <br />
+                            <img class="blog-header-img" src="images/PlantSim/01A_Splash.jpg">
+                            <br />
+                            <h4 class="blog-text">
+                                I created all the environment and plant assets for  <a target="blank" href="https://store.steampowered.com/app/3474700/Plant_Nursery_Simulator/"><i>Plant Nursery Simulator</i></a> over the course of 6 months of development. As a tiny team of 2, an artist and programmer, I also helped in the planning and organization of assets, creating marketing material, implementing VFX, testing, designing the NPCs, and anything else that needed to get done! Once the game was released on Steam, I also helped to gather player feedback and requests through our community Discord to be addressed in future updates. Plant Nursery Simulator was released in June 2025 with a very positive rating on Steam!
+                                <br />
+                                <br />
+                                <img class="blog-img" src="images/PlantSim/05A_Environment.jpg">
+                                <img class="blog-img" src="images/PlantSim/05D_Environment.jpg">
+                                <img class="blog-img" src="images/PlantSim/05F_Environment.jpg">
+                                <img class="blog-img" src="images/PlantSim/05C_Environment.jpg">
+                                <img class="blog-img" src="images/PlantSim/05B_Environment.jpg">
+                                <img class="blog-img" src="images/PlantSim/05E_Environment.jpg">
+                                <img class="blog-img" src="images/PlantSim/05G_Environment.jpg">
+                                </div>
+                            <br />
+                            </h4>
+                            <br />
+                            <br />
+                            <h5 class="blog-header1">Plants</h5>
+                            <h6 class="blog-header2">                                
+                                Plant Creation Process
+                            </h6>
+                            <div class="blog-text">
+                                
+                                <h4>
+                                    For all the plants, I first looked for what the common colors, varieties, and names are, and compiled references for the petals, leaves, and arrangements. Then I made rough blockouts of the pieces I needed in Blender to use as a base for the sculpt in ZBrush. I usually just needed to sculpt 1 or 2 petals since they would be re-used when arranging them into the shape of the flower. I used the sculpt to bake the normal map and base color maps in Substance Painter, also including other pieces needed for the plant like a cylinder for the stem and the plant pot. Finally, I assembled the pieces in Blender, using low poly transparent planes to create the flowers. As I finished more assets, I created a small asset library of petals, leaves, and pots to reuse to speed up the plant creation process.
+                                    <img class="blog-img" src="images/PlantSim/02H_Plants.jpg">
+                                    <img class="blog-img" src="images/PlantSim/02I_Plants.jpg">
+                                    <img class="blog-img" src="images/PlantSim/02J_Plants.jpg">
+                                    <img class="blog-img" src="images/PlantSim/02K_Plants.jpg">
+                                    </h4>
+                            </div>
+                            <h6 class="blog-header2">                                
+                                Plants
+                            </h6>
+                                <div class="blog-text">
+                                <h4>
+                                    <img class="blog-img" src="images/PlantSim/02A_Plants.jpg">
+                                    <img class="blog-img" src="images/PlantSim/02B_Plants.jpg">
+                                    <img class="blog-img" src="images/PlantSim/02C_Plants.jpg">
+                                    <img class="blog-img" src="images/PlantSim/02D_Plants.jpg">
+                                    <img class="blog-img" src="images/PlantSim/02E_Plants.jpg">
+                                    <img class="blog-img" src="images/PlantSim/02F_Plants.jpg">
+                                    <img class="blog-img" src="images/PlantSim/02G_Plants.jpg">
+                                </h4>
+                            </div>
+                            
+                            <br />
+                            <h5 class="blog-header1">Crops</h5>
+                            <h6 class="blog-header2">                                
+                                Crop Creation Process
+                            </h6>
+                            <div class="blog-text">
+                                <h4 >
+                                    The process for creating the crops was the same as making the plants and flowers, except there was also the fully grown crop and multiple growth stages to make.
+                                    <br />
+                                    <img class="blog-img" src="images/PlantSim/03L_Crops.jpg">
+                                    <img class="blog-img" src="images/PlantSim/03M_Crops.jpg">
+                                    <img class="blog-img" src="images/PlantSim/03N_Crops.jpg">
+                                    <img class="blog-img" src="images/PlantSim/03G_Crops.jpg">
+                                    <br />
+                            </div>
+                            <h6 class="blog-header2">                                
+                                Crops
+                            </h6>
+                            <div class="blog-text">
+                                <h4 >
+                                    <img class="blog-img" src="images/PlantSim/03A_Crops.jpg">
+                                    <img class="blog-img" src="images/PlantSim/03B_Crops.jpg">
+                                    <img class="blog-img" src="images/PlantSim/03C_Crops.jpg">
+                                    <img class="blog-img" src="images/PlantSim/03D_Crops.jpg">
+                                    <img class="blog-img" src="images/PlantSim/03E_Crops.jpg">
+                                    <img class="blog-img" src="images/PlantSim/03F_Crops.jpg">
+                                    <img class="blog-img" src="images/PlantSim/03H_Crops.jpg">
+                                    <img class="blog-img" src="images/PlantSim/03I_Crops.jpg">
+                                    <img class="blog-img" src="images/PlantSim/03J_Crops.jpg">
+                                    <img class="blog-img" src="images/PlantSim/03K_Crops.jpg">
+                                    <br />
+                            </div>
+                            <br />
+
+                            <h5 class="blog-header1">Props</h5>
+                            <div class="blog-text">
+                                <h4 >
+                                    I also designed, modelled, textured, and implemented furniture, garden props, and store items for the game. There are also unlockable items to give the player stat boosts that players can also use as decor for the store, and I tried to give them some extra flair with animations or custom shaders.
+                                    <br />
+                                    <img class="blog-img" src="images/PlantSim/04C_Props.jpg">
+                                    <img class="blog-img" src="images/PlantSim/04A_Props.jpg">
+                                    <img class="blog-img" src="images/PlantSim/04D_Props.jpg">
+                                    <img class="blog-img" src="images/PlantSim/04E_Props.jpg">
+                                    <video width=100% controls>
+                                        <source src="images/PlantSim/04B_Props.webm" type="video/mp4">
+                                      Your browser does not support the video tag.
+                                      </video> 
+                                    <br />
+                                    <br />
+                            </div>
+                            <br />
+                            <h5 class="blog-header1">Shop Customization</h5>
+                            <div class="blog-text">
+                                <h4 >
+                                One of the most requested features from our players was to add customization to the store, so I added lots of variations in materials and colors for the exterior, interior, and floor. Players can also customize their store name and sign and choose between different open signs, lighting, and awning designs.
+                                <br />
+                                <img class="blog-img" src="images/PlantSim/06E_Customization.jpg">
+                                <img class="blog-img" src="images/PlantSim/06F_Customization.jpg">
+                                <img class="blog-img" src="images/PlantSim/06G_Customization.jpg">
+                                <img class="blog-img" src="images/PlantSim/06H_Customization.jpg">
+                                <img class="blog-img" src="images/PlantSim/06I_Customization.jpg">
+                                <img class="blog-img" src="images/PlantSim/06A_Customization.jpg">
+                                <img class="blog-img" src="images/PlantSim/06C_Customization.jpg">
+                                <img class="blog-img" src="images/PlantSim/06B_Customization.jpg">
+                                <img class="blog-img" src="images/PlantSim/06D_Customization.jpg">
+                                </h4>
+                                <br />
+                            </div>
+
+                            <h5 class="blog-header1">Play Plant Nursery Simulator on Steam!</h5>                                
+                            <div class="blog-text">
+                                <h4 >
+                                <a target="blank" href="https://store.steampowered.com/app/3474700/Plant_Nursery_Simulator/"><img class="blog-img" src="images/PlantSim/07A_Steam.jpg"></a>
+                                </h4>
+                            </div>
+
+
+
+                                 
+                </div>
+                    <div id="email">
+                        <h1><a target="_blank" href="mailto:nlin.nicole@gmail.com">nlin.nicole@gmail.com</a></h1>
+                    </div>
+                </div>
+                <div class="col-filler"></div>
+                <div class="col-half logo-container-outer">
+                    <div class="logo-container">
+                        <a href="index.html">
+                            <img class="logo" src="images/logo_home.png">
+                    </div>
+                </div>
+            
+            </div>
+</body>
+
+
+</html>
+
+
+</html>
